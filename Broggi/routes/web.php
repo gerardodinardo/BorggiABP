@@ -11,6 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/crearUsuari', function () {
+    
     return view('crearUsuari');
 });
 
