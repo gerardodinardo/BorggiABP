@@ -98,22 +98,22 @@ final class LinkParserHelper
 
         $openParens = 0;
         while (($c = $cursor->getCharacter()) !== null) {
-            if ($c === '\\' && $cursor->peek() !== null && RegexHelper::isEscapable($cursor->peek())) {
+            if ($c === '\\' && RegexHelper::isEscapable($cursor->peek())) {
                 $cursor->advanceBy(2);
             } elseif ($c === '(') {
-                $cursor->advanceBy(1);
+                $cursor->advance();
                 $openParens++;
             } elseif ($c === ')') {
                 if ($openParens < 1) {
                     break;
                 }
 
-                $cursor->advanceBy(1);
+                $cursor->advance();
                 $openParens--;
             } elseif (\preg_match(RegexHelper::REGEX_WHITESPACE_CHAR, $c)) {
                 break;
             } else {
-                $cursor->advanceBy(1);
+                $cursor->advance();
             }
         }
 

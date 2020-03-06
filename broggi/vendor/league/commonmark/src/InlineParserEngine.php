@@ -42,8 +42,7 @@ final class InlineParserEngine
     public function parse(AbstractStringContainerBlock $container, ReferenceMapInterface $referenceMap)
     {
         $inlineParserContext = new InlineParserContext($container, $referenceMap);
-        $cursor = $inlineParserContext->getCursor();
-        while (($character = $cursor->getCharacter()) !== null) {
+        while (($character = $inlineParserContext->getCursor()->getCharacter()) !== null) {
             if (!$this->parseCharacter($character, $inlineParserContext)) {
                 $this->addPlainText($character, $container, $inlineParserContext);
             }
@@ -77,10 +76,10 @@ final class InlineParserEngine
 
     private function parseDelimiters(DelimiterProcessorInterface $delimiterProcessor, InlineParserContext $inlineContext): bool
     {
-        $cursor = $inlineContext->getCursor();
-        $character = $cursor->getCharacter();
+        $character = $inlineContext->getCursor()->getCharacter();
         $numDelims = 0;
 
+        $cursor = $inlineContext->getCursor();
         $charBefore = $cursor->peek(-1);
         if ($charBefore === null) {
             $charBefore = "\n";
@@ -103,7 +102,7 @@ final class InlineParserEngine
 
         list($canOpen, $canClose) = self::determineCanOpenOrClose($charBefore, $charAfter, $character, $delimiterProcessor);
 
-        $node = new Text(\str_repeat($character, $numDelims), [
+        $node = new Text($cursor->getPreviousText(), [
             'delim' => true,
         ]);
         $inlineContext->getContainer()->appendChild($node);
@@ -141,7 +140,7 @@ final class InlineParserEngine
         $text = $inlineParserContext->getCursor()->match($this->environment->getInlineParserCharacterRegex());
         // This might fail if we're currently at a special character which wasn't parsed; if so, just add that character
         if ($text === null) {
-            $inlineParserContext->getCursor()->advanceBy(1);
+            $inlineParserContext->getCursor()->advance();
             $text = $character;
         }
 

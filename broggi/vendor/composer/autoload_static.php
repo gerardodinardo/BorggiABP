@@ -4,25 +4,25 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
+class ComposerStaticInite4357d2ddaa529664d5cfc4065e431bd
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
-        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -99,6 +99,7 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'League\\CommonMark\\Ext\\Table\\' => 28,
             'League\\CommonMark\\' => 18,
             'Laravel\\Tinker\\' => 15,
         ),
@@ -146,8 +147,8 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -305,6 +306,10 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'League\\CommonMark\\Ext\\Table\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/commonmark-ext-table/src',
+        ),
         'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
@@ -438,7 +443,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Carbon\\Exceptions\\BadUnitException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadUnitException.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Exceptions\\NotAPeriodException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/NotAPeriodException.php',
-        'Carbon\\Exceptions\\NotLocaleAwareException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/NotLocaleAwareException.php',
         'Carbon\\Exceptions\\ParseErrorException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/ParseErrorException.php',
         'Carbon\\Factory' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Factory.php',
         'Carbon\\FactoryImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/FactoryImmutable.php',
@@ -456,7 +460,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Carbon\\Traits\\Mixin' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Mixin.php',
         'Carbon\\Traits\\Modifiers' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Modifiers.php',
         'Carbon\\Traits\\Mutability' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Mutability.php',
-        'Carbon\\Traits\\ObjectInitialisation' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/ObjectInitialisation.php',
         'Carbon\\Traits\\Options' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Options.php',
         'Carbon\\Traits\\Rounding' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Rounding.php',
         'Carbon\\Traits\\Serialization' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Serialization.php',
@@ -494,7 +497,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'DeepCopy\\TypeFilter\\Date\\DateIntervalFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DateIntervalFilter.php',
         'DeepCopy\\TypeFilter\\ReplaceFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ReplaceFilter.php',
         'DeepCopy\\TypeFilter\\ShallowCopyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ShallowCopyFilter.php',
-        'DeepCopy\\TypeFilter\\Spl\\ArrayObjectFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/ArrayObjectFilter.php',
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedList' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedList.php',
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
@@ -1271,7 +1273,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Illuminate\\Auth\\Events\\OtherDeviceLogout' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Events/OtherDeviceLogout.php',
         'Illuminate\\Auth\\Events\\PasswordReset' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Events/PasswordReset.php',
         'Illuminate\\Auth\\Events\\Registered' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Events/Registered.php',
-        'Illuminate\\Auth\\Events\\Validated' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Events/Validated.php',
         'Illuminate\\Auth\\Events\\Verified' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Events/Verified.php',
         'Illuminate\\Auth\\GenericUser' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/GenericUser.php',
         'Illuminate\\Auth\\GuardHelpers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/GuardHelpers.php',
@@ -1306,7 +1307,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Illuminate\\Broadcasting\\Broadcasters\\RedisBroadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/RedisBroadcaster.php',
         'Illuminate\\Broadcasting\\Broadcasters\\UsePusherChannelConventions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/UsePusherChannelConventions.php',
         'Illuminate\\Broadcasting\\Channel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Channel.php',
-        'Illuminate\\Broadcasting\\EncryptedPrivateChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/EncryptedPrivateChannel.php',
         'Illuminate\\Broadcasting\\InteractsWithSockets' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/InteractsWithSockets.php',
         'Illuminate\\Broadcasting\\PendingBroadcast' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/PendingBroadcast.php',
         'Illuminate\\Broadcasting\\PresenceChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/PresenceChannel.php',
@@ -1351,8 +1351,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Illuminate\\Console\\Application' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Application.php',
         'Illuminate\\Console\\Command' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Command.php',
         'Illuminate\\Console\\Concerns\\CallsCommands' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php',
-        'Illuminate\\Console\\Concerns\\HasParameters' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/HasParameters.php',
-        'Illuminate\\Console\\Concerns\\InteractsWithIO' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/InteractsWithIO.php',
         'Illuminate\\Console\\ConfirmableTrait' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/ConfirmableTrait.php',
         'Illuminate\\Console\\DetectsApplicationNamespace' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/DetectsApplicationNamespace.php',
         'Illuminate\\Console\\Events\\ArtisanStarting' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Events/ArtisanStarting.php',
@@ -1558,7 +1556,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'Illuminate\\Database\\Events\\MigrationStarted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/MigrationStarted.php',
         'Illuminate\\Database\\Events\\MigrationsEnded' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/MigrationsEnded.php',
         'Illuminate\\Database\\Events\\MigrationsStarted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/MigrationsStarted.php',
-        'Illuminate\\Database\\Events\\NoPendingMigrations' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/NoPendingMigrations.php',
         'Illuminate\\Database\\Events\\QueryExecuted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/QueryExecuted.php',
         'Illuminate\\Database\\Events\\StatementPrepared' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/StatementPrepared.php',
         'Illuminate\\Database\\Events\\TransactionBeginning' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionBeginning.php',
@@ -2160,46 +2157,20 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'League\\CommonMark\\EnvironmentInterface' => __DIR__ . '/..' . '/league/commonmark/src/EnvironmentInterface.php',
         'League\\CommonMark\\Event\\AbstractEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/AbstractEvent.php',
         'League\\CommonMark\\Event\\DocumentParsedEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/DocumentParsedEvent.php',
-        'League\\CommonMark\\Exception\\UnexpectedEncodingException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/UnexpectedEncodingException.php',
-        'League\\CommonMark\\Extension\\Autolink\\AutolinkExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Autolink/AutolinkExtension.php',
-        'League\\CommonMark\\Extension\\Autolink\\EmailAutolinkProcessor' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Autolink/EmailAutolinkProcessor.php',
-        'League\\CommonMark\\Extension\\Autolink\\InlineMentionParser' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Autolink/InlineMentionParser.php',
-        'League\\CommonMark\\Extension\\Autolink\\UrlAutolinkProcessor' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Autolink/UrlAutolinkProcessor.php',
+        'League\\CommonMark\\Ext\\Table\\Table' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/Table.php',
+        'League\\CommonMark\\Ext\\Table\\TableCaption' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableCaption.php',
+        'League\\CommonMark\\Ext\\Table\\TableCaptionRenderer' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableCaptionRenderer.php',
+        'League\\CommonMark\\Ext\\Table\\TableCell' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableCell.php',
+        'League\\CommonMark\\Ext\\Table\\TableCellRenderer' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableCellRenderer.php',
+        'League\\CommonMark\\Ext\\Table\\TableExtension' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableExtension.php',
+        'League\\CommonMark\\Ext\\Table\\TableParser' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableParser.php',
+        'League\\CommonMark\\Ext\\Table\\TableRenderer' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableRenderer.php',
+        'League\\CommonMark\\Ext\\Table\\TableRow' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableRow.php',
+        'League\\CommonMark\\Ext\\Table\\TableRowRenderer' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableRowRenderer.php',
+        'League\\CommonMark\\Ext\\Table\\TableSection' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableSection.php',
+        'League\\CommonMark\\Ext\\Table\\TableSectionRenderer' => __DIR__ . '/..' . '/league/commonmark-ext-table/src/TableSectionRenderer.php',
         'League\\CommonMark\\Extension\\CommonMarkCoreExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/CommonMarkCoreExtension.php',
-        'League\\CommonMark\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlBlockRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/DisallowedRawHtml/DisallowedRawHtmlBlockRenderer.php',
-        'League\\CommonMark\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/DisallowedRawHtml/DisallowedRawHtmlExtension.php',
-        'League\\CommonMark\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlInlineRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/DisallowedRawHtml/DisallowedRawHtmlInlineRenderer.php',
         'League\\CommonMark\\Extension\\ExtensionInterface' => __DIR__ . '/..' . '/league/commonmark/src/Extension/ExtensionInterface.php',
-        'League\\CommonMark\\Extension\\ExternalLink\\ExternalLinkExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/ExternalLink/ExternalLinkExtension.php',
-        'League\\CommonMark\\Extension\\ExternalLink\\ExternalLinkProcessor' => __DIR__ . '/..' . '/league/commonmark/src/Extension/ExternalLink/ExternalLinkProcessor.php',
-        'League\\CommonMark\\Extension\\GithubFlavoredMarkdownExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/GithubFlavoredMarkdownExtension.php',
-        'League\\CommonMark\\Extension\\InlinesOnly\\ChildRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/InlinesOnly/ChildRenderer.php',
-        'League\\CommonMark\\Extension\\InlinesOnly\\InlinesOnlyExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/InlinesOnly/InlinesOnlyExtension.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\PunctuationParser' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/PunctuationParser.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\Quote' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/Quote.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\QuoteParser' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/QuoteParser.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\QuoteProcessor' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/QuoteProcessor.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\QuoteRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/QuoteRenderer.php',
-        'League\\CommonMark\\Extension\\SmartPunct\\SmartPunctExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/SmartPunct/SmartPunctExtension.php',
-        'League\\CommonMark\\Extension\\Strikethrough\\Strikethrough' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Strikethrough/Strikethrough.php',
-        'League\\CommonMark\\Extension\\Strikethrough\\StrikethroughDelimiterProcessor' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Strikethrough/StrikethroughDelimiterProcessor.php',
-        'League\\CommonMark\\Extension\\Strikethrough\\StrikethroughExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Strikethrough/StrikethroughExtension.php',
-        'League\\CommonMark\\Extension\\Strikethrough\\StrikethroughRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Strikethrough/StrikethroughRenderer.php',
-        'League\\CommonMark\\Extension\\Table\\Table' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/Table.php',
-        'League\\CommonMark\\Extension\\Table\\TableCell' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableCell.php',
-        'League\\CommonMark\\Extension\\Table\\TableCellRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableCellRenderer.php',
-        'League\\CommonMark\\Extension\\Table\\TableExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableExtension.php',
-        'League\\CommonMark\\Extension\\Table\\TableParser' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableParser.php',
-        'League\\CommonMark\\Extension\\Table\\TableRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableRenderer.php',
-        'League\\CommonMark\\Extension\\Table\\TableRow' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableRow.php',
-        'League\\CommonMark\\Extension\\Table\\TableRowRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableRowRenderer.php',
-        'League\\CommonMark\\Extension\\Table\\TableSection' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableSection.php',
-        'League\\CommonMark\\Extension\\Table\\TableSectionRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Table/TableSectionRenderer.php',
-        'League\\CommonMark\\Extension\\TaskList\\TaskListExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/TaskList/TaskListExtension.php',
-        'League\\CommonMark\\Extension\\TaskList\\TaskListItemMarker' => __DIR__ . '/..' . '/league/commonmark/src/Extension/TaskList/TaskListItemMarker.php',
-        'League\\CommonMark\\Extension\\TaskList\\TaskListItemMarkerParser' => __DIR__ . '/..' . '/league/commonmark/src/Extension/TaskList/TaskListItemMarkerParser.php',
-        'League\\CommonMark\\Extension\\TaskList\\TaskListItemMarkerRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Extension/TaskList/TaskListItemMarkerRenderer.php',
-        'League\\CommonMark\\GithubFlavoredMarkdownConverter' => __DIR__ . '/..' . '/league/commonmark/src/GithubFlavoredMarkdownConverter.php',
         'League\\CommonMark\\HtmlElement' => __DIR__ . '/..' . '/league/commonmark/src/HtmlElement.php',
         'League\\CommonMark\\HtmlRenderer' => __DIR__ . '/..' . '/league/commonmark/src/HtmlRenderer.php',
         'League\\CommonMark\\InlineParserContext' => __DIR__ . '/..' . '/league/commonmark/src/InlineParserContext.php',
@@ -4393,11 +4364,11 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Deprecated' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Deprecated.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Example' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Example.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Factory\\StaticMethod' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Factory/StaticMethod.php',
+        'phpDocumentor\\Reflection\\DocBlock\\Tags\\Factory\\Strategy' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Factory/Strategy.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter\\AlignFormatter' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter/AlignFormatter.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter\\PassthroughFormatter' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter/PassthroughFormatter.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Generic' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Generic.php',
-        'phpDocumentor\\Reflection\\DocBlock\\Tags\\InvalidTag' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/InvalidTag.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Link' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Link.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Method' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Method.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Param' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Param.php',
@@ -4429,7 +4400,6 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
         'phpDocumentor\\Reflection\\Types\\Array_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Array_.php',
         'phpDocumentor\\Reflection\\Types\\Boolean' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Boolean.php',
         'phpDocumentor\\Reflection\\Types\\Callable_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Callable_.php',
-        'phpDocumentor\\Reflection\\Types\\ClassString' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/ClassString.php',
         'phpDocumentor\\Reflection\\Types\\Collection' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Collection.php',
         'phpDocumentor\\Reflection\\Types\\Compound' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Compound.php',
         'phpDocumentor\\Reflection\\Types\\Context' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Context.php',
@@ -4454,10 +4424,10 @@ class ComposerStaticInite0d88176e342f2e443c3db5a05049e17
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite0d88176e342f2e443c3db5a05049e17::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite0d88176e342f2e443c3db5a05049e17::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInite0d88176e342f2e443c3db5a05049e17::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInite0d88176e342f2e443c3db5a05049e17::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite4357d2ddaa529664d5cfc4065e431bd::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite4357d2ddaa529664d5cfc4065e431bd::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite4357d2ddaa529664d5cfc4065e431bd::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite4357d2ddaa529664d5cfc4065e431bd::$classMap;
 
         }, null, ClassLoader::class);
     }
