@@ -11,7 +11,10 @@ Route::get('/', function () {
 });
 
 Route::get('/crearUsuari', function () {
-    
     return view('crearUsuari');
+});
+
+Route::get('incidenciesTotals', function () {
+    return view('incidenciesTotals');
 });
 
