@@ -10,7 +10,7 @@
         <hr>
         <!-- ********** Start Desplegables ********** --> 
         <div class="desplegable">
-            <button class="collapsible"><strong>Dades Automàtiques (Telèfon, Data i Hora)</strong></button>
+            <button class="collapsible"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
             <div class="content">
                 <div class="form-group row">
                     <label for="example-tel-input" class="col-sm-1 mt-4 col-form-label" style="margin-left:80px;">Telèfon</label>
