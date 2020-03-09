@@ -12,13 +12,13 @@
         <div class="desplegable">
             <button class="collapsible"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
             <div class="content">
-                <div class="form-group row">
-                    <label for="example-tel-input" class="col-sm-1 mt-4 col-form-label" style="margin-left:80px;">Telèfon</label>
-                    <div class="col-sm-4 mt-4">
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="example-tel-input" class="col-sm-1 mt-4 col-form-label">Telèfon</label>
+                    <div class="col-sm-2 mt-4">
                         <input class="form-control" type="tel" value="" id="example-tel-input" placeholder="Ej. 616105478">
                     </div>
-                    <label for="example-datetime-local-input" class="col-sm-1.5 mt-4 col-form-label">Data / Hora</label>
-                    <div class="col-sm-3 mt-4">
+                    <label for="example-datetime-local-input" class="col-sm-1 mt-4 col-form-label">Data</label>
+                    <div class="col-sm-2 mt-4">
                         <input class="form-control" type="date" value="" id="myDate">
                         <script type="text/javascript">
                             function SetDate()
@@ -40,6 +40,7 @@
                             </script>
                             <body onload="SetDate();">
                     </div>
+                    <label for="example-datetime-local-input" class="col-sm-1 mt-4 col-form-label">Hora</label>
                     <div class="col-sm-2 mt-4">
                         <input class="form-control" type="time" value="" id="currentTime">
                         <script>
