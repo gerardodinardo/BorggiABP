@@ -23,9 +23,12 @@
                     </div>
                     <div class="form-group row">
                         <label for="inputContrasenya" class="col-sm-2 col-form-label">Contrasenya: </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputContrasenya">
-                        </div>                       
+                        <div class="col-sm-10 input-group">
+                            <input type="password" class="form-control" id="inputContrasenya">
+                            <div class="input-group-append">
+                              <div class="input-group-text" onclick="mContrasenya()"><i class="fa fa-eye"></i></div>
+                            </div>
+                        </div>                      
                     </div>
                     <fieldset class="form-group">
                         <div class="row">
@@ -55,5 +58,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+      function mContrasenya() {
+      var x = document.getElementById("inputContrasenya");
+      if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }
+}
+    </script>
 
 @endsection
