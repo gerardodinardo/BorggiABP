@@ -27,9 +27,9 @@
         <!-- ********** Fin Desplegable 1 ********** -->
         <script src="{{ asset('/js/addIncidenciaSelecciones.js') }}"></script>{{-- Js resultado aparecer div segun selector --}}
         <div class="desplegable">
-            <button class="collapsible"><strong>Identificació - Classificació Alertant</strong></button>
+            <button class="collapsible" id="coll"><strong>Identificació - Classificació Alertant</strong></button>
             <div class="content">
-                <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this);">
+                <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this); reabrir();" id="desplegable_alertant">
                     <option selected>- Slecciona un tipus d'Alertant-</option>
                     <option id="centreSanitari"value="1">Centre Sanitari</option>
                     <option id="personaAfectada"value="2">Persona Afectada</option>
@@ -102,6 +102,7 @@
                 } 
                 });
             }
+            
         </script>
     </div>
 

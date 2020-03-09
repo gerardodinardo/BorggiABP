@@ -42,3 +42,9 @@ function admSelectCheck(nameSelect)
         document.getElementById("divalertantVip").style.display = "none";
     }
 }
+
+function reabrir()
+{
+    document.getElementById("coll").click();
+    document.getElementById("coll").click();
+}
