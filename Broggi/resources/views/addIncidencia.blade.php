@@ -18,8 +18,35 @@
                         <input class="form-control" type="tel" value="" id="example-tel-input" placeholder="Ej. 616105478">
                     </div>
                     <label for="example-datetime-local-input" class="col-sm-1.5 mt-4 col-form-label">Data / Hora</label>
-                    <div class="col-sm-4 mt-4">
-                        <input class="form-control" type="datetime-local" value="" id="example-datetime-local-input">
+                    <div class="col-sm-3 mt-4">
+                        <input class="form-control" type="date" value="" id="myDate">
+                        <script type="text/javascript">
+                            function SetDate()
+                            {
+                            var date = new Date();
+                            
+                            var day = date.getDate();
+                            var month = date.getMonth() + 1;
+                            var year = date.getFullYear();
+                            
+                            if (month < 10) month = "0" + month;
+                            if (day < 10) day = "0" + day;
+                            
+                            var today = year + "-" + month + "-" + day;
+                            
+                            
+                            document.getElementById('myDate').value = today;
+                            }
+                            </script>
+                            <body onload="SetDate();">
+                    </div>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="time" value="" id="currentTime">
+                        <script>
+                            var date = new Date();
+                            var currentTime = date.getHours() + ':' + date.getMinutes();
+                            document.getElementById('currentTime').value = currentTime;
+                        </script>
                     </div>
                 </div>
             </div>
