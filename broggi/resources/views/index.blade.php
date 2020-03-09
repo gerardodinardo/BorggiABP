@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-sm-5">
         <h3 class="text-center text-danger mt-5">Ingressa</h2>
-          <form  >
+        <form  action="{{  action() }}">
             <div class="form-group">
               <label for="user">Usuari: </label>
               <input type="email"  name="user" class="form-control" id="user" aria-describedby="emailHelp">
