@@ -1,4 +1,4 @@
-nav, footer {
+nav:first-child {
     background-color: #cc0000;
 }
 
