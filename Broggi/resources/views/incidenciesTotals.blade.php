@@ -43,7 +43,7 @@
               </table>
         </div>
         <div class="col">
-            <nav aria-label="Page navigation example">
+            <div aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
                   <li class="page-item">
                     <a class="page-link " href="#" tabindex="-1">Anterior</a>
@@ -55,7 +55,7 @@
                     <a class="page-link" href="#">Seguent</a>
                   </li>
                 </ul>
-              </nav>
+              </div>
         </div>             
     </div>
 
