@@ -21,8 +21,8 @@ h3{
     outline: none;
     font-size: 15px;
     border: solid 1px #ffffff;
-    border-color: rgba(207, 47, 47, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(207, 47, 47, 0.8);
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
 }
 
 /* .active, .collapsible:hover {
@@ -46,15 +46,15 @@ h3{
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #ffe2e2da;
+    background-color: rgba(232, 229, 229, 0.87);
 }
 .content p{
     margin-top: 10px;
 }
 
 button:focus{  
-    border-color: rgba(207, 47, 47, 0.8);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset, 0 0 20px rgba(155, 15, 15, 0.8);
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset, 0 0 20px rgba(63, 0, 82, 0.493);
     outline: 0 none;
 }
 
@@ -73,9 +73,9 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus, .custom-select, .custom-select:focus{   
-  border-color: rgba(207, 47, 47, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(207, 47, 47, 0.8);
+.uneditable-input:focus, .custom-select:focus, textarea:focus{   
+  border-color: rgba(63, 0, 82, 0.493);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
   outline: 0 none;
 }
 
@@ -93,8 +93,9 @@ input[type="color"]:focus,
     outline: none;
     font-size: 15px;
     border: solid 1px #ffffff;
-    border-color: rgba(207, 47, 47, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(207, 47, 47, 0.8);
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);  
+    background-color: rgba(172, 3, 224, 0.322);;
 }
 
 /* .active, .collapsible:hover {

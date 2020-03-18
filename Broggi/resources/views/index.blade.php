@@ -6,10 +6,10 @@
   <div class="container border border rounded-left mt-5 shadow-lg mb-5 bg-white rounded">
     <div class="row">
       <div class="col-sm-5">
-        <h3 class="text-center text-danger mt-5">Ingressa</h2>
+        <h3 class="text-center text-dark mt-5">Accedeix-hi</h2>
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Usuari: </label>
+              <label for="exampleInputEmail1">Usuari/a: </label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <small id="emailHelp" class="form-text text-muted">Si no tens un usuari, posa't en contacte amb nosaltres.</small>
             </div>
@@ -22,7 +22,7 @@
               <label class="form-check-label" for="exampleCheck1">Recorda'm</label>
             </div>
             <div class="text-center pb-4">
-              <button type="submit" class="btn btn-danger">Ingressar</button>
+              <button type="submit" class="btn btn-custom1">Ingressar</button>
             </div>            
           </form>
       </div>

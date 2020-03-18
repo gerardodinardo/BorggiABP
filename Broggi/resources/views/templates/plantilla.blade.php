@@ -13,7 +13,7 @@
 <body style="padding-top:105px;">
     
     <nav class="navbar navbar-light fixed-top">
-        <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ asset('/') }}" style="text-decoration: none; color: white;">Institut Moisès BROGGI</a></span>
+        <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ asset('/') }}" style="text-decoration: none; color: white;"><img src="{{ asset('img/logo_broggiv1.svg') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
         <img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">
     </nav>
 

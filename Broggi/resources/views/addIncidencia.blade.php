@@ -4,13 +4,14 @@
 
 
 @section('content')
+
     <link href="{{ asset('/css/addIncidencia.css') }}" rel="stylesheet">
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Formulari Nova Incidència</h1>
         <hr>
         <!-- ********** Start Desplegables ********** --> 
         <div class="desplegable">
-            <button class="collapsible"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
+            <button class="collapsible" id="coll1"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
             <div class="content">
                 <div class="form-group row d-flex justify-content-center">
                     <label for="example-tel-input" class="col-sm-1 mt-4 col-form-label">Telèfon</label>
@@ -21,24 +22,8 @@
                     <div class="col-sm-2 mt-4">
                         <input class="form-control" type="date" value="" id="myDate">
                         <script type="text/javascript">
-                            function SetDate()
-                            {
-                            var date = new Date();
                             
-                            var day = date.getDate();
-                            var month = date.getMonth() + 1;
-                            var year = date.getFullYear();
-                            
-                            if (month < 10) month = "0" + month;
-                            if (day < 10) day = "0" + day;
-                            
-                            var today = year + "-" + month + "-" + day;
-                            
-                            
-                            document.getElementById('myDate').value = today;
-                            }
                             </script>
-                            <body onload="SetDate();">
                     </div>
                     <label for="example-datetime-local-input" class="col-sm-1 mt-4 col-form-label">Hora</label>
                     <div class="col-sm-2 mt-4">
@@ -66,51 +51,142 @@
                   </select>
                   {{-- divs a mostrar despues de execute javascript, los divs estan default display:none --}}
                 <div id="divcentreSanitari" style="display:none;">
-                    centreSanitari selected
                     <div class="form-group row">
                         <label for="example-metge-input" class="col-sm-2 mt-4 col-form-label">Nom del Metge: </label>
                         <div class="col-sm-4 mt-4">
                             <input class="form-control" type="metge" value="" id="example-metge-input" placeholder="">
                         </div>
                     </div>
+                    <p>S'han de mostrar dades de l'alertant automàticament (backend)</p>
+                    <p><strong><center>Has seleccionat Perona Afectada</center></strong></p>
                 </div>  
                 <div id="divpersonaAfectada" style="display:none;">
-                    personaAfectada selected
+                    <p><strong><center>Has seleccionat Perona Afectada</center></strong></p>
                 </div>
                 <div id="diventornAfectat" style="display:none;">
-                    <p>entornAfectat selected</p>
+                    <p><strong><center>Has seleccionat Entorn Afectat</center></strong></p>
                 </div>   
                 <div id="divalertantVip" style="display:none;">
-                    alertantVip selected
+                    <p><strong><center>S'ha de buscar l'alertant VIP (backend)</center></strong></p>
                 </div>
             </div>
         </div>        
         <!-- ********** Fin Desplegable 2 ********** -->
         <div class="desplegable">
-            <button class="collapsible"><strong>Localització</strong></button>
+            <button class="collapsible" id="coll3"><strong>Localització</strong></button>
             <div class="content">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quis corporis fugit facilis modi veritatis, ipsa sunt reiciendis in cumque neque reprehenderit maiores assumenda commodi at molestias, rerum a iure!</p>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Província</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Barcelona">
+                    </div>
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Comarca</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Barcelonés">
+                    </div> 
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Municipi</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Granollers">
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="inputAddress" class="col-sm-1 mt-4 col-form-label">Adreça</label>
+                    <div class="col-sm-4 mt-4">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Ej. Passeig de Sant Martí">
+                    </div>
+                    <label for="inputTipusCarrer" class="col-sm-2 mt-4 col-form-label">Tipus Carrer</label>
+                    <div class="col-sm-3 mt-4">
+                        <select class="custom-select">
+                            <option selected>- Selecciona un Tipus de Carrer -</option>
+                            <option value="1">Avenida</option>
+                            <option value="2">Passeig</option>
+                            <option value="3">Carrer</option>
+                            <option value="3">Plaça</option>
+                          </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
+                    <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
+                </div>
             </div>   
         </div>      
         <!-- ********** Fin Desplegable 3 ********** -->  
         <div class="desplegable">     
-            <button class="collapsible"><strong>Dades Afectat</strong></button>
+            <button class="collapsible" id="coll4"><strong>Dades Afectat</strong></button>
             <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor repudiandae sed vitae laboriosam accusantium! Quae asperiores repellat consequatur optio cumque iure pariatur dolorum praesentium dignissimos, fugit, numquam corrupti sapiente?</p>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">CIP</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. XX99000999">
+                    </div>
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Teléfon</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. 666999666">
+                    </div> 
+                </div>
+                <hr>
+                <p><strong><center>S'ha de buscar segons Tel o CIP i omplir dades següents automàticament(backend) si es troba, omplir a mà...</center></strong></p>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Edat</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. 27">
+                    </div>
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Sexe</label>
+                    <div class="col-sm-2 mt-4">
+                        <select class="custom-select">
+                            <option selected>- Selecciona Sexe -</option>
+                            <option value="1">Home</option>
+                            <option value="2">Dona</option>
+                            <option value="3">Altres</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="formGroupExampleInput" class="col-sm-0.5 mt-4 col-form-label">Nom</label>
+                    <div class="col-sm-2 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Lorena">
+                    </div> 
+                    <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">1r Cognom</label>
+                    <div class="col-sm-3 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. García">
+                    </div>
+                    <label for="formGroupExampleInput" class="col-sm-1.5 mt-4 mb-4 col-form-label">2n Cognom</label>
+                    <div class="col-sm-3 mt-4">
+                        <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Torra">
+                    </div>
+                </div>
             </div>  
         </div>
         <!-- ********** Fin Desplegable 4 ********** -->    
         <div class="desplegable">          
-            <button class="collapsible"><strong>Classificació Incident</strong></button>
+            <button class="collapsible" id="coll5"><strong>Classificació Incident</strong></button>
             <div class="content">
-                <p>Loremaa ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-sm-9 mt-4">
+                        <select class="custom-select">
+                            <option selected>- Selecciona una Classificació -</option>
+                            <option value="1">Accidents / Traumatisme</option>
+                            <option value="2">Malaltia lloc públic</option>
+                            <option value="3">Malaltia Domicili</option>
+                            <option value="4">Consulta Mèdica</option>
+                            <option value="5">Transport Sanitari</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
+                    <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
+                </div>
             </div> 
         </div>
         <!-- ********** Fin Desplegable 5 ********** -->  
         <div class="desplegable">              
-            <button class="collapsible"><strong>Recursos Mòbils</strong></button>
+            <button class="collapsible" id="coll6"><strong>Assignació de Recursos Mòbils</strong></button>
             <div class="content">
-                <p>Loremaa ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p><strong><center>Falta por acabar, discutir en grupo...</center></strong></p>
             </div>
         </div>  
         <!-- ********** Fin Desplegable 6 ********** --> 
@@ -132,6 +208,12 @@
             }
             
         </script>
+        <div class="text-center pb-4">
+            <button type="submit" class="btn btn-custom3" style="width:100%; margin-bottom:1%;">Enviar</button>
+            <button type="submit" class="btn btn-custom2" style="width:25%;" onClick="window.location.reload();">Netejar Formulari</button>
+            <button type="submit" class="btn btn-custom4" style="width:25%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
+          </div>  
     </div>
+</div> 
 
 @endsection
