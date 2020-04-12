@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container border col-sm-5 mt-5 border rounded shadow-lg">
+    <div class="container border col-sm-7 mt-5 border rounded shadow-lg">
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-black text-center mt-5">Crear nou usuari/a: </h3>
