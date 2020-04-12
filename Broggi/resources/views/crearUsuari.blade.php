@@ -7,7 +7,7 @@
     <div class="container border col-sm-5 mt-5 border rounded shadow-lg">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-danger text-center mt-5">Crear nou usuari/a: </h3>
+                <h3 class="text-black text-center mt-5">Crear nou usuari/a: </h3>
                 <form class="mt-5">
                     <div class="form-group row">
                         <label for="inputCodi" class="col-sm-2 col-form-label">Codi: </label>
@@ -50,8 +50,8 @@
                         </div>
                     </fieldset>
                     <div class="form-group row">
-                        <div class="col-12 offset-sm-8">
-                          <button type="submit" class="btn btn-danger">Submit</button>
+                        <div class="col-10 my-4 offset-1">
+                          <button type="submit" class="btn btn-block btn-custom1">Submit</button>
                         </div>
                     </div>
                 </form>

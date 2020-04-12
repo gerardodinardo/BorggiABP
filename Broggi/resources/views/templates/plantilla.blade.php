@@ -17,9 +17,10 @@
         <img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">
     </nav>
 
+    
     @yield('content')
 
-    <div class="card-footer text-muted">
+    <div class="card-footer text-muted mb-0">
         <p class="text-white">Copyright © 2020 CENTRE D’ESTUDIS POLITÈCNICS. Tots els drets reservats. Política de privacitat. Avís legal</p>
     </div>
 
