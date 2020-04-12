@@ -1,3 +1,31 @@
+window.addEventListener('load', abrirDesplegables, false);
+window.addEventListener('load', SetDate, false);
+
+function abrirDesplegables(){
+    document.getElementById("coll1").click();
+    document.getElementById("coll").click();
+    document.getElementById("coll3").click();
+    document.getElementById("coll4").click();
+    document.getElementById("coll5").click();    
+    document.getElementById("coll6").click();
+}
+
+function SetDate(){
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;
+
+
+    document.getElementById('myDate').value = today;
+}
+
+
 // JS Para desplegar div tipo de alertant segun select menu
 function admSelectCheck(nameSelect)
 {
