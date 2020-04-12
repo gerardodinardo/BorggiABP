@@ -1,15 +1,19 @@
 @extends('templates.plantilla')
 
-@section('titulo', 'Broggi - Incidencies Totals')
+@section('titulo', 'Broggi - Incidències')
 
 @section('content')
   
-    <div class="container col-sm-8 border">
-        <div class="row">
-            <div class="col">
-                <h3 class="my-5 text-center">Menu Principal Incidencies</h3>
-            </div>
+    <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
+        <h1>Tauler Principal Incidències </h1>
+        <hr>
+        <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px;">
+            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Gestió Alertants</button>            
+            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Nova Incidència</button>            
+            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Històric Incidències</button>
+            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Gestió Recursos Mòbils</button>
         </div>
+        <hr>
         <div class="col">
             <table class="table table-striped table-bordered table-hover">
                 <thead class="thead-dark">
