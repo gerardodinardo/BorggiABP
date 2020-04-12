@@ -7,7 +7,9 @@
 
     <link href="{{ asset('/css/addIncidencia.css') }}" rel="stylesheet">
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
-        <h1>Formulari Nova Incidència</h1>
+        <h1>Nova Incidència</h1>
+        <hr>
+        <button type="submit" class="btn btn-custom1 mb-4" style="width:100%; heigth: 20px; background-color: #1e1e1e;" onClick="window.location.reload();">Menú Principal Incidències</button>
         <hr>
         <!-- ********** Start Desplegables ********** --> 
         <div class="desplegable">
@@ -208,10 +210,11 @@
             }
             
         </script>
+        <hr>
         <div class="text-center pb-4">
-            <button type="submit" class="btn btn-custom3" style="width:100%; margin-bottom:1%;">Enviar</button>
-            <button type="submit" class="btn btn-custom2" style="width:25%;" onClick="window.location.reload();">Netejar Formulari</button>
-            <button type="submit" class="btn btn-custom4" style="width:25%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
+            <button type="submit" class="btn btn-custom2 mb-4" style="width:70%; heigth: 20px;" onClick="window.location.reload();">Netejar Formulari</button>
+            <button type="submit" class="btn btn-custom3" style="width:70%; margin-bottom:1%;">Enviar</button>
+            <button type="submit" class="btn btn-custom4" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
           </div>  
     </div>
 </div> 

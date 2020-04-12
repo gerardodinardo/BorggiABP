@@ -31,7 +31,7 @@ h3{
 
 .collapsible:after {
     content: '\002B';
-    color: black;
+    color: white;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -85,17 +85,17 @@ input[type="color"]:focus,
 }
 
 .collapsible {
-    color: #020100;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
     border: solid 1px #ffffff;
     border-color: rgba(63, 0, 82, 0.493);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);  
-    background-color: rgba(172, 3, 224, 0.322);;
+    background-color: #3F0052;
 }
 
 /* .active, .collapsible:hover {
