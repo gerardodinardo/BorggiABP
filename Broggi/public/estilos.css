@@ -38,6 +38,21 @@ input[type="color"]:focus,
   opacity: 80%;
   color: white;
 }
+.btn-custom2:hover{
+  background-color:rgb(122, 124, 0);
+  opacity: 80%;
+  color: white;
+}
+.btn-custom3:hover{
+  background-color:rgb(0, 145, 7);
+  opacity: 80%;
+  color: white;
+}
+.btn-custom4:hover{
+  background-color:rgb(180, 0, 0);
+  opacity: 80%;
+  color: white;
+}
 
 .btn-custom2{
   background-color:rgb(122, 124, 0);
