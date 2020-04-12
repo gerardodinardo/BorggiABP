@@ -22,3 +22,6 @@ Route::get('incidenciesTotals', function () {
     return view('incidenciesTotals');
 });
 
+Route::get('/principalIncidencies', function () {
+    return view('principalIncidencies');
+});
