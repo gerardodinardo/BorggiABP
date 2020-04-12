@@ -22,7 +22,7 @@
               <label class="form-check-label" for="exampleCheck1">Recorda'm</label>
             </div>
             <div class="text-center pb-4">
-              <button type="submit" class="btn btn-custom1">Ingressar</button>
+              <button type="submit" class="btn btn-danger">Ingressar</button>
             </div>            
           </form>
       </div>

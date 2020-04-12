@@ -7,7 +7,7 @@
     <div class="container border col-sm-5 mt-5 border rounded shadow-lg">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-danger text-center mt-4">Crear nou usuari: </h3>
+                <h3 class="text-danger text-center mt-5">Crear nou usuari/a: </h3>
                 <form class="mt-5">
                     <div class="form-group row">
                         <label for="inputCodi" class="col-sm-2 col-form-label">Codi: </label>
@@ -16,7 +16,7 @@
                         </div>                       
                     </div>
                     <div class="form-group row">
-                        <label for="inputUsuari" class="col-sm-2 col-form-label">Usuari: </label>
+                        <label for="inputUsuari" class="col-sm-2 col-form-label">Usuari/a: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputUsuari">
                         </div>                       
