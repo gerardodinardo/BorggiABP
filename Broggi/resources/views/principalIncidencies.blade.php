@@ -3,15 +3,16 @@
 @section('titulo', 'Broggi - Incidències')
 
 @section('content')
+    <link href="{{ asset('/css/principalIncidencies.css') }}" rel="stylesheet">
   
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Tauler Principal Incidències </h1>
         <hr>
-        <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px;">
-            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Gestió Alertants</button>            
-            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Nova Incidència</button>            
-            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Històric Incidències</button>
-            <button type="submit" class="btn btn-info text-center" style="width: 23.5%; background-color: white; border-color: #2e153c; color: #2e153c;">Gestió Recursos Mòbils</button>
+        <div class="col mb-4" style="background-color: #ca236e; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
+            <button type="submit" class="btn btn-custom text-center" >Gestió Alertants</button>            
+            <button type="submit" class="btn btn-custom text-center">Nova Incidència</button>            
+            <button type="submit" class="btn btn-custom text-center">Històric Incidències</button>
+            <button type="submit" class="btn btn-custom text-center">Gestió Recursos Mòbils</button>
         </div>
         <hr>
         <div class="col">
