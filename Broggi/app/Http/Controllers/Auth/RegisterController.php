@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\User;
+//use App\User;
+use App\Usuario;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+
 
 class RegisterController extends Controller
 {
@@ -70,4 +73,24 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function register(Request $request)
+    {
+        
+
+                    $usuari = new Usuario();
+                    $pass = $request->input('password');
+                    $pass = Hash::make($pass);
+                    $usuari->nombre = $request->input('name');
+                    $usuari->correo = $request->input('email');
+                    $usuari->direccion = $request->input('direccion');
+                    $usuari->rol_id = $request->input('rol');
+                    $usuari->contrasenya = $pass;
+                   
+                    $usuari->save();
+            
+                    return redirect()->to('/index');
+
+    }
+
 }
