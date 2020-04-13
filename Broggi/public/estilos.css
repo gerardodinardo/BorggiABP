@@ -136,7 +136,7 @@ input[type="color"]:focus,
   background-color: #3F0052;
 }
 #back{
-  top: 85%;  
+  top: 50%;  
   background-color: #3F0052;
   position: fixed;
 }
