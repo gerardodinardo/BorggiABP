@@ -22,7 +22,7 @@
                     <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
                     <th scope="col-sm" class="localitzacio">Localització</th>
                     <th scope="col-sm" class="hora">Hora</th>
-                    <th scope="col-sm" class="descripcioIncident">Descripció Incident</th>
+                    <th scope="col-sm" class="descripcioIncident" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Descripció Incident</th>
                     <th scope="col-sm" class="estat">Estat</th>
                   </tr>
                 </thead>
@@ -82,5 +82,8 @@
            placement:'left'
        });
     });
+    $(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
     </script>
 @endsection
