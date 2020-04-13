@@ -12,7 +12,7 @@
             <button type="submit" class="btn btn-custom text-center" >Gestió Alertants</button>            
             <button type="submit" class="btn btn-custom text-center">Nova Incidència</button>            
             <button type="submit" class="btn btn-custom text-center">Històric Incidències</button>
-            <button type="submit" class="btn btn-custom text-center">Gestió Recursos Mòbils</button>
+            <button type="submit" class="btn btn-custom text-center">Recursos Mòbils</button>
         </div>
         <hr>
         <div class="col">
