@@ -32,6 +32,10 @@ Route::get('/principalIncidencies', function () {
     return view('principalIncidencies');
 });
 
+Route::get('/contacte', function () {
+    return view('contacte');
+});
+
 //login y registro de usuarios
 
 
