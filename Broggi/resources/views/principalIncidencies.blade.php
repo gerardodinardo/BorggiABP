@@ -16,13 +16,14 @@
         </div>
         <hr>
         <div class="col">
-            <table class="table table-striped table-bordered table-hover">
-                <thead class="thead-dark">
+            <table class="table table-striped table-bordered table-hover text-center">
+                <thead class="table-dark">
                   <tr>
-                    <th scope="col">Num. Incidència</th>
-                    <th scope="col">Localització</th>
-                    <th scope="col">Hora</th>
-                    <th scope="col">Descripció Incident</th>
+                    <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
+                    <th scope="col-sm">Localització</th>
+                    <th scope="col-sm">Hora</th>
+                    <th scope="col-sm">Descripció Incident</th>
+                    <th scope="col-sm" class="estat">Estat</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -31,18 +32,21 @@
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
+                    <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
+                    <td><img src="{{ asset('img/cancel.png') }}" alt=""></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
                     <td>@twitter</td>
+                    <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
                   </tr>
                 </tbody>
               </table>
