@@ -7,24 +7,40 @@
     <div class="row">
       <div class="col-sm-5">
         <h3 class="text-center text-dark mt-5">Accedeix-hi</h2>
-          <form>
+
+
+          <form action="{{ action('Auth\LoginController@login')}}" method="POST">
+            @csrf
+            
+          {{-- USUARIO --}}
             <div class="form-group">
-              <label for="exampleInputEmail1">Usuari/a: </label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">Si no tens un usuari, posa't en contacte amb nosaltres.</small>
+              <label for="usuari">Usuari/a: </label>
+                  <input type="text" name="usuari" id="usuari" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('user')}}">
+                <small id="emailHelp" class="form-text text-muted">Si no tens un usuari, posa't en contacte amb nosaltres.</small>
             </div>
+
+            {{-- CONTRASENYA --}}
+            {{-- "pass" significa contraseña, es el identificador que tiene para no tener que escribir tanto lol --}}
             <div class="form-group">
-              <label for="exampleInputPassword1">Contrasenya: </label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="pass">Contrasenya: </label>
+                  <input type="password" name="pass" id="pass" class="form-control" id="exampleInputPassword1">
             </div>
+
+            {{-- Esto lo tendría que mirar como se hace pero ni idea de momento de como va el tema, yo lo quitaría si no encuentro forma de controlarlo. --}}
             <div class="form-group form-check ml-4">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Recorda'm</label>
             </div>
             <div class="text-center pb-4 mt-5">
+
+              {{-- MOTHERFUCKING SUBMIT BUTTON --}}
               <button type="submit" class="btn btn-block btn-custom1">Ingressar</button>
+
+
             </div>            
           </form>
+
+
       </div>
       <div class="col-sm-7">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
