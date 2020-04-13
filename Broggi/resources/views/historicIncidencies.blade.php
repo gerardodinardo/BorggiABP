@@ -5,16 +5,19 @@
 @section('content')
   
 <link href="{{ asset('/css/principalIncidencies.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/backButton.css') }}" rel="stylesheet">
+  <div id="mySidenav2" class="sidenav2">
+    <a href="#" id="back">
+        Torna a l'inici
+        <svg class="bi bi-arrow-return-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M5.854 5.646a.5.5 0 010 .708L3.207 9l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M13.5 2.5a.5.5 0 01.5.5v4a2.5 2.5 0 01-2.5 2.5H3a.5.5 0 010-1h8.5A1.5 1.5 0 0013 7V3a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+        </svg>
+    </a>
+  </div>
   
 <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
-    <h1>Tauler Incidències Obertes</h1>
-    <hr>
-    <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
-        <button type="submit" class="btn btn-custom text-center" >Gestió Alertants</button>            
-        <button type="submit" class="btn btn-custom text-center">Nova Incidència</button>            
-        <button type="submit" class="btn btn-custom text-center">Històric Incidències</button>
-        <button type="submit" class="btn btn-custom text-center">Recursos Mòbils</button>
-    </div>
+    <h1>Històric Incidències</h1>
     <hr>
     <div class="col">
         <table class="table table-striped table-bordered table-hover text-center">

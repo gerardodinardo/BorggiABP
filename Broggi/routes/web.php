@@ -24,8 +24,8 @@ Route::get('/crearUsuari', function () {
     return view('crearUsuari');
 });
 
-Route::get('incidenciesTotals', function () {
-    return view('incidenciesTotals');
+Route::get('historicIncidencies', function () {
+    return view('historicIncidencies');
 });
 
 Route::get('/principalIncidencies', function () {
