@@ -22,9 +22,9 @@
 
     <div class="card-footer text-muted mb-0">
         <div class="row">
-            <p class="text-white h6 text-left col-sm-6">
+            <p class="text-white h6 text-left col-sm-6" style="opacity: 50%;">
                 Programmed by - Dan Cezanne, Gerard Andrés, Alessio Crusella...
-                <p class="text-white h6 text-right col-sm-6" style="opacity: 20%; margin-top: 0px;">Copyright © 2020 Centre d'Estudis Politècnics. Tots els drets reservats. Política de privacitat. Avís legal.</p>
+                <p class="text-white h6 text-right col-sm-6" style="opacity: 50%; margin-top: 0px;">Copyright © 2020 Centre d'Estudis Politècnics. Tots els drets reservats. Política de privacitat. Avís legal.</p>
             </p>
         </div>
     </div>
