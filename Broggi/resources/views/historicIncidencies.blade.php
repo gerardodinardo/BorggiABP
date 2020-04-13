@@ -22,7 +22,7 @@
     <div class="col">
         <table class="table table-striped table-bordered table-hover text-center">
             <thead class="table-dark">
-              <tr>
+              <tr style="background-color: #ffc107;">
                 <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
                 <th scope="col-sm" class="localitzacio">Localització</th>
                 <th scope="col-sm" class="hora">Hora</th>

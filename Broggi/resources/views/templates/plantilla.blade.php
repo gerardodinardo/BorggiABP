@@ -21,7 +21,12 @@
     @yield('content')
 
     <div class="card-footer text-muted mb-0">
-        <p class="text-white h6">Copyright © 2020 CENTRE D’ESTUDIS POLITÈCNICS. Tots els drets reservats. Política de privacitat. Avís legal</p>
+        <div class="row">
+            <p class="text-white h6 text-left col-sm-6">
+                Programmed by - Dan Cezanne, Gerard Andrés, Alessio Crusella...
+                <p class="text-white h6 text-right col-sm-6" style="opacity: 20%; margin-top: 0px;">Copyright © 2020 Centre d'Estudis Politècnics. Tots els drets reservats. Política de privacitat. Avís legal.</p>
+            </p>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
