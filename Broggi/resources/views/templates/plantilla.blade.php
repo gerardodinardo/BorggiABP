@@ -14,7 +14,31 @@
     <nav class="navbar navbar-light fixed-top">
         <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ asset('/') }}" style="text-decoration: none; color: white;"><img src="{{ asset('img/ibroggi.png') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
         <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
-        <button type="button" class="btn btn-outline-danger m-auto">TANCAR SESSIÓ</button>
+
+        <div class="btn-group m-auto">
+            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px;">Hey, usertest!</button>
+            <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" style="width: 200px;" >Tanca la Sessió &nbsp;
+                <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd"/>
+              </svg></a>
+            </div>
+          </div>
+
+          {{-- Dejo comentado el mismo estilo pero para iniciar session si no esta iniciado, nose si hara falta pero lo dejo por si acaso --}}
+
+        {{--           
+        <div class="btn-group m-auto">
+            <button type="button" class="btn btn-customNAVTEXT" style="width: 200px; outline: 0;">Inicia Sessió</button>
+            <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+          </div> --}}
+
     </nav>
 
     

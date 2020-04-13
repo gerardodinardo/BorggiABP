@@ -86,12 +86,6 @@
     </div>
   </div>
   <div id="mySidenav" class="sidenav">
-    <a href="#" id="user">
-      Hola, User1!
-      <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"style="margin-left: 10px; position:fixed; margin-top: 5px;">
-        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-      </svg>
-    </a>
     <a href="#" id="simulacio">
       Simulació
       <svg class="bi bi-droplet-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"style="margin-left: 20px; position:fixed;margin-top: 5px;">

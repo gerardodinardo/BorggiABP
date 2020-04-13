@@ -66,6 +66,26 @@ input[type="color"]:focus,
   background-color:rgb(180, 0, 0);
   color: white;
 }
+.btn-customNAVTEXT{
+  color: white;
+  border-color: #dc3545;
+}
+.btn-customNAVTEXT:hover{
+  color: white;
+  border-color: #dc3545;
+}
+.btn-customNAV{
+  color: white;
+  border-color: #dc3545;
+}
+.btn-customNAV:hover{
+  background-color: #dc3545;
+}
+.dropdown-item:hover{
+  background-color: #3F0052;
+  color: white;
+
+}
 
 .card-footer {
   position: fixed;
