@@ -85,7 +85,8 @@ input[type="color"]:focus,
   left: -105px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; /* 15px padding */
-  width: 150px; /* Set a specific width */
+  width: 170px; /* Set a specific width */
+  max-height: 60px;
   text-decoration: none; /* Remove underline */
   font-size: 20px; /* Increase font size */
   color: white; /* White text color */
@@ -98,6 +99,11 @@ input[type="color"]:focus,
 }
 
 /* The about link: 20px from the top with a green background */
+#user {
+  top: 26%;
+  background-color: #3F0052;
+}
+
 #simulacio {
   top: 33%;
   background-color: #3F0052;
@@ -112,3 +118,4 @@ input[type="color"]:focus,
   top: 47%;
   background-color: #3F0052; /* Red */
 }
+
