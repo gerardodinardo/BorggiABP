@@ -26,7 +26,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    //use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
@@ -45,26 +45,26 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    //esto ensña el formulario del login.-que está enla vista del index.
     public function showLoginForm()
     {
         return view('index');
     }
 
     
-
+    //esta es la fución que hace la comprobaciíon del login, 
     public function login(Request $request){
 
-        $usuari = $request->input('nom');
-        $pass = $request->input('contrasenya');
+        $usuari = $request->input('usuari');
+        $contrasenya = $request->input('pass');
         $user = Usuario::where('nom',$usuari)->first();
-        return redirect('/crearUsuari');
+        
         if($user != null && Hash::check($contrasenya, $user->contrasenya)){
 
             Auth::login($user);
             return redirect('/crearUsuari');
 
         }else{
-
             return redirect('login')->withInput();
 
         }

@@ -15,7 +15,7 @@
           {{-- USUARIO --}}
             <div class="form-group">
               <label for="usuari">Usuari/a: </label>
-                  <input type="text" name="usuari" id="usuari" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('user')}}">
+                  <input type="text" name="usuari" id="usuari" class="form-control"aria-describedby="emailHelp" value="{{old('user')}}">
                 <small id="emailHelp" class="form-text text-muted">Si no tens un usuari, posa't en contacte amb nosaltres.</small>
             </div>
 
@@ -23,7 +23,7 @@
             {{-- "pass" significa contraseña, es el identificador que tiene para no tener que escribir tanto lol --}}
             <div class="form-group">
                 <label for="pass">Contrasenya: </label>
-                  <input type="password" name="pass" id="pass" class="form-control" id="exampleInputPassword1">
+                  <input type="password" name="pass" id="pass" class="form-control">
             </div>
 
             {{-- Esto lo tendría que mirar como se hace pero ni idea de momento de como va el tema, yo lo quitaría si no encuentro forma de controlarlo. --}}
