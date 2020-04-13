@@ -19,10 +19,10 @@
             <table class="table table-striped table-bordered table-hover">
                 <thead class="thead-dark">
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Num. Incidència</th>
+                    <th scope="col">Localització</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Descripció Incident</th>
                   </tr>
                 </thead>
                 <tbody>
