@@ -38,5 +38,4 @@ Route::get('/principalIncidencies', function () {
 //Route::get('/logout','Auth\LoginController@logout')->name('logout');//si pongo el name le puedo llamar por el route,.
 //
 ////registre per als usuaris
-//Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('register');
-//Route::post('/register','Auth\RegisterController@register')->name('register');
+Route::post('/register','Auth\RegisterController@register')->name('register');

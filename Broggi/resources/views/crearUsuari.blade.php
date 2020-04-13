@@ -8,16 +8,16 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-black text-center mt-5">Crear nou usuari/a: </h3>
-                <form class="mt-5">
+                <form method="POST" action="{{ route('register') }}" class="mt-5">
                   @csrf
-                  {{-- El id es autoincrement, no hay que ponerlo.- --}}
-
-                    {{-- <div class="form-group row">
+                  
+                      {{-- estaría bien controlar el tamaño para que fuese un mínimo --}}
+                    <div class="form-group row">
                         <label for="inputCodi" class="col-sm-2 offset-sm-2 col-form-label">Codi: </label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputCodi">
+                            <input type="text" class="form-control" id="inputCodi" name="inputCodi">
                         </div>                       
-                    </div> --}}
+                    </div>
 
                     <div class="form-group row">
                         <label for="inputUsuari" class="col-sm-2 offset-sm-2 col-form-label">Usuari/a: </label>
@@ -42,15 +42,15 @@
 
                           <div class="col-sm-6">
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                              <label class="form-check-label" for="gridRadios1">
+                              <input class="form-check-input" type="radio" name="rol" id="rol" value="2" checked>
+                              <label class="form-check-label" for="rol">
                                 CECOS
                               </label>
                             </div>
 
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                              <label class="form-check-label" for="gridRadios2">
+                              <input class="form-check-input" type="radio" name="rol" id="rol" value="3">
+                              <label class="form-check-label" for="rol">
                                 Recurs mòbil
                               </label>
                             </div>

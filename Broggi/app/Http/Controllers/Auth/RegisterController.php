@@ -77,14 +77,13 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         
-
+                    //lo que está seguido del -> es el nombre de la columna de la BD
                     $usuari = new Usuario();
-                    $pass = $request->input('password');
+                    $pass = $request->input('contrasenya');
                     $pass = Hash::make($pass);
-                    $usuari->nombre = $request->input('name');
-                    $usuari->correo = $request->input('email');
-                    $usuari->direccion = $request->input('direccion');
-                    $usuari->rol_id = $request->input('rol');
+                    $usuari->nom = $request->input('inputUsuari');
+                    $usuari->codi = $request->input('inputCodi');
+                    $usuari->rols_id = $request->input('rol');
                     $usuari->contrasenya = $pass;
                    
                     $usuari->save();
