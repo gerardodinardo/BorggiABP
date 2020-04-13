@@ -14,7 +14,8 @@
     
     <nav class="navbar navbar-light fixed-top">
         <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ asset('/') }}" style="text-decoration: none; color: white;"><img src="{{ asset('img/ibroggi.png') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
-        <button type="button" class="btn btn-outline-danger col-sm-2">TANCAR SESSIÓ</button> height="50px" width="50px" alt="" class="m-auto">
+        <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
+        <button type="button" class="btn btn-outline-danger m-auto">TANCAR SESSIÓ</button>
     </nav>
 
     
@@ -28,6 +29,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
-    
+    <script>
+    jQuery(document).ready(function() {
+        $('.estat').popover({
+           trigger:'hover',
+           content:'Verd significa que està oberta, vermell que ja està tancada.',
+           placement:'right'
+       });
+    });
+    jQuery(document).ready(function() {
+        $('.nIncidencia').popover({
+           trigger:'hover',
+           content:'El codi va augmentat automàticament.',
+           placement:'left'
+       });
+    });</script>
 </body>
 </html>
