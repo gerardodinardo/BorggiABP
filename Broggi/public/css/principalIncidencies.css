@@ -1,15 +1,21 @@
-.btn-custom:hover{
-    color: white;
-    border-color: white;
-    background-color: #3F0052;
+.button1:hover{
+    color: black;
+    opacity: 70%;
+    text-decoration: none;
 }
-.btn-custom{
+.button1{
     width: 23.5%; 
     background-color: white; 
-    border-color: #3F0052; 
+    border-color: white; 
     color: black;
     font-size: 1.15em;
     font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0.5%;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
 }
 
 #mySidenav2 a:hover {

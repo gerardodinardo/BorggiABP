@@ -24,7 +24,7 @@ Route::get('/crearUsuari', function () {
     return view('crearUsuari');
 });
 
-Route::get('historicIncidencies', function () {
+Route::get('/historicIncidencies', function () {
     return view('historicIncidencies');
 });
 
@@ -38,6 +38,10 @@ Route::get('/contacte', function () {
 
 Route::get('/gestioRecursos', function () {
     return view('gestioRecursos');
+});
+
+Route::get('/gestioAlertants', function () {
+    return view('gestioAlertants');
 });
 
 //login y registro de usuarios

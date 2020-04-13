@@ -6,7 +6,7 @@
     <link href="{{ asset('/css/principalIncidencies.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/backButton.css') }}" rel="stylesheet">
     <div id="mySidenav2" class="sidenav2">
-      <a href="#" id="back">
+    <a href="{{ asset('/')}}" id="back">
           Torna a l'inici
           <svg class="bi bi-arrow-return-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M5.854 5.646a.5.5 0 010 .708L3.207 9l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
@@ -18,11 +18,11 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Tauler Principal Incidències </h1>
         <hr>
-        <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
-            <button type="submit" class="btn btn-custom text-center" >Gestió Alertants</button>            
-            <button type="submit" class="btn btn-custom text-center">Nova Incidència</button>            
-            <button type="submit" class="btn btn-custom text-center">Històric Incidències</button>
-            <button type="submit" class="btn btn-custom text-center">Recursos Mòbils</button>
+        <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 5px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
+          <a class="button1" href="{{ asset('/gestioAlertants')}}">Gestió Alertants</a>
+          <a class="button1" href="{{ asset('/addIncidencia')}}">Nova Incidència</a>      
+          <a class="button1" href="{{ asset('/historicIncidencies')}}">Històric Incidències</a>                
+          <a class="button1" href="{{ asset('/gestioRecursos')}}">Recursos Mòbils</a>
         </div>
         <hr>
         <div class="col">
