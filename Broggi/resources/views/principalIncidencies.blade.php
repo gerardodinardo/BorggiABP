@@ -22,7 +22,7 @@
                     <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
                     <th scope="col-sm" class="localitzacio">Localització</th>
                     <th scope="col-sm" class="hora">Hora</th>
-                    <th scope="col-sm" class="descripcioIncident" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Descripció Incident</th>
+                    <th scope="col-sm" class="descripcioIncident">Descripció Incident</th>
                     <th scope="col-sm" class="estat">Estat</th>
                   </tr>
                 </thead>
@@ -51,7 +51,7 @@
                 </tbody>
               </table>
         </div>
-        <div class="col">
+        <div class="col mt-5">
             <div aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
                   <li class="page-item">
@@ -67,6 +67,8 @@
               </div>
         </div>             
     </div>
+    <style>
+    </style>
     <script>
     jQuery(document).ready(function() {
         $('.estat').popover({
