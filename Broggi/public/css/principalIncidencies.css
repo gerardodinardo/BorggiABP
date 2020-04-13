@@ -1,11 +1,13 @@
 .btn-custom:hover{
     color: white;
     border-color: white;
-    background-color: #ca236e;
+    background-color: #3F0052;
 }
 .btn-custom{
     width: 23.5%; 
     background-color: white; 
-    border-color: #ca236e; 
+    border-color: #3F0052; 
     color: black;
+    font-size: 1.3em;
+    font-weight: bold;
 }

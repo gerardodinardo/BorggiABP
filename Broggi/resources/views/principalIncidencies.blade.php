@@ -8,7 +8,7 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Tauler Principal Incidències </h1>
         <hr>
-        <div class="col mb-4" style="background-color: #ca236e; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
+        <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 10px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
             <button type="submit" class="btn btn-custom text-center" >Gestió Alertants</button>            
             <button type="submit" class="btn btn-custom text-center">Nova Incidència</button>            
             <button type="submit" class="btn btn-custom text-center">Històric Incidències</button>
