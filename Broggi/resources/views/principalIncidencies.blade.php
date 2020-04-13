@@ -20,9 +20,9 @@
                 <thead class="table-dark">
                   <tr>
                     <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
-                    <th scope="col-sm">Localització</th>
-                    <th scope="col-sm">Hora</th>
-                    <th scope="col-sm">Descripció Incident</th>
+                    <th scope="col-sm" class="localitzacio">Localització</th>
+                    <th scope="col-sm" class="hora">Hora</th>
+                    <th scope="col-sm" class="descripcioIncident">Descripció Incident</th>
                     <th scope="col-sm" class="estat">Estat</th>
                   </tr>
                 </thead>
@@ -67,5 +67,20 @@
               </div>
         </div>             
     </div>
-
+    <script>
+    jQuery(document).ready(function() {
+        $('.estat').popover({
+           trigger:'hover',
+           content:'Verd significa que està oberta, vermell que ja està tancada.',
+           placement:'right'
+       });
+    });
+    jQuery(document).ready(function() {
+        $('.nIncidencia').popover({
+           trigger:'hover',
+           content:'El codi va augmentat automàticament.',
+           placement:'left'
+       });
+    });
+    </script>
 @endsection
