@@ -36,6 +36,10 @@ Route::get('/contacte', function () {
     return view('contacte');
 });
 
+Route::get('/gestioRecursos', function () {
+    return view('gestioRecursos');
+});
+
 //login y registro de usuarios
 
 
