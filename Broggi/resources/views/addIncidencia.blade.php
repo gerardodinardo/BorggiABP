@@ -19,7 +19,7 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Nova Incidència</h1>
         <hr>
-        <button type="submit" class="btn btn-info text-center btn-lg" style="width:70%; margin-left: 15%;" onClick="window.location.reload();">Menú Principal Incidències</button>
+        <button type="submit" class="btn btn-info text-center btn-lg" style="width:70%; margin-left: 15%;" onclick="location.href='{{ url('/principalIncidencies') }}'">Menú Principal Incidències</button>
         <hr>
         <!-- ********** Start Desplegables ********** --> 
         <div class="desplegable">

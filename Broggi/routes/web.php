@@ -44,6 +44,10 @@ Route::get('/gestioAlertants', function () {
     return view('gestioAlertants');
 });
 
+Route::get('/editarRecurs', function () {
+    return view('editarRecurs');
+});
+
 //login y registro de usuarios
 
 
