@@ -27,8 +27,8 @@
         <hr>
         <div class="col">
             <table class="table table-striped table-bordered table-hover text-center">
-                <thead class="table-dark">
-                  <tr style="background-color: #ffc107;">
+                <thead class="bg-warning">
+                  <tr>
                     <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
                     <th scope="col-sm" class="localitzacio">Localització</th>
                     <th scope="col-sm" class="hora">Hora</th>
