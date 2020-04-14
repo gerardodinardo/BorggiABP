@@ -14,9 +14,49 @@
         </a>
     </div>
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
-        <h1 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
-        <hr>   
-        <div class="row">
+        <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
+        <hr>
+        <div class="row d-flex justify-content-around mt-5 text-center">
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Centre Sanitari</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <span class="badge badge-info badge-pill">14</span>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{ asset('img/headache.svg') }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">El propi afectat</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <span class="badge badge-info badge-pill">10</span>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{ asset('img/enterprise.svg') }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Entorn de l'afectat</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <span class="badge badge-info badge-pill">22</span>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Alertant VIP</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <span class="badge badge-info badge-pill">33</span>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{ asset('img/eye.svg') }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Alertant accidental</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <span class="badge badge-info badge-pill">52</span>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
