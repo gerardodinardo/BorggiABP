@@ -16,7 +16,7 @@
     </a>
   </div>
     
-    <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
+    <div class="container border col-sm-11 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
         <div class="row">
           <div class="col-sm-7 border rounded">
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
@@ -34,31 +34,37 @@
                     <th scope="row">1</th>
                     <td>Plaza Catalunya 123</td>
                     <td>L'ambulància és troba al lloc.</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Carrer Ibiza</td>
                     <td>L'ambulancia, está de camí a l'incident.</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
+                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
                   </tr>
                 </tbody>
               </table>
