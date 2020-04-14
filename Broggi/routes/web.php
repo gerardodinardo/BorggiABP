@@ -54,7 +54,7 @@ Route::post('/register','Auth\RegisterController@register')->name('register');
 
 //Route::group(['middleware' => ['auth']],function(){
  
-    Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
+Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
 
 
 //});
