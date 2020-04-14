@@ -72,8 +72,8 @@
           <div class="col-sm-5 border rounded">
             <p class="h2 mt-4 text-center">Recursos Disponibles</p>
             <hr>
-            <div class="row text-center">
-                <div class="col">
+            <div class="row text-center m-auto pb-5">
+                <div class="col-sm">
                     <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
                           <h5 class="card-title">Amb. Med.-Mike</h5>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
                           <h5 class="card-title">Amb. Med.-India</h5>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="w-100"></div>
-                <div class="col mt-5 mb-5">
+                <div class="col-sm mt-5">
                     <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
                           <h5 class="card-title">Amb. Med.-Tango</h5>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-5">
+                <div class="col-sm mt-5">
                     <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
                           <h5 class="card-title">Helicopter Medicalitzat</h5>

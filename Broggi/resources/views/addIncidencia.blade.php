@@ -19,7 +19,7 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Nova Incidència</h1>
         <hr>
-        <button type="submit" class="btn btn-info text-center" style="width:70%; margin-left: 15%;" onClick="window.location.reload();">Menú Principal Incidències</button>
+        <button type="submit" class="btn btn-info text-center btn-lg" style="width:70%; margin-left: 15%;" onClick="window.location.reload();">Menú Principal Incidències</button>
         <hr>
         <!-- ********** Start Desplegables ********** --> 
         <div class="desplegable">
@@ -222,9 +222,9 @@
         </script>
         <hr>
         <div class="text-center pb-4">
-            <button type="submit" class="btn btn-warning mb-1" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
-            <button type="submit" class="btn btn-success mb-1" style="width:70%;">Enviar</button>
-            <button type="submit" class="btn btn-danger mb-1" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
+            <button type="submit" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
+            <button type="submit" class="btn btn-success mb-1 btn-lg" style="width:70%;">Enviar</button>
+            <button type="submit" class="btn btn-danger mb-1 btn-lg" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
           </div>  
     </div>
 </div> 
