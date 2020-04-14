@@ -55,6 +55,8 @@ class LoginController extends Controller
     //esta es la fución que hace la comprobaciíon del login, 
     public function login(Request $request){
 
+       
+
         $usuari = $request->input('usuari');
         $contrasenya = $request->input('pass');
         $user = Usuario::where('nom',$usuari)->first();
@@ -65,10 +67,12 @@ class LoginController extends Controller
             return redirect('/crearUsuari');
 
         }else{
+
             return redirect('login')->withInput();
 
         }
-
     }
+
+    
 
 }
