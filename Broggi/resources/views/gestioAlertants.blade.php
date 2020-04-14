@@ -17,7 +17,7 @@
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
         <hr>
         <div class="row d-flex justify-content-around mt-5 text-center">
-            <div class="card" style="width: 14rem; border-color: rgba(63, 0, 82, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493); outline: 0 none;">
+            <div class="card p-2" style="width: 14rem; border-color: rgba(63, 0, 82, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
                 <div class="card-body" >
                   <h5 class="card-title">Centre Sanitari</h5>
@@ -26,7 +26,7 @@
                   <span class="badge badge-info badge-pill">14</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem; border-color: rgba(173, 38, 4, 0.685); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(173, 38, 4, 0.685); outline: 0 none;">
+            <div class="card p-2" style="width: 14rem; border-color: rgba(173, 38, 4, 0.685); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(173, 38, 4, 0.685); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/headache.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">El propi afectat</h5>
@@ -34,7 +34,7 @@
                   <span class="badge badge-info badge-pill">10</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem; border-color: rgba(33, 0, 177, 0.562); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(33, 0, 177, 0.562); outline: 0 none;">
+            <div class="card p-2" style="width: 14rem; border-color: rgba(33, 0, 177, 0.562); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(33, 0, 177, 0.562); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/enterprise.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Entorn de l'afectat</h5>
@@ -42,7 +42,7 @@
                   <span class="badge badge-info badge-pill">22</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem; border-color: rgba(1, 146, 1, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(1, 146, 1, 0.493); outline: 0 none;">
+            <div class="card p-2" style="width: 14rem; border-color: rgba(1, 146, 1, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(1, 146, 1, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Alertant VIP</h5>
@@ -50,7 +50,7 @@
                   <span class="badge badge-info badge-pill">33</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem; border-color: rgba(111, 136, 0, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(111, 136, 0, 0.493); outline: 0 none;">
+            <div class="card p-2" style="width: 14rem; border-color: rgba(111, 136, 0, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(111, 136, 0, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/eye.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Alertant accidental</h5>
