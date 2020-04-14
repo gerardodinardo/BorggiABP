@@ -50,14 +50,12 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{{ asset('img/instalaciones.jpg') }}" class="d-block w-100" alt="..." height="500px">
+              <img src="{{ asset('img/emer_slideV1.jpg') }}" class="d-block w-100" alt="..." height="500px">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Instalacions</h5>
-                <p>Tenim les millors instal·lacions perquè et puguis formar de la millor manera possible.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('img/portesObertes.png') }}" class="d-block w-100" alt="..." height="500px">
+              <img src="{{ asset('img/heli_slideV1.jpg') }}" class="d-block w-100" alt="..." height="500px">
               <div class="carousel-caption d-none d-md-block">
                 <!--<h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
