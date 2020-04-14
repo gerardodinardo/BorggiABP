@@ -36,6 +36,6 @@ jQuery(document).ready(function() {
     $('.descripcioIncident').popover({
        trigger:'hover',
        content:'Breu resum clar, sobre la incidència en qüestió.',
-       placement:'right'
+       placement:'top'
    });
 });
