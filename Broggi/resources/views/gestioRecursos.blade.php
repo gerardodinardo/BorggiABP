@@ -22,7 +22,7 @@
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
             <hr>
             <table class="table table-striped table-bordered table-hover text-center">
-                <thead class="table-dark">
+                <thead class="bg-warning">
                   <tr>
                     <th scope="col-sm">Tipus Recurs</th>
                     <th scope="col-sm">Direcció</th>
