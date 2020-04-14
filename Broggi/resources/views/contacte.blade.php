@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="col-sm-6 text-center">
-                <img src="{{ asset('img/contacte_jerat.jfif') }}" style="display: flex; position: center;margin: 0 auto;  margin-bottom: 15px; ">
+                <img src="{{ asset('img/contacte_jeratAnime.PNG') }}" style="display: flex; position: center;margin: 0 auto;  margin-bottom: 15px; width: 57%; ">
                 <div class="container" style="background-color: #3F0052; border-radius: 10px; color: white; padding: 10px;">
                     <p><strong>Correu: </strong>gerardibz@gmail.com</p>
                     <p><strong>Especialitat:</strong> Shh, calla que me estoy viendo un episodio...</p>
