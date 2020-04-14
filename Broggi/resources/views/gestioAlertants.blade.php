@@ -17,43 +17,44 @@
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
         <hr>
         <div class="row d-flex justify-content-around mt-5 text-center">
-            <div class="card" style="width: 14rem;">
+            <div class="card" style="width: 14rem; border-color: rgba(63, 0, 82, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body" >
                   <h5 class="card-title">Centre Sanitari</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">
+                    Fa referència a l'edifici on s'atén a la població en un primer nivell sanitari.</p>
                   <span class="badge badge-info badge-pill">14</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem;">
+            <div class="card" style="width: 14rem; border-color: rgba(173, 38, 4, 0.685); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(173, 38, 4, 0.685); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/headache.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">El propi afectat</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">La incidència es relaciona directament amb l'afectat en qüestió.</p>
                   <span class="badge badge-info badge-pill">10</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem;">
+            <div class="card" style="width: 14rem; border-color: rgba(33, 0, 177, 0.562); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(33, 0, 177, 0.562); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/enterprise.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Entorn de l'afectat</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">L'afectat no está directament relacionat amb l'emissor de la trucada a emergències.</p>
                   <span class="badge badge-info badge-pill">22</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem;">
+            <div class="card" style="width: 14rem; border-color: rgba(1, 146, 1, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(1, 146, 1, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Alertant VIP</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Aquella persona habitual, sanitaris, ambulància, metge.</p>
                   <span class="badge badge-info badge-pill">33</span>
                 </div>
             </div>
-            <div class="card" style="width: 14rem;">
+            <div class="card" style="width: 14rem; border-color: rgba(111, 136, 0, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(111, 136, 0, 0.493); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/eye.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Alertant accidental</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">L'alertant no está afectat directament en la incidència.</p>
                   <span class="badge badge-info badge-pill">52</span>
                 </div>
             </div>
