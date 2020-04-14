@@ -10,6 +10,9 @@
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login');;
 Route::post('/login','Auth\LoginController@login');
 
+//logout function
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
+
 Route::get('/', function () {
     return view('index');
 });
@@ -52,9 +55,9 @@ Route::get('/editarRecurs', function () {
 ////registre per als usuaris
 Route::post('/register','Auth\RegisterController@register')->name('register');
 
-//Route::group(['middleware' => ['auth']],function(){
+Route::group(['middleware' => ['auth']],function(){
  
 Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
 
 
-//});
+});

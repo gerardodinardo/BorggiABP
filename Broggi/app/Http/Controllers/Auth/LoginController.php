@@ -73,6 +73,13 @@ class LoginController extends Controller
         }
     }
 
-    
+    //funcio per a tancar la sessio.
+    public function logout(){
+
+        Auth::logout();
+
+        return redirect('/login');
+
+    }
 
 }
