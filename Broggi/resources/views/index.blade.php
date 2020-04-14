@@ -40,7 +40,6 @@
             </div>            
           </form>
 
-
       </div>
       <div class="col-sm-7">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
