@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/eye.svg') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('img/sid-view.svg') }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Alertant accidental</h5>
                   <p class="card-text">L'alertant no está afectat directament en la incidència.</p>
