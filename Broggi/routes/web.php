@@ -35,18 +35,15 @@ Route::get('/gestioAlertants', function () {
     return view('gestioAlertants');
 });
 
-<<<<<<< HEAD
 
 Route::get('/addIncidencia', function () {
     
     return view('addIncidencia');
 });
-=======
 Route::get('/editarRecurs', function () {
     return view('editarRecurs');
 });
 
->>>>>>> 343d635b7f6a11136680419e85fc16585487a9e6
 //login y registro de usuarios
 
 
@@ -57,7 +54,7 @@ Route::post('/register','Auth\RegisterController@register')->name('register');
 
 //Route::group(['middleware' => ['auth']],function(){
  
-    Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
+Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
 
 
 //});
