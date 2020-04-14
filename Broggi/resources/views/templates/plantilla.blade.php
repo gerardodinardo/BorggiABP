@@ -17,11 +17,11 @@
         <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
 
         <div class="btn-group m-auto">
-            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px;">Hey, usertest!</button>
+            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px;">Benvingut, usertest!</button>
             <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu mt-2">
               <a class="dropdown-item" href="#" style="width: 200px;" >Tanca la Sessió &nbsp;
                 <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z" clip-rule="evenodd"/>
