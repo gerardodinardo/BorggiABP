@@ -68,35 +68,51 @@
             <hr>
             <div class="row text-center">
                 <div class="col">
-                    <div class="card bg-light" style="width: 16rem;">
+                    <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Ambulancia Medicalitzada-Mike</h5>
-                          <p class="card-text" style="font-size: 4em;">100</p>
+                          <h5 class="card-title">Amb. Med.-Mike</h5>
+                          <div class="row d-flex justify-content-around">
+                            <button type="button" class="btn btn-danger btn-sm">-</button>
+                            <p class="card-text" style="font-size: 4em;">100</p>
+                            <button type="button" class="btn btn-success btn-sm">+</button>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light" style="width: 16rem;">
+                    <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Ambulancia Medicalitzada-India</h5>
-                          <p class="card-text" style="font-size: 4em;">100</p>
+                          <h5 class="card-title">Amb. Med.-India</h5>
+                          <div class="row d-flex justify-content-around">
+                            <button type="button" class="btn btn-danger btn-sm">-</button>
+                            <p class="card-text" style="font-size: 4em;">100</p>
+                            <button type="button" class="btn btn-success btn-sm">+</button>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="w-100"></div>
-                <div class="col mt-5">
-                    <div class="card bg-light" style="width: 16rem;">
+                <div class="col mt-5 mb-5">
+                    <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Ambulancia Medicalitzada-Tango</h5>
-                          <p class="card-text" style="font-size: 4em;">100</p>
+                          <h5 class="card-title">Amb. Med.-Tango</h5>
+                          <div class="row d-flex justify-content-around">
+                            <button type="button" class="btn btn-danger btn-sm">-</button>
+                            <p class="card-text" style="font-size: 4em;">100</p>
+                            <button type="button" class="btn btn-success btn-sm">+</button>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="col mt-5">
-                    <div class="card bg-light" style="width: 16rem;">
+                    <div class="card bg-light" style="width: 16rem; height:12rem;">
                         <div class="card-body">
                           <h5 class="card-title">Helicopter Medicalitzat</h5>
-                          <p class="card-text" style="font-size: 4em;">100</p>
+                          <div class="row d-flex justify-content-around">
+                            <button type="button" class="btn btn-danger btn-sm">-</button>
+                            <p class="card-text" style="font-size: 4em;">100</p>
+                            <button type="button" class="btn btn-success btn-sm">+</button>
+                          </div>
                         </div>
                     </div>
                 </div>
