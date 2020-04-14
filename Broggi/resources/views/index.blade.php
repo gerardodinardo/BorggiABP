@@ -63,7 +63,8 @@
             </div>
             <div class="carousel-item">
               <!--<img src="{{ asset('img/ubicacion.png') }}" class="d-block w-100" alt="..." height="500px">-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.178086687839!2d2.1760203154266007!3d41.41365267926181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2d121a09aa9%3A0x295f7b407ebc6292!2sInstituto%20P%C3%BAblico%20Mois%C3%A9s%20Broggi!5e0!3m2!1ses!2ses!4v1583389633190!5m2!1ses!2ses" class="d-block w-100" height="500" frameborder="0" allowfullscreen=""></iframe>
+              {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.178086687839!2d2.1760203154266007!3d41.41365267926181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2d121a09aa9%3A0x295f7b407ebc6292!2sInstituto%20P%C3%BAblico%20Mois%C3%A9s%20Broggi!5e0!3m2!1ses!2ses!4v1583389633190!5m2!1ses!2ses" class="d-block w-100" height="500" frameborder="0" allowfullscreen=""></iframe> --}}
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6128822734536!2d2.1760203156711255!3d41.41365670232863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2d121a09aa9%3A0x295f7b407ebc6292!2sInstituto%20P%C3%BAblico%20Mois%C3%A9s%20Broggi!5e1!3m2!1ses!2ses!4v1586894984755!5m2!1ses!2ses" class="d-block w-100" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
               <div class="carousel-caption d-none d-md-block">
                 <!--<h5>Third slide label</h5>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
