@@ -1,0 +1,43 @@
+.button1:hover{
+    color: black;
+    opacity: 70%;
+    text-decoration: none;
+}
+.button1{
+    width: 23.5%; 
+    background-color: white; 
+    border-color: white; 
+    color: black;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0.5%;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+#mySidenav2 a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+    width: 190px;
+}
+
+#mySidenav2 a {
+    position: fixed; /* Position them relative to the browser window */
+    left: -105px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 170px; /* Set a specific width */
+    max-height: 60px;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#back{
+    top: 50%;  
+    background-color: #3F0052;
+    position: fixed;
+  }

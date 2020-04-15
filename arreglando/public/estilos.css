@@ -1,0 +1,164 @@
+
+nav:first-child {
+    background-color: #3F0052;
+}
+img{
+  margin-right: 0px;
+}
+h1, h2 {
+  display: inline;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(63, 0, 82, 0.493);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
+  outline: 0 none;
+}
+.btn-custom1{
+  background-color:#3F0052;
+  color: white;
+}
+.btn-custom1:hover{
+  background-color:#3F0052;
+  opacity: 80%;
+  color: white;
+}
+.btn-custom2:hover{
+  background-color:rgb(122, 124, 0);
+  opacity: 80%;
+  color: white;
+}
+.btn-custom3:hover{
+  background-color:rgb(0, 145, 7);
+  opacity: 80%;
+  color: white;
+}
+.btn-custom4:hover{
+  background-color:rgb(180, 0, 0);
+  opacity: 80%;
+  color: white;
+}
+
+.btn-custom2{
+  background-color:rgb(122, 124, 0);
+  color: white;
+}
+.btn-custom3{
+  background-color:rgb(0, 145, 7);
+  color: white;
+}
+.btn-custom4{
+  background-color:rgb(180, 0, 0);
+  color: white;
+}
+.btn-customNAVTEXT{
+  color: white;
+  border-color: #e2167c;
+}
+.btn-customNAVTEXT:hover{
+  color: white;
+  border-color: #e2167c;
+}
+.btn-customNAV{
+  color: white;
+  border-color: #e2167c;
+}
+.btn-customNAV:hover{
+  background-color: #e2167c;
+}
+.dropdown-item:hover{
+  background-color: #e2167c;
+  color: white;
+}
+.dropdown-toggle{
+  background-color: #e2167c !important;
+}
+
+.card-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #3F0052;
+  color: white;
+  text-align: center;
+}
+
+/* Test side menu from index */
+
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -105px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 170px; /* Set a specific width */
+  max-height: 60px;
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav2 a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+  width: 190px;
+}
+#mySidenav2 a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -105px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 170px; /* Set a specific width */
+  max-height: 60px;
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+  width: 190px;
+}
+
+/* The about link: 20px from the top with a green background */
+#user {
+  top: 26%;
+  background-color: #3F0052;
+}
+
+#simulacio {
+  top: 33%;
+  background-color: #3F0052;
+}
+
+#formacio {
+  top: 40%;
+  background-color: #3F0052;
+}
+
+#contacte {
+  top: 47%;
+  background-color: #3F0052;
+}
+#back{
+  top: 50%;  
+  background-color: #3F0052;
+  position: fixed;
+}

@@ -16,8 +16,6 @@
         <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ asset('/') }}" style="text-decoration: none; color: white;"><img src="{{ asset('img/ibroggi.png') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
         <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
 
-
-        
         <div class="btn-group m-auto">
             <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">Benvingut, usertest!</button>
             <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">

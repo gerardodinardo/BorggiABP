@@ -67,7 +67,7 @@ final class ReferenceParser
         }
 
         // Advance past the colon
-        $cursor->advanceBy(1);
+        $cursor->advance();
 
         // Link URL
         $cursor->advanceToNextNonSpaceOrNewline();

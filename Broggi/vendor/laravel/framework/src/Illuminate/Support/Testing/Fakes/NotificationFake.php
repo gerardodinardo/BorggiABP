@@ -2,7 +2,6 @@
 
 namespace Illuminate\Support\Testing\Fakes;
 
-use Exception;
 use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
 use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
 use Illuminate\Contracts\Translation\HasLocalePreference;
@@ -36,16 +35,10 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
      * @param  string  $notification
      * @param  callable|null  $callback
      * @return void
-     *
-     * @throws \Exception
      */
     public function assertSentTo($notifiable, $notification, $callback = null)
     {
         if (is_array($notifiable) || $notifiable instanceof Collection) {
-            if (count($notifiable) === 0) {
-                throw new Exception('No notifiable given.');
-            }
-
             foreach ($notifiable as $singleNotifiable) {
                 $this->assertSentTo($singleNotifiable, $notification, $callback);
             }
@@ -73,10 +66,8 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
      */
     public function assertSentToTimes($notifiable, $notification, $times = 1)
     {
-        $count = $this->sent($notifiable, $notification)->count();
-
-        PHPUnit::assertSame(
-            $times, $count,
+        PHPUnit::assertTrue(
+            ($count = $this->sent($notifiable, $notification)->count()) === $times,
             "Expected [{$notification}] to be sent {$times} times, but was sent {$count} times."
         );
     }
@@ -88,16 +79,10 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
      * @param  string  $notification
      * @param  callable|null  $callback
      * @return void
-     *
-     * @throws \Exception
      */
     public function assertNotSentTo($notifiable, $notification, $callback = null)
     {
         if (is_array($notifiable) || $notifiable instanceof Collection) {
-            if (count($notifiable) === 0) {
-                throw new Exception('No notifiable given.');
-            }
-
             foreach ($notifiable as $singleNotifiable) {
                 $this->assertNotSentTo($singleNotifiable, $notification, $callback);
             }
@@ -105,8 +90,8 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
             return;
         }
 
-        PHPUnit::assertCount(
-            0, $this->sent($notifiable, $notification, $callback),
+        PHPUnit::assertTrue(
+            $this->sent($notifiable, $notification, $callback)->count() === 0,
             "The unexpected [{$notification}] notification was sent."
         );
     }

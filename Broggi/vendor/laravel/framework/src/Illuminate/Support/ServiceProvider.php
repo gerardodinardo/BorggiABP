@@ -3,11 +3,7 @@
 namespace Illuminate\Support;
 
 use Illuminate\Console\Application as Artisan;
-use Illuminate\Contracts\Foundation\CachesConfiguration;
-use Illuminate\Contracts\Foundation\CachesRoutes;
 use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Database\Eloquent\Factory as ModelFactory;
-use Illuminate\View\Compilers\BladeCompiler;
 
 abstract class ServiceProvider
 {
@@ -62,7 +58,7 @@ abstract class ServiceProvider
      */
     protected function mergeConfigFrom($path, $key)
     {
-        if (! ($this->app instanceof CachesConfiguration && $this->app->configurationIsCached())) {
+        if (! $this->app->configurationIsCached()) {
             $this->app['config']->set($key, array_merge(
                 require $path, $this->app['config']->get($key, [])
             ));
@@ -77,7 +73,7 @@ abstract class ServiceProvider
      */
     protected function loadRoutesFrom($path)
     {
-        if (! ($this->app instanceof CachesRoutes && $this->app->routesAreCached())) {
+        if (! $this->app->routesAreCached()) {
             require $path;
         }
     }
@@ -102,22 +98,6 @@ abstract class ServiceProvider
             }
 
             $view->addNamespace($namespace, $path);
-        });
-    }
-
-    /**
-     * Register the given view components with a custom prefix.
-     *
-     * @param  string  $prefix
-     * @param  array  $components
-     * @return void
-     */
-    protected function loadViewComponentsAs($prefix, array $components)
-    {
-        $this->callAfterResolving(BladeCompiler::class, function ($blade) use ($prefix, $components) {
-            foreach ($components as $component) {
-                $blade->component($component, null, $prefix);
-            }
         });
     }
 
@@ -149,7 +129,7 @@ abstract class ServiceProvider
     }
 
     /**
-     * Register database migration paths.
+     * Register a database migration path.
      *
      * @param  array|string  $paths
      * @return void
@@ -159,21 +139,6 @@ abstract class ServiceProvider
         $this->callAfterResolving('migrator', function ($migrator) use ($paths) {
             foreach ((array) $paths as $path) {
                 $migrator->path($path);
-            }
-        });
-    }
-
-    /**
-     * Register Eloquent model factory paths.
-     *
-     * @param  array|string  $paths
-     * @return void
-     */
-    protected function loadFactoriesFrom($paths)
-    {
-        $this->callAfterResolving(ModelFactory::class, function ($factory) use ($paths) {
-            foreach ((array) $paths as $path) {
-                $factory->load($path);
             }
         });
     }
@@ -246,8 +211,8 @@ abstract class ServiceProvider
     /**
      * Get the paths to publish.
      *
-     * @param  string|null  $provider
-     * @param  string|null  $group
+     * @param  string  $provider
+     * @param  string  $group
      * @return array
      */
     public static function pathsToPublish($provider = null, $group = null)

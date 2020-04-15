@@ -33,16 +33,12 @@ class ChangeColumn
             ));
         }
 
-        $schema = $connection->getDoctrineSchemaManager();
-        $databasePlatform = $schema->getDatabasePlatform();
-        $databasePlatform->registerDoctrineTypeMapping('enum', 'string');
-
         $tableDiff = static::getChangedDiff(
-            $grammar, $blueprint, $schema
+            $grammar, $blueprint, $schema = $connection->getDoctrineSchemaManager()
         );
 
         if ($tableDiff !== false) {
-            return (array) $databasePlatform->getAlterTableSQL($tableDiff);
+            return (array) $schema->getDatabasePlatform()->getAlterTableSQL($tableDiff);
         }
 
         return [];
@@ -128,7 +124,6 @@ class ChangeColumn
         if (in_array($fluent['type'], ['json', 'binary'])) {
             $options['customSchemaOptions'] = [
                 'collation' => '',
-                'charset' => '',
             ];
         }
 
@@ -158,9 +153,6 @@ class ChangeColumn
                 break;
             case 'binary':
                 $type = 'blob';
-                break;
-            case 'uuid':
-                $type = 'guid';
                 break;
         }
 

@@ -68,7 +68,7 @@ final class CloseBracketParser implements InlineParserInterface, EnvironmentAwar
         $startPos = $cursor->getPosition();
         $previousState = $cursor->saveState();
 
-        $cursor->advanceBy(1);
+        $cursor->advance();
 
         // Check to see if we have a link/image
         if (!($link = $this->tryParseLink($cursor, $inlineContext->getReferenceMap(), $opener, $startPos))) {
@@ -149,7 +149,7 @@ final class CloseBracketParser implements InlineParserInterface, EnvironmentAwar
 
         $previousState = $cursor->saveState();
 
-        $cursor->advanceBy(1);
+        $cursor->advance();
         $cursor->advanceToNextNonSpaceOrNewline();
         if (($dest = LinkParserHelper::parseLinkDestination($cursor)) === null) {
             $cursor->restoreState($previousState);
@@ -167,13 +167,11 @@ final class CloseBracketParser implements InlineParserInterface, EnvironmentAwar
 
         $cursor->advanceToNextNonSpaceOrNewline();
 
-        if ($cursor->getCharacter() !== ')') {
+        if ($cursor->match('/^\\)/') === null) {
             $cursor->restoreState($previousState);
 
             return false;
         }
-
-        $cursor->advanceBy(1);
 
         return ['url' => $dest, 'title' => $title];
     }

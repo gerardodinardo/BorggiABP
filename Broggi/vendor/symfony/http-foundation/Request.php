@@ -15,14 +15,6 @@ use Symfony\Component\HttpFoundation\Exception\ConflictingHeadersException;
 use Symfony\Component\HttpFoundation\Exception\SuspiciousOperationException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-// Help opcache.preload discover always-needed symbols
-class_exists(AcceptHeader::class);
-class_exists(FileBag::class);
-class_exists(HeaderBag::class);
-class_exists(HeaderUtils::class);
-class_exists(ParameterBag::class);
-class_exists(ServerBag::class);
-
 /**
  * Request represents an HTTP request.
  *
@@ -318,7 +310,7 @@ class Request
      *
      * @return static
      */
-    public static function create(string $uri, string $method = 'GET', array $parameters = [], array $cookies = [], array $files = [], array $server = [], $content = null)
+    public static function create($uri, $method = 'GET', $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
         $server = array_replace([
             'SERVER_NAME' => 'localhost',
@@ -416,8 +408,10 @@ class Request
      * This is mainly useful when you need to override the Request class
      * to keep BC with an existing system. It should not be used for any
      * other purpose.
+     *
+     * @param callable|null $callable A PHP callable
      */
-    public static function setFactory(?callable $callable)
+    public static function setFactory($callable)
     {
         self::$requestFactory = $callable;
     }
@@ -644,9 +638,11 @@ class Request
      * It builds a normalized query string, where keys/value pairs are alphabetized,
      * have consistent escaping and unneeded delimiters are removed.
      *
+     * @param string $qs Query string
+     *
      * @return string A normalized query string for the Request
      */
-    public static function normalizeQueryString(?string $qs)
+    public static function normalizeQueryString($qs)
     {
         if ('' === ($qs ?? '')) {
             return '';
@@ -693,11 +689,12 @@ class Request
      *
      * Order of precedence: PATH (routing placeholders or custom attributes), GET, BODY
      *
-     * @param mixed $default The default value if the parameter key does not exist
+     * @param string $key     The key
+     * @param mixed  $default The default value if the parameter key does not exist
      *
      * @return mixed
      */
-    public function get(string $key, $default = null)
+    public function get($key, $default = null)
     {
         if ($this !== $result = $this->attributes->get($key, $this)) {
             return $result;
@@ -727,7 +724,8 @@ class Request
         }
 
         if (null === $session) {
-            throw new \BadMethodCallException('Session has not been set.');
+            @trigger_error(sprintf('Calling "%s()" when no session has been set is deprecated since Symfony 4.1 and will throw an exception in 5.0. Use "hasSession()" instead.', __METHOD__), E_USER_DEPRECATED);
+            // throw new \BadMethodCallException('Session has not been set');
         }
 
         return $session;
@@ -1043,7 +1041,7 @@ class Request
      *
      * @return string The normalized URI for the path
      */
-    public function getUriForPath(string $path)
+    public function getUriForPath($path)
     {
         return $this->getSchemeAndHttpHost().$this->getBaseUrl().$path;
     }
@@ -1063,9 +1061,11 @@ class Request
      * - "/a/b/c/other" -> "other"
      * - "/a/x/y"       -> "../../x/y"
      *
+     * @param string $path The target path
+     *
      * @return string The relative target path
      */
-    public function getRelativeUriForPath(string $path)
+    public function getRelativeUriForPath($path)
     {
         // be sure that we are dealing with an absolute path
         if (!isset($path[0]) || '/' !== $path[0]) {
@@ -1203,8 +1203,10 @@ class Request
 
     /**
      * Sets the request method.
+     *
+     * @param string $method
      */
-    public function setMethod(string $method)
+    public function setMethod($method)
     {
         $this->method = null;
         $this->server->set('REQUEST_METHOD', $method);
@@ -1275,9 +1277,11 @@ class Request
     /**
      * Gets the mime type associated with the format.
      *
+     * @param string $format The format
+     *
      * @return string|null The associated mime type (null if not found)
      */
-    public function getMimeType(string $format)
+    public function getMimeType($format)
     {
         if (null === static::$formats) {
             static::initializeFormats();
@@ -1289,9 +1293,11 @@ class Request
     /**
      * Gets the mime types associated with the format.
      *
+     * @param string $format The format
+     *
      * @return array The associated mime types
      */
-    public static function getMimeTypes(string $format)
+    public static function getMimeTypes($format)
     {
         if (null === static::$formats) {
             static::initializeFormats();
@@ -1303,9 +1309,11 @@ class Request
     /**
      * Gets the format associated with the mime type.
      *
+     * @param string $mimeType The associated mime type
+     *
      * @return string|null The format (null if not found)
      */
-    public function getFormat(?string $mimeType)
+    public function getFormat($mimeType)
     {
         $canonicalMimeType = null;
         if (false !== $pos = strpos($mimeType, ';')) {
@@ -1331,9 +1339,10 @@ class Request
     /**
      * Associates a format with mime types.
      *
+     * @param string       $format    The format
      * @param string|array $mimeTypes The associated mime types (the preferred one must be the first as it will be used as the content type)
      */
-    public function setFormat(?string $format, $mimeTypes)
+    public function setFormat($format, $mimeTypes)
     {
         if (null === static::$formats) {
             static::initializeFormats();
@@ -1353,9 +1362,11 @@ class Request
      *
      * @see getPreferredFormat
      *
+     * @param string|null $default The default format
+     *
      * @return string|null The request format
      */
-    public function getRequestFormat(?string $default = 'html')
+    public function getRequestFormat($default = 'html')
     {
         if (null === $this->format) {
             $this->format = $this->attributes->get('_format');
@@ -1366,8 +1377,10 @@ class Request
 
     /**
      * Sets the request format.
+     *
+     * @param string $format The request format
      */
-    public function setRequestFormat(?string $format)
+    public function setRequestFormat($format)
     {
         $this->format = $format;
     }
@@ -1384,8 +1397,10 @@ class Request
 
     /**
      * Sets the default locale.
+     *
+     * @param string $locale
      */
-    public function setDefaultLocale(string $locale)
+    public function setDefaultLocale($locale)
     {
         $this->defaultLocale = $locale;
 
@@ -1406,8 +1421,10 @@ class Request
 
     /**
      * Sets the locale.
+     *
+     * @param string $locale
      */
-    public function setLocale(string $locale)
+    public function setLocale($locale)
     {
         $this->setPhpDefaultLocale($this->locale = $locale);
     }
@@ -1429,7 +1446,7 @@ class Request
      *
      * @return bool
      */
-    public function isMethod(string $method)
+    public function isMethod($method)
     {
         return $this->getMethod() === strtoupper($method);
     }
@@ -1443,6 +1460,10 @@ class Request
      */
     public function isMethodSafe()
     {
+        if (\func_num_args() > 0) {
+            @trigger_error(sprintf('Passing arguments to "%s()" has been deprecated since Symfony 4.4; use "%s::isMethodCacheable()" to check if the method is cacheable instead.', __METHOD__, __CLASS__), E_USER_DEPRECATED);
+        }
+
         return \in_array($this->getMethod(), ['GET', 'HEAD', 'OPTIONS', 'TRACE']);
     }
 
@@ -1501,7 +1522,7 @@ class Request
      *
      * @throws \LogicException
      */
-    public function getContent(bool $asResource = false)
+    public function getContent($asResource = false)
     {
         $currentContentIsResource = \is_resource($this->content);
 
@@ -1561,9 +1582,7 @@ class Request
      * Gets the preferred format for the response by inspecting, in the following order:
      *   * the request format set using setRequestFormat
      *   * the values of the Accept HTTP header
-     *
-     * Note that if you use this method, you should send the "Vary: Accept" header
-     * in the response to prevent any issues with intermediary HTTP caches.
+     *   * the content type of the body of the request.
      */
     public function getPreferredFormat(?string $default = 'html'): ?string
     {

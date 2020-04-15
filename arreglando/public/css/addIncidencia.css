@@ -1,0 +1,128 @@
+h3{
+    margin-bottom: 0px;
+}
+
+.container{
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+.desplegable{
+    margin-bottom: 20px;
+}
+
+.collapsible {
+    color: #020100;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border: solid 1px #ffffff;
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
+}
+
+/* .active, .collapsible:hover {
+  background-color:  #F1D302;
+} */
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(232, 229, 229, 0.87);
+}
+.content p{
+    margin-top: 10px;
+}
+
+button:focus{  
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset, 0 0 20px rgba(63, 0, 82, 0.493);
+    outline: 0 none;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus, .custom-select:focus, textarea:focus{   
+  border-color: rgba(63, 0, 82, 0.493);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
+  outline: 0 none;
+}
+
+
+.desplegable{
+    margin-bottom: 20px;
+}
+
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    border: solid 1px #ffffff;
+    border-color: rgba(63, 0, 82, 0.493);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);  
+    background-color: #3F0052;
+}
+
+/* .active, .collapsible:hover {
+  background-color:  #F1D302;
+} */
+
+
+#mySidenav2 a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+    width: 190px;
+}
+
+#mySidenav2 a {
+    position: fixed; /* Position them relative to the browser window */
+    left: -105px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 170px; /* Set a specific width */
+    max-height: 60px;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#back{
+    top: 50%;  
+    background-color: #3F0052;
+    position: fixed;
+  }
