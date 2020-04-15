@@ -85,7 +85,7 @@ input[type="color"]:focus,
   background-color: #e2167c;
   color: white;
 }
-.dropdown-toggle:hover{
+.dropdown-toggle{
   background-color: #e2167c !important;
 }
 
