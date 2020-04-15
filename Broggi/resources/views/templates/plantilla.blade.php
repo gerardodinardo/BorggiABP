@@ -17,7 +17,7 @@
         <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
 
         <div class="btn-group m-auto">
-            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c;">Benvingut, usertest!</button>
+            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">Benvingut, usertest!</button>
             <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">
               <span class="sr-only">Toggle Dropdown</span>
             </button>
