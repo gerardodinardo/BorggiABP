@@ -25,14 +25,14 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    //use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    //protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -59,19 +59,11 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+  
+    public function index(){
+
+        return view('crearUsuari');
+        
     }
 
     public function register(Request $request)
@@ -91,5 +83,7 @@ class RegisterController extends Controller
                     return redirect()->to('/index');
 
     }
+
+
 
 }

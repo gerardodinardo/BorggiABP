@@ -6,12 +6,7 @@
 |--------------------------------------------------------------------------
 */
 ;
-//esto es el loggin principal, el que viene siendo el index.
-Route::get('/login','Auth\LoginController@showLoginForm')->name('login');;
-Route::post('/login','Auth\LoginController@login');
 
-//logout function
-Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::get('/', function () {
     return view('index');
@@ -47,17 +42,18 @@ Route::get('/editarRecurs', function () {
     return view('editarRecurs');
 });
 
-//login y registro de usuarios
-
-
-//Route::get('/logout','Auth\LoginController@logout')->name('logout');//si pongo el name le puedo llamar por el route,.
-//
-////registre per als usuaris
-Route::post('/register','Auth\RegisterController@register')->name('register');
+//egistro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
  
-Route::get('/crearUsuari','ControllerCrearUsuari@index')->name('crearUsuari');
+    Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
+    Route::post('/register','Auth\RegisterController@register')->name('register');
 
+    });
+    
+//esto es el loggin principal, el que viene siendo el index.
+Route::get('/login','Auth\LoginController@showLoginForm')->name('login');;
+Route::post('/login','Auth\LoginController@login');
 
-});
+//logout function
+Route::get('/logout','Auth\LoginController@logout')->name('logout');

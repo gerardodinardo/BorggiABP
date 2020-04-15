@@ -64,7 +64,7 @@ class LoginController extends Controller
         if($user != null && Hash::check($contrasenya, $user->contrasenya)){
 
             Auth::login($user);
-            return redirect('/crearUsuari');
+            return redirect('/register');
 
         }else{
 
