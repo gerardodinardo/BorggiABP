@@ -84,7 +84,9 @@ input[type="color"]:focus,
 .dropdown-item:hover{
   background-color: #e2167c;
   color: white;
-
+}
+.dropdown-toggle:hover{
+  background-color: #e2167c !important;
 }
 
 .card-footer {
