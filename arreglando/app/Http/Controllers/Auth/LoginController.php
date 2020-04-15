@@ -36,8 +36,8 @@ class LoginController extends Controller
             return redirect('/register');
 
         }else{
-
-            return redirect('login')->withInput();
+            return redirect('/register');
+            //return redirect('login')->withInput();
 
         }
     }
