@@ -8,7 +8,9 @@
       <div class="col-sm-5">
         <h3 class="text-center text-dark mt-5">Accedeix-hi</h2>
 
+          @if (Auth::check())
 
+          @else
           <form action="{{ action('Auth\LoginController@login')}}" method="POST">
             @csrf
             
@@ -39,7 +41,7 @@
 
             </div>            
           </form>
-
+            @endif
       </div>
       <div class="col-sm-7">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

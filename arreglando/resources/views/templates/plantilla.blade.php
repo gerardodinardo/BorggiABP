@@ -20,7 +20,7 @@
         @if (Auth::check())
         
 
-        <div class="btn-group m-auto">
+        {{-- <div class="btn-group m-auto">
             <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">{{ Auth::user()->nom }}</button>
             <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">
               <span class="sr-only">Toggle Dropdown</span>
@@ -32,10 +32,7 @@
                 <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd"/>
               </svg></a>
             </div>
-          </div>
-
-          @else 
-
+          </div> --}}
           <div class="btn-group m-auto">
             <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">Inicia Sessió!</button>
             <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">
@@ -51,8 +48,26 @@
             </div>
           </div>
 
+          @else 
 
-          
+         
+
+          <div class="btn-group m-auto">
+            <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">{{ Auth::user()->nom }}</button>
+            <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu mt-2">
+              <a class="dropdown-item" href="{{ route('logout') }}" style="width: 200px; border-color: #e2167c;" > &nbsp;
+                <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd"/>
+              </svg></a>
+            </div>
+          </div>
+
+
+
           @endif
           {{-- Dejo comentado el mismo estilo pero para iniciar session si no esta iniciado, nose si hara falta pero lo dejo por si acaso --}}
 
