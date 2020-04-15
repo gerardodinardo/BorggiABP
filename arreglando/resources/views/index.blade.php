@@ -24,8 +24,8 @@
             {{-- CONTRASENYA --}}
             {{-- "pass" significa contraseña, es el identificador que tiene para no tener que escribir tanto lol --}}
             <div class="form-group">
-                <label for="contrasenya">Contrasenya: </label>
-                  <input type="password" name="contrasenya" id="contrasenya" class="form-control">
+                <label for="pass">Contrasenya: </label>
+                  <input type="password" name="pass" id="pass" class="form-control">
             </div>
 
             {{-- Esto lo tendría que mirar como se hace pero ni idea de momento de como va el tema, yo lo quitaría si no encuentro forma de controlarlo. --}}
