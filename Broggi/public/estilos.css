@@ -68,21 +68,21 @@ input[type="color"]:focus,
 }
 .btn-customNAVTEXT{
   color: white;
-  border-color: #dc3545;
+  border-color: #e2167c;
 }
 .btn-customNAVTEXT:hover{
   color: white;
-  border-color: #dc3545;
+  border-color: #e2167c;
 }
 .btn-customNAV{
   color: white;
-  border-color: #dc3545;
+  border-color: #e2167c;
 }
 .btn-customNAV:hover{
-  background-color: #dc3545;
+  background-color: #e2167c;
 }
 .dropdown-item:hover{
-  background-color: #3F0052;
+  background-color: #e2167c;
   color: white;
 
 }
