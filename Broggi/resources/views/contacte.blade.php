@@ -23,15 +23,13 @@
                 <div class="container" style="background-color: #3F0052; border-radius: 10px; color: white; padding: 10px;">
                     <p><strong>Correu: </strong>alessiocrusella@gmail.com</p>
                     <p><strong>Especialitat:</strong> Hacer macarrones a las 4 de la mañana.</p>
-                    <p><strong>Conclusió:</strong>Si me hubiesen pagado no lo podría haber hecho mejor.</p>
                 </div>
             </div>
             <div class="col-sm-6 text-center">                
                 <img src="{{ asset('img/contacte_dan.jfif') }}" style="display: flex; position: center;margin: 0 auto; margin-bottom: 15px; ">
                 <div class="container" style="background-color: #3F0052; border-radius: 10px; color: white; padding: 10px;">
                     <p><strong>Correu: </strong>dancezanne@gmail.com</p>
-                    <p><strong>Especialitat:</strong> Crecí en la calle, cuidao.</p>
-                    <p><strong>Conclusió:</strong> El lila es inhumano.</p>
+                    <p><strong>Especialitat:</strong> El Yoga modo diablo.</p>
                 </div>
             </div>
         </div> 
@@ -40,16 +38,14 @@
                 <img src="{{ asset('img/contacte_alex.jfif') }}" style="display: flex; position: center;margin: 0 auto;  margin-bottom: 15px; ">
                 <div class="container" style="background-color: #3F0052; border-radius: 10px; color: white; padding: 10px;">
                     <p><strong>Correu: </strong>alexgarsanc@gmail.com</p>
-                    <p><strong>Especialitat:</strong> Nose, que pondrías tú?</p>
-                    <p><strong>Conclusió:</strong> ** Grillos **</p>
+                    <p><strong>Especialitat:</strong> Pensar durante horas.</p>
                 </div>
             </div>
             <div class="col-sm-6 text-center">
                 <img src="{{ asset('img/contacte_jeratAnime.PNG') }}" style="display: flex; position: center;margin: 0 auto;  margin-bottom: 15px; width: 57%; ">
                 <div class="container" style="background-color: #3F0052; border-radius: 10px; color: white; padding: 10px;">
                     <p><strong>Correu: </strong>gerardibz@gmail.com</p>
-                    <p><strong>Especialitat:</strong> Shh, calla que me estoy viendo un episodio...</p>
-                    <p><strong>Conclusió:</strong> El sistema educativo español, no funciona. Almenos ha quedado una web perfecta!</p>
+                    <p><strong>Especialitat:</strong> No dormir en días.</p>
                 </div>
             </div>
         </div>
