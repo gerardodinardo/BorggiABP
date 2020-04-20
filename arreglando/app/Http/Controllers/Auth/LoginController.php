@@ -36,7 +36,7 @@ class LoginController extends Controller
             return redirect('/crearUsuari');
 
         }else{
-           return redirect('/crearUsuari');
+           return redirect('/');
            // return redirect('login')->withInput();
 
         }
