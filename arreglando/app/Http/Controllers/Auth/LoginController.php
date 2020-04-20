@@ -26,9 +26,12 @@ class LoginController extends Controller
 
        
 
-        $usuari = $request->input('usuari');
+        $usuari_ = $request->input('usuari');
         $contrasenya = $request->input('pass');
-        $user = Usuario::where('nom',$usuari)->first();
+        $user = Usuario::where('nom',$usuari_)->first();
+
+        //$e = Hash::check($contrasenya, $user->contrasenya);
+
         
         if($user != null && Hash::check($contrasenya, $user->contrasenya)){
 
@@ -36,7 +39,7 @@ class LoginController extends Controller
             return redirect('/crearUsuari');
 
         }else{
-           return redirect('/crearUsuari');
+           return redirect('/');
            // return redirect('login')->withInput();
 
         }
