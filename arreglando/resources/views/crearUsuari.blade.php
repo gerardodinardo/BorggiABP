@@ -64,6 +64,14 @@
                                 Recurs mòbil
                               </label>
                             </div>
+
+                            <!-- <div class="form-check">
+                              <input class="form-check-input" type="radio" name="rol" id="rol" value="1">
+                              <label class="form-check-label" for="rol">
+                                Admin
+                              </label>
+                            </div> -->
+
                           </div>
                         </div>
 
