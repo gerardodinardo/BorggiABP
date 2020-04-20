@@ -24,7 +24,7 @@ class RegisterController extends Controller
         
                     //lo que está seguido del -> es el nombre de la columna de la BD
                     $usuari = new Usuario();
-                    $pass = $request->input('contrasenya');
+                    $pass = $request->input('inputContrasenya');
                     $pass = Hash::make($pass);
                     $usuari->nom = $request->input('inputUsuari');
                     $usuari->codi = $request->input('inputCodi');
