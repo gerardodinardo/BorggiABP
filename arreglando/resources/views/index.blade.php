@@ -9,7 +9,7 @@
         <h3 class="text-center text-dark mt-5">Accedeix-hi</h2>
 
           @if (Auth::check())
-
+              {{-- AÑADIR BOTÓN PARA VOLVER AL LUGAR QUE LE CORRESPONDE. --}}
           @else
           <form action="{{ action('Auth\LoginController@login')}}" method="POST">
             @csrf

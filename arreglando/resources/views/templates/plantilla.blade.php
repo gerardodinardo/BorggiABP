@@ -13,7 +13,7 @@
 </head>
 <body style="padding-top:105px;">
    <nav class="navbar navbar-light fixed-top">                 {{--  <a href="{{ route('logout') }}" --}}
-        <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ route('logout')}}" style="text-decoration: none; color: white;"><img src="{{ asset('img/ibroggi.png') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
+        <span class="navbar-brand mb-0 h1 text-light mx-auto"><a href="{{ route('login')}}" style="text-decoration: none; color: white;"><img src="{{ asset('img/ibroggi.png') }}" alt="" style="height:60px;"> &nbsp;&nbsp;&nbsp;&nbsp;| Institut Moisés Broggi</a></span>
         <!--<img src="{{ asset('img/cruz_blanca.png')}}" height="50px" width="50px" alt="" class="m-auto">-->
 
 

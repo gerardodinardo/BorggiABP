@@ -44,12 +44,12 @@ Route::get('/editarRecurs', function () {
 
 //egistro de usuarios
 
-//Route::group(['middleware' => ['auth']],function(){
+Route::group(['middleware' => ['auth']],function(){
  
     Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
     Route::post('/register','Auth\RegisterController@register')->name('register');
 
-   // });
+});
     
 //esto es el loggin principal, el que viene siendo el index.
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login');;
