@@ -27,6 +27,11 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `afectats`
 --
 
+DROP DATABASE if exists broggi;
+CREATE DATABASE broggi;
+use broggi;
+
+
 CREATE TABLE `afectats` (
   `id` int(11) NOT NULL,
   `cip` varchar(14) DEFAULT NULL,
