@@ -50,7 +50,7 @@
         
         </div>   
         {{-- {{ $alertants->links() }} --}}
-        {{$alertants->links()}}
+        {{$alertants->appends(['search'=>$search])->links()}}
     </div>
 @endsection
     
