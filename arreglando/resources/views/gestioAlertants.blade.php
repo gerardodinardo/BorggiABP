@@ -16,16 +16,18 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
         <hr>
-        <div class="row d-flex justify-content-around mt-5 text-center">
-            <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
-                <div class="card-body" >
-                  <h5 class="card-title">Centre Sanitari</h5>
-                  <p class="card-text">
-                    Fa referència a l'edifici on s'atén a la població en un primer nivell sanitari.</p>
-                  <span class="badge badge-info badge-pill">14</span>
-                </div>
-            </div>
+        <a href="{{ asset('/alertantCentreSanitari')}}" style="color: black;">
+          <div class="row d-flex justify-content-around mt-5 text-center">
+              <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
+                  <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
+                  <div class="card-body" >
+                    <h5 class="card-title">Centre Sanitari</h5>
+                    <p class="card-text">
+                      Fa referència a l'edifici on s'atén a la població en un primer nivell sanitari.</p>
+                    <span class="badge badge-info badge-pill">14</span>
+                  </div>
+              </div>
+            </a> 
             <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
                 <img class="card-img-top" src="{{ asset('img/headache.svg') }}" alt="Card image cap">
                 <div class="card-body">

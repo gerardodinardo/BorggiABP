@@ -42,6 +42,13 @@ Route::get('/editarRecurs', function () {
     return view('editarRecurs');
 });
 
+//ALERTANTS _____________________________________
+Route::get('/alertantCentreSanitari', function () {
+    return view('alertantCentreSanitari');
+});
+
+//FINAL ALERTANTS _____________________________________
+
 //egistro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
