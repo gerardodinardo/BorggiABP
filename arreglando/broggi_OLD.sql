@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-04-2020 a las 01:18:30
--- Versión del servidor: 10.1.34-MariaDB
--- Versión de PHP: 7.2.8
+-- Tiempo de generación: 20-04-2020 a las 12:18:01
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -27,6 +26,11 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `afectats`
 --
+
+DROP DATABASE if exists broggi;
+CREATE DATABASE broggi;
+use broggi;
+
 
 CREATE TABLE `afectats` (
   `id` int(11) NOT NULL,
@@ -204,14 +208,6 @@ CREATE TABLE `estats_incidencia` (
   `estat` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `estats_incidencia`
---
-
-INSERT INTO `estats_incidencia` (`id`, `estat`) VALUES
-(1, 'Oberta'),
-(2, 'Tancada');
-
 -- --------------------------------------------------------
 
 --
@@ -233,16 +229,6 @@ CREATE TABLE `incidencies` (
   `tipus_alertant_id` int(11) NOT NULL,
   `alertants_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `incidencies`
---
-
-INSERT INTO `incidencies` (`id`, `num_incidencia`, `telefon_alertant`, `data`, `hora`, `adreca`, `complement_adreca`, `descripcio`, `municipis_id`, `tipus_incident_id`, `estats_incidencia_id`, `tipus_alertant_id`, `alertants_id`) VALUES
-(1, 1, 606218580, '2020-04-21', '20:06:12', 'Passeig Maragall 23', 'Pis 11 Porta 4', 'Possible traumatisme, causat per caiguda a domicili.', 1, 1, 1, 3, 21),
-(2, 2, 933427151, '2020-04-23', '14:13:17', 'Plaza Malgrat 50 ', 'A l\'aire lliure, dòna accidentada amb coche.', 'Una dona. ha sigut embestida per un coche a alta velocitat, possible parada cardiàca.', 568, 1, 1, 5, 17),
-(3, 3, 933555151, '2020-04-21', '22:14:17', 'Carrer de Flor 90', 'Apartament 15.', 'Fractura de cama al relliscar al menjador. Persona de risc potencial.', 91, 3, 1, 2, 30),
-(5, 4, 620123587, '2020-04-14', '14:07:08', 'Carrer Comtal 52', 'Planta 2, porta B.', 'Vòmits, baixa capacitat respiratòria, febre 39º.', 91, 3, 2, 3, 29);
 
 -- --------------------------------------------------------
 
@@ -1388,9 +1374,7 @@ CREATE TABLE `usuaris` (
 --
 
 INSERT INTO `usuaris` (`id`, `codi`, `nom`, `contrasenya`, `rols_id`) VALUES
-(10, 'admin', 'admin', '$2y$10$hit9FP.l5jKW4U6dHi3RJuAe6s5J8xFzn9QQ7Tk3J7eHocBtOmzuK', 1),
-(11, '11', 'testcecos', '$2y$10$T7p8VjLCHJl5zCAPP53freHA1vAMIGGToP0oR70DDQmw6fFNM5mJa', 2),
-(12, '12', 'testrecursos', '$2y$10$tsenaN6m9UwmTnvalXdWieHMpie6ExdlSYwyImF1wNUb0uMw8OsCK', 3);
+(10, 'admin', 'admin', '$2y$10$hit9FP.l5jKW4U6dHi3RJuAe6s5J8xFzn9QQ7Tk3J7eHocBtOmzuK', 1);
 
 --
 -- Índices para tablas volcadas
@@ -1540,13 +1524,13 @@ ALTER TABLE `comarques`
 -- AUTO_INCREMENT de la tabla `estats_incidencia`
 --
 ALTER TABLE `estats_incidencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `incidencies`
 --
 ALTER TABLE `incidencies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `municipis`
@@ -1594,7 +1578,7 @@ ALTER TABLE `tipus_recurs`
 -- AUTO_INCREMENT de la tabla `usuaris`
 --
 ALTER TABLE `usuaris`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
