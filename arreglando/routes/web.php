@@ -12,32 +12,34 @@ Route::get('/', function () {
     return view('index');
 });
 
-
+//meter en Middleware al acabar.
 Route::get('/historicIncidencies', function () {
     return view('historicIncidencies');
 });
-
+//meter en Middleware al acabar.s
 Route::get('/principalIncidencies', function () {
     return view('principalIncidencies');
 });
-
+//meter en Middleware al acabar.
 Route::get('/contacte', function () {
     return view('contacte');
 });
-
+//meter en Middleware al acabar.
 Route::get('/gestioRecursos', function () {
     return view('gestioRecursos');
 });
-
+//meter en Middleware al acabar.
 Route::get('/gestioAlertants', function () {
     return view('gestioAlertants');
 });
 
-
+//meter en Middleware al acabar.
 Route::get('/addIncidencia', function () {
     
     return view('addIncidencia');
 });
+
+//meter en Middleware al acabar.
 Route::get('/editarRecurs', function () {
     return view('editarRecurs');
 });
@@ -50,6 +52,8 @@ Route::get('/editarRecurs', function () {
 //FINAL ALERTANTS _____________________________________
 
 //Ruta Resource
+
+//meter en Middleware al acabar.
 Route::resource('/alertantCentreSanitari', 'AlertantController');
 
 //Final Ruta Resource
@@ -57,7 +61,7 @@ Route::resource('/alertantCentreSanitari', 'AlertantController');
 
 
 
-//egistro de usuarios
+//registro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
  
