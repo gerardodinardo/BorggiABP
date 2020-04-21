@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Alertant extends Model
 {
     protected $table = 'alertants';
-    protected $primaryKey = 'dni';
-    public $incrementing = false;
-    protected $keyType = 'string';
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    protected $keyType = 'int';
 
     public $timestamps = false;
 
@@ -17,11 +17,18 @@ class Alertant extends Model
 
     public function municipis()
     {
-        return $this->belongsTo;//falta acabar
+        return $this->belongsTo('App\Models\Municipi','municipis_id');
     }
 
     public function tipusAlertant()
     {
-        return $this->belongsTo;//falta acabar
+        return $this->belongsTo('App\Models\TipuAlertant');
     }
+
+    public function incidencies(){
+
+        return $this->hasMany('App\Models\Incidencia','alertants_id');
+
+    }
+
 }

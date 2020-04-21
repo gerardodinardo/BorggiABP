@@ -8,7 +8,7 @@ class Municipi extends Model
 {
     protected $table = 'municipis';
     protected $primaryKey = 'id';
-    public $incrementing = false;
+    public $incrementing = true;
     protected $keyType = 'int';
 
     public $timestamps = false;
@@ -18,5 +18,11 @@ class Municipi extends Model
     public function comarques()
     {
         return $this->belongsTo;//falta acabar modelo comarques qq
+    }
+
+    public function alertants(){
+
+        return $this->hasMany('App\Models\Alertant','municipis_id');
+
     }
 }

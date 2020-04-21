@@ -8,7 +8,7 @@ class Comarca extends Model
 {
     protected $table = 'comarques';
     protected $priamryKey = 'id';
-    public $incrementing = false;
+    public $incrementing = true;
     protected $keyType = 'int';
 
     public $timestamps = false;
@@ -17,6 +17,9 @@ class Comarca extends Model
 
     public function provincies()
     {
-        return $this->belongstoMany;//falta
+        return $this->belongsTo('App\Models\Provincia','provincies_id');//falta
     }
+
+
+
 }
