@@ -24,7 +24,7 @@ class IncidenciaController extends Controller
     }
     public function indexHistoricIncidencies()
     {
-        $incidencies = Incidencia::orderby('hora')->paginate(10);
+        $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
         $data['incidencies'] = $incidencies;
         return view('historicIncidencies', $data);
     }

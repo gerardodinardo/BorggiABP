@@ -37,7 +37,17 @@
                     <td>{{ $incidencia->adreca }}</td>
                     <td>{{ $incidencia->hora }}</td>
                     <td>{{ $incidencia->descripcio }}</td>
-                    <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
+                    <td>
+                      @php 
+                        $estado = 1; 
+                        $datoAComparar = $incidencia->EstatIncidencia->id ;                   
+                      @endphp
+                      @if($datoAComparar == $estado)
+                        <img src="{{ asset('img/tick.png') }}" alt="">
+                      @else
+                        <img src="{{ asset('img/cancel.png') }}" alt="">
+                      @endif
+                    </td>
                   </tr>
               @endforeach
               
