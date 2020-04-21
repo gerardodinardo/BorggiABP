@@ -15,9 +15,16 @@ class IncidenciaController extends Controller
      */
     public function index()
     {
-        //
+        $incidencies = Incidencia::orderby('hora')->paginate(10);
+        $data['incidencies'] = $incidencies;
+        return view('principalIncidencies', $data);
     }
-
+    public function indexHistoricIncidencies()
+    {
+        $incidencies = Incidencia::orderby('hora')->paginate(10);
+        $data['incidencies'] = $incidencies;
+        return view('historicIncidencies', $data);
+    }
     /**
      * Show the form for creating a new resource.
      *

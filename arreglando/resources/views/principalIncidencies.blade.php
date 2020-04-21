@@ -37,45 +37,27 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td><img src="{{ asset('img/cancel.png') }}" alt=""></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
-                  </tr>
+                  @foreach ($incidencies as $incidencia) {{-- MUESTRA SOLO LAS ABIERTAS! --}}
+                    @php 
+                        $estado = 1; 
+                        $datoAComparar = $incidencia->EstatIncidencia->id ;                   
+                    @endphp
+                     @if($datoAComparar == $estado)
+                      <tr>
+                        <th scope="row">{{ $incidencia->num_incidencia }}</th>
+                        <td>{{ $incidencia->adreca }}</td>
+                        <td>{{ $incidencia->hora }}</td>
+                        <td>{{ $incidencia->descripcio }}</td>
+                        <td><img src="{{ asset('img/tick.png') }}" alt=""></td>
+                      </tr>
+                      @else
+                      @endif
+                  @endforeach
+                  
                 </tbody>
               </table>
-        </div>
-        <div class="col mt-5">
-            <div aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item">
-                    <a class="page-link " href="#" tabindex="-1">Anterior</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Seguent</a>
-                  </li>
-                </ul>
-              </div>
-        </div>             
+              {{ $incidencies->links() }}
+        </div>            
     </div>
     <style>
     </style>

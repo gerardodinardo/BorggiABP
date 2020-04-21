@@ -17,9 +17,9 @@ Route::get('/historicIncidencies', function () {
     return view('historicIncidencies');
 });
 
-Route::get('/principalIncidencies', function () {
-    return view('principalIncidencies');
-});
+// Route::get('/principalIncidencies', function () {
+//     return view('principalIncidencies');
+// });
 
 Route::get('/contacte', function () {
     return view('contacte');
@@ -51,6 +51,7 @@ Route::get('/editarRecurs', function () {
 
 //Ruta Resource
 Route::resource('/alertantCentreSanitari', 'AlertantController');
+Route::resource('/principalIncidencies', 'IncidenciaController');
 //Final Ruta Resource
 
 
@@ -62,6 +63,7 @@ Route::group(['middleware' => ['auth']],function(){
  
     Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
     Route::post('/register','Auth\RegisterController@register')->name('register');
+    Route::get('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
 
 });
     
