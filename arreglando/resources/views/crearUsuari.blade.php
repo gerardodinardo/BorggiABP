@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <link href="{{ asset('/css/backButton.css') }}" rel="stylesheet">
   <div id="mySidenav2" class="sidenav2">
     <a href="{{ asset('/')}}" id="back">
