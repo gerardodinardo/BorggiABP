@@ -6,6 +6,9 @@ use App\Models\Incidencia;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\TipuAlertant;
+use Illuminate\Database\QueryException;
+
 class IncidenciaController extends Controller
 {
     /**

@@ -17,24 +17,22 @@
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Centres Sanitàris</h1>
         <hr>
         <div class="d-flex justify-content-center">
+
+        {{-- BUSCADOR--}}
             <form action="{{ action('AlertantController@index') }}" method="get" class="form-inline">
-                {{-- <div class="form-group row col-sm-12">
-                    <label for="" class="col-4">Nom Centre: </label>
-                    <div class="col-6">
-                        <input type="text" class="form-control" name="search" id="search" aria-describedby="helpId" placeholder="" value="{{ $search }}">
-                    </div>
-                    <button type="submit" class="btn btn-custom1 btn-xl col-2">BUSCAR</button>
-                </div> --}}
+         
                 <div class="form-group mb-2">
                     <label for="" class="sr-only">Centre Sanitari a cercar: </label>
                     <input type="text" readonly class="form-control-plaintext" id="" value="Centre Sanitari a cercar: ">
                   </div>
                   <div class="form-group mx-sm-3 mb-2">
-                    <label for="buscar" class="sr-only">Nom centre</label>
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Nom centre">
+                    <label for="search" class="sr-only">Nom centre</label>
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Nom centre">
                   </div>
                   <button type="submit" class="btn btn-custom1 btn-xl mb-2">CERCAR</button>
             </form>
+
+
         </div>
         <div class="d-flex flex-wrap justify-content-center  row no-gutters">
         @foreach ($alertants as $alertant)
