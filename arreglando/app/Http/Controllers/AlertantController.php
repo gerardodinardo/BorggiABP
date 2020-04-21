@@ -22,10 +22,12 @@ class AlertantController extends Controller
         }
         else
         {
+                $search = '';
             $alertants = Alertant::orderby('nom')->paginate(12);
         }
         
         $data['alertants'] = $alertants;
+        $data['search'] = $search;
         return view('alertantCentreSanitari', $data);
         
     }

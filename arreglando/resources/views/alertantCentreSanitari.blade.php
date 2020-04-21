@@ -21,7 +21,7 @@
                 <div class="form-group row col-sm-12">
                     <label for="" class="col-4">Nom Centre: </label>
                     <div class="col-6">
-                        <input type="text" class="form-control" name="search" id="search" aria-describedby="helpId" placeholder="">
+                        <input type="text" class="form-control" name="search" id="search" aria-describedby="helpId" placeholder="" value="{{ $search }}">
                     </div>
                     <button type="submit" class="btn btn-custom1 btn-xl col-2">BUSCAR</button>
                 </div>
