@@ -36,21 +36,24 @@ class LoginController extends Controller
         if($user != null && Hash::check($contrasenya, $user->contrasenya)){
 
             //guarda el id del rol del usuari. Version Alessio
-            if($user->rols_id==1){
+            if($user->rols_id==1)
+            {
                 Auth::login($user);
                 return redirect('/crearUsuari');
             }
-            else if($user->rols_id==2){
+            else if($user->rols_id==2)
+            {
                 Auth::login($user);
                 return redirect('/principalIncidencies');
             }
-            else{
+            else
+            {
                 Auth::login($user); 
                 return redirect('/gestioRecursos');
             }
 
-
-        }else{
+        }else
+        {
         //    return redirect('/');
             return redirect('login')->withInput();
 
