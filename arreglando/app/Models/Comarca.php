@@ -13,13 +13,13 @@ class Comarca extends Model
 
     public $timestamps = false;
 
-    //tabla con una FK hacia provincies belongs to many creo falta completar
-
-    public function provincies()
+    public function municipis()
     {
-        return $this->belongsTo('App\Models\Provincia','provincies_id');//falta
+        return $this->hasMany('App\Models\Municipi', 'id');
     }
 
-
-
+    public function provincia()
+    {
+        return $this->belongsTo('App\Models\Provincia','id');
+    }
 }

@@ -4,18 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Provincia extends Model
+class Usuari extends Model
 {
-    protected $table = 'provincies';
+    protected $table = 'usuaris';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $keyType = 'int';
 
     public $timestamps = false;
 
-
-    public function comarca()
+    public function rol()
     {
-        return $this->hasMany('App\Models\Comarca','id');
+        return $this->belongsTo('App\Models\Rol', 'rols_id');
     }
 }

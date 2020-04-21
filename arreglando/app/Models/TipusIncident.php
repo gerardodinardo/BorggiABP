@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Municipi extends Model
+class TipusIncident extends Model
 {
-    protected $table = 'municipis';
+    protected $table = 'tipus_incident';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $keyType = 'int';
@@ -16,10 +16,5 @@ class Municipi extends Model
     public function incidencies()
     {
         return $this->hasMany('App\Models\Incidencia', 'id');
-    }
-
-    public function comarca()
-    {
-        return $this->belongsTo('App\Models\Comarca', 'id');
     }
 }

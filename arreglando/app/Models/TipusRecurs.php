@@ -4,18 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Provincia extends Model
+class TipusRecurs extends Model
 {
-    protected $table = 'provincies';
+    protected $table = 'tipus_recurs';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $keyType = 'int';
 
     public $timestamps = false;
 
-
-    public function comarca()
+    public function recursosMobils()
     {
-        return $this->hasMany('App\Models\Comarca','id');
+        return $this->hasMany('App\Models\RecursMobil', 'id');
     }
 }
