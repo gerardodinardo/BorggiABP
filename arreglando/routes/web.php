@@ -54,6 +54,8 @@ Route::get('/editarRecurs', function () {
 //Ruta Resource
 
 //meter en Middleware al acabar.
+
+Route::resource('/principalIncidencies', 'IncidenciaController');
 Route::resource('/alertantCentreSanitari', 'AlertantController');
 //Final Ruta Resource
 
