@@ -37,4 +37,11 @@ class Incidencia extends Model
     {
         return $this->belongsTo('App\Models\Municipi', 'municipis_id');
     }
+
+    public function TipuAlertant()
+    {
+        return $this->belongsTo('App\Models\TipusAlertant', 'id');
+    }
+
+    
 }

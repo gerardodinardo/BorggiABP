@@ -17,4 +17,9 @@ class TipuAlertant extends Model
     {
         return $this->hasMany('App\Model\Alertant', 'id');
     }
+
+    public function incidencia()
+    {
+        return $this->hasMany('App\Model\Incidencia', 'id');
+    }
 }

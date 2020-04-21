@@ -51,6 +51,7 @@ Route::get('/editarRecurs', function () {
 
 //Ruta Resource
 Route::resource('/alertantCentreSanitari', 'AlertantController');
+
 //Final Ruta Resource
 
 
