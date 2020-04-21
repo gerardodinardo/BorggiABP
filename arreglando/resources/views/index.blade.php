@@ -6,11 +6,17 @@
   <div class="container border border rounded-left mt-5 shadow-lg mb-5 bg-white rounded">
     <div class="row">
       <div class="col-sm-5">
-        <h3 class="text-center text-dark mt-5">Accedeix-hi</h2>
 
           @if (Auth::check())
               {{-- AÑADIR BOTÓN PARA VOLVER AL LUGAR QUE LE CORRESPONDE. --}}
+              <h3 class="text-center text-dark mt-5">Benvingut, {{ Auth::user()->nom }}!</h3>
+              <div class="text-center pb-4 mt-5">
+                <a href="{{ url('/principalIncidencies') }}" class="btn btn-custom1 mt-1">Navega a Tauler d'Incidencies</a><br/>
+                <a href="{{ route('logout') }}" class="btn btn-custom1 mt-4">- Tancar Sessió -</a>
+              </div>
           @else
+          
+          <h3 class="text-center text-dark mt-5">Accedeix-hi</h3>
           <form action="{{ action('Auth\LoginController@login')}}" method="POST">
             @csrf
             
