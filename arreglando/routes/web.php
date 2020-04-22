@@ -25,25 +25,26 @@ Route::group(['middleware' => ['auth']],function(){
     Route::post('/register','Auth\RegisterController@register')->name('register');
     Route::get('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
     //TEST DENTRO MIDDLE
-    
-Route::resource('/principalIncidencies', 'IncidenciaController');
-Route::resource('/alertantCentreSanitari', 'AlertantController');
-Route::get('/editarRecurs', function () {
-    return view('editarRecurs');
-});
-Route::get('/addIncidencia', function () {
+    Route::resource('/principalIncidencies', 'IncidenciaController');
+    Route::resource('/alertantCentreSanitari', 'AlertantController');
+    Route::resource('/addIncidencia', 'IncidenciaController');
+    Route::get('/editarRecurs', function () 
+    {
+        return view('editarRecurs');
+    });
+    // Route::get('/addIncidencia', function () {
 
-    return view('addIncidencia');
-});
-Route::get('/gestioAlertants', function () {
-    return view('gestioAlertants');
-});
-Route::get('/contacte', function () {
-    return view('contacte');
-});
-Route::get('/gestioRecursos', function () {
-    return view('gestioRecursos');
-});
+    //     return view('addIncidencia');
+    // });
+    Route::get('/gestioAlertants', function () {
+        return view('gestioAlertants');
+    });
+    Route::get('/contacte', function () {
+        return view('contacte');
+    });
+    Route::get('/gestioRecursos', function () {
+        return view('gestioRecursos');
+    });
 
 
 });

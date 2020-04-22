@@ -22,7 +22,7 @@
         <button type="submit" class="btn btn-info text-center btn-lg" style="width:70%; margin-left: 15%;" onclick="location.href='{{ url('/principalIncidencies') }}'">Menú Principal Incidències</button>
         <hr>
         <!-- ********** Start Desplegables ********** -->
-        <form action="{{ action('IncidenciaController@store') }}" method="POST">
+        <form action="{{ action('IncidenciaController@store') }}" method="post">
             @csrf
             <div class="desplegable">
                 <button class="collapsible" id="coll1"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
@@ -55,7 +55,7 @@
                 <div class="content">
                     <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this); reabrir();" id="desplegable_alertant" name="tipuAlertant[]">
                         <option selected>- Slecciona un tipus d'Alertant-</option>
-                            @foreach($tipus_alertant as $tipuAlertant)
+                            @foreach($tipusAlertants as $tipuAlertant)
                                 <option value="{{$tipuAlertant->id}}">
                                     {{$tipuAlertant->tipus}}
                                 </option>
@@ -74,16 +74,16 @@
                             </div>
                         </div>
                         <p>S'han de mostrar dades de l'alertant automàticament (backend)</p>
-                        <p><strong><center>Has seleccionat Perona Afectada</center></strong></p>
+                        <p><strong>Has seleccionat Perona Afectada</strong></p>
                     </div>  
                     <div id="divpersonaAfectada" style="display:none;">
-                        <p><strong><center>Has seleccionat Perona Afectada</center></strong></p>
+                        <p><strong>Has seleccionat Perona Afectada</strong></p>
                     </div>
                     <div id="diventornAfectat" style="display:none;">
-                        <p><strong><center>Has seleccionat Entorn Afectat</center></strong></p>
+                        <p><strong>Has seleccionat Entorn Afectat</strong></p>
                     </div>   
                     <div id="divalertantVip" style="display:none;">
-                        <p><strong><center>S'ha de buscar l'alertant VIP (backend)</center></strong></p>
+                        <p><strong>S'ha de buscar l'alertant VIP (backend)</strong></p>
                     </div>
                 </div>
             </div>        
@@ -148,7 +148,7 @@
                         </div> 
                     </div>
                     <hr>
-                    <p><strong><center>S'ha de buscar segons Tel o CIP i omplir dades següents automàticament(backend) si es troba, omplir a mà...</center></strong></p>
+                    <p><strong>S'ha de buscar segons Tel o CIP i omplir dades següents automàticament(backend) si es troba, omplir a mà...</strong></p>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="edad" class="col-sm-1 mt-4 col-form-label">Edat</label>
                         <div class="col-sm-2 mt-4">
@@ -206,7 +206,7 @@
             <div class="desplegable">              
                 <button class="collapsible" id="coll6"><strong>Assignació de Recursos Mòbils</strong></button>
                 <div class="content">
-                    <p><strong><center>Falta por acabar, discutir en grupo...</center></strong></p>
+                    <p><strong>Falta por acabar, discutir en grupo...</strong></p>
                 </div>
             </div>  
             <!-- ********** Fin Desplegable 6 ********** --> 
@@ -230,12 +230,13 @@
             </script>
             <hr>
             <div class="text-center pb-4">
-                <button type="submit" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
+                <button type="" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
                 <button type="submit" class="btn btn-success mb-1 btn-lg" style="width:70%;">Enviar</button>
-                <button type="submit" class="btn btn-danger mb-1 btn-lg" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
+                <button type="" class="btn btn-danger mb-1 btn-lg" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
             </div>  
-        </div>
-    </form>
+            
+        </form>
+    </div>
 </div> 
 
 @endsection

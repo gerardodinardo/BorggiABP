@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\TipuAlertant;
+use App\Models\Comarca;
 use Illuminate\Database\QueryException;
 
 class IncidenciaController extends Controller
@@ -35,7 +36,13 @@ class IncidenciaController extends Controller
      */
     public function create()
     {
-        //
+        $comarques = Comarca::all();
+        $tipusAlertants = TipuAlertant::all();
+
+        $data['comarques'] = $comarques;
+        $data['tipusAlertants'] = $tipusAlertants;
+
+        return view('addIncidencia', $data);
     }
 
     /**

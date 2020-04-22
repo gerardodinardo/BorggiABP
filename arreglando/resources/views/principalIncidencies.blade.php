@@ -20,7 +20,7 @@
         <hr>
         <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 5px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
           <a class="button1" href="{{ asset('/gestioAlertants')}}">Gestió Alertants</a>
-          <a class="button1" href="{{ asset('/addIncidencia')}}">Nova Incidència</a>      
+          <a class="button1" href="{{ action('IncidenciaController@create') }}">Nova Incidència</a>      
           <a class="button1" href="{{ asset('/historicIncidencies')}}">Històric Incidències</a>                
           <a class="button1" href="{{ asset('/gestioRecursos')}}">Recursos Mòbils</a>
         </div>
