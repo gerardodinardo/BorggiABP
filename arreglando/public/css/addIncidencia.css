@@ -108,3 +108,22 @@ input[type="color"]:focus,
     background-color: #3F0052;
     position: fixed;
   }
+
+/* 
+.custom-control-label::after {
+    position: absolute;
+    top: .25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50%/50% 50%;
+} */
+
+.custom-control-label:before{
+    background-color:#3F0052;
+  }
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+  }
