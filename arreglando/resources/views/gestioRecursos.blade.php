@@ -30,44 +30,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Plaza Catalunya 123</td>
-                    <td>L'ambulància és troba al lloc.</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Carrer Ibiza</td>
-                    <td>L'ambulancia, está de camí a l'incident.</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
+                  @foreach ($recursos as $recurs)
+                      <tr>
+                        <th scope="row"> {{ $recurs->id }} </th>
+                        <td> {{ $recurs->adreca }} </td>
+                        <td> {{ $recurs->descripcio }} </td>
+                      </tr>
+                  @endforeach
                 </tbody>
               </table>
+              {{ $recursos->links() }}
           </div>
           <div class="col-sm-5 border rounded">
             <p class="h2 mt-4 text-center">Recursos Disponibles</p>

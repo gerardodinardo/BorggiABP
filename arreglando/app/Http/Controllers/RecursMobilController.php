@@ -6,6 +6,15 @@ use App\Models\RecursMobil;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Incidencia;
+use App\Models\TipuAlertant;
+use App\Models\TipusIncident;
+use App\Models\Comarca;
+use App\Models\Provincia;
+use App\Models\Municipi;
+use App\Models\EstatIncidencia;
+use Illuminate\Database\QueryException;
+
 class RecursMobilController extends Controller
 {
     /**
@@ -15,7 +24,9 @@ class RecursMobilController extends Controller
      */
     public function index()
     {
-        //
+        $recursos = Incidencia::orderby('hora')->paginate(10);
+        $data['recursos'] = $recursos;
+        return view('gestioRecursos', $data);
     }
 
     /**
