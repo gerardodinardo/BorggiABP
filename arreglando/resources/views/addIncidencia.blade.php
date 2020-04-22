@@ -40,7 +40,7 @@
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="time" name="hora" value=" {{ old('hora') }} " id="hora">
                         </div>
-                        <select class="custom-select mt-4 mb-4 col-sm-1" select id="getFname" id="provincies" name="provincies[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-1" select id="estat" id="estat" name="provincies[]">
                             <option selected>Estat</option>
                                 @foreach($estats as $estat)
                                     <option value="{{$estat->id}}">
@@ -56,7 +56,7 @@
             <div class="desplegable" > 
                 <button class="collapsible" id="coll" disabled><strong>Identificació - Classificació Alertant</strong></button>
                 <div class="content">
-                    <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this);" id="desplegable_alertant" name="tipuAlertant[]">
+                    <select class="custom-select mt-4 mb-4" select id="tipusAlertant" onchange="admSelectCheck(this);" id="tipusAlertant" name="tipuAlertant[]">
                         <option selected>- Slecciona un tipus d'Alertant-</option>
                             {{-- @foreach($tipusAlertants as $tipuAlertant)//Opcion de For EACH Funciona, No vàlida para mostrar los divs a continuación, x value 1-4
                                 <option value="{{$tipuAlertant->id}}">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="form-group row d-flex justify-content-center">
                             <p class="text-center mb-4 col-sm-2">Centre Sanitari: </p>
-                            <select class="custom-select  mb-4 col-sm-6" select id="getFname" id="provincies" name="provincies[]">
+                            <select class="custom-select  mb-4 col-sm-6" select id="id_alertant" id="id_alertant" name="provincies[]">
                                 <option selected>- Selecciona un Centre Sanitari -</option>
                                     @foreach($alertants as $alertant)
                                         <option value="{{$alertant->id}}">
@@ -109,7 +109,7 @@
                 <button class="collapsible" id="coll3" disabled><strong>Localització</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
-                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="provincies" name="provincies[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="provincia" id="provincia" name="provincies[]">
                             <option selected>- Provincia -</option>
                                 @foreach($provincies as $provincia)
                                     <option value="{{$provincia->id}}">
@@ -117,7 +117,7 @@
                                     </option>
                                 @endforeach
                         </select>
-                        <select class="custom-select mt-4 mb-4 ml-2 mr-2 col-sm-3" select id="getFname" id="comarques" name="comarques[]">
+                        <select class="custom-select mt-4 mb-4 ml-2 mr-2 col-sm-3" select id="comarca" id="comarca" name="comarques[]">
                             <option selected>- Comarca -</option>
                                 @foreach($comarques as $comarca)
                                     <option value="{{$comarca->id}}">
@@ -125,7 +125,7 @@
                                     </option>
                                 @endforeach
                         </select>
-                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="municipiss<" name="municipis[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="municipi" id="municipi" name="municipis[]">
                             <option selected>- Municipi -</option>
                                 @foreach($municipis as $municipi)
                                     <option value="{{$municipi->id}}">
@@ -144,7 +144,7 @@
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="Textarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}"></textarea>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="complementAddress" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}"></textarea>
                     </div>
                 </div>   
             </div>      
@@ -200,7 +200,7 @@
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <div class="col-sm-9 mt-4">
-                            <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusIncident" name="tipusIncident[]">
+                            <select class="custom-select mt-4 mb-4" select id="tipusIncident" name="tipusIncident[]">
                                 <option selected>- Tipus Incident -</option>
                                     @foreach($tipusIncidents as $tipoIncident)
                                         <option value="{{$tipoIncident->id}}">
@@ -211,8 +211,8 @@
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-center">
-                        <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value="{{ old('complement_adreca') }}"></textarea>
+                        <label for="descripcio" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="descripcio" rows="3" placeholder="Ej. Traumatisme a causa d'un accident..." value="{{ old('descripcio') }}"></textarea>
                     </div>
                 </div> 
             </div>
