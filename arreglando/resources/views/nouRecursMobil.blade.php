@@ -26,15 +26,6 @@
                         </div>                       
                     </div>
 
-                    <div class="form-group row">
-                        <label for="inputTipus" class="col-sm-2 offset-sm-2 col-form-label">Tipus de Recurs</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputTipus" name="inputTipus">
-                        </div>                       
-                    </div>
-
-                
-
                     <fieldset class="form-group">
                         <div class="row">
                           <legend class="col-form-label col-sm-2 offset-sm-2 pt-0">Tipus de recurs:</legend>

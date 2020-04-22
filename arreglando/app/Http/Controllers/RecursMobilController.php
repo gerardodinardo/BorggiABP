@@ -47,17 +47,16 @@ class RecursMobilController extends Controller
     {
         
         $recurs = new RecursMobil();
-        $recurs->titulo = $request->input('titulo');
-        $recurs->director = $request->input('director');
-        $recurs->id_pelicula = $request->input('id_pelicula');
-
+        $recurs->codi = $request->input('inputCodi');
+        $recurs->tipus_recurs_id = $request->input('id_tipus');
+        $recurs->id_usuario = 1;
        
             $recurs->save();
 
             
         
 
-        return redirect()->action('PeliculaController@index')->withInput();
+        return redirect()->action('RecursMobilController@index')->withInput();
 
 
     }
