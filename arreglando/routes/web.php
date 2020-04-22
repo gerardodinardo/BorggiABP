@@ -19,6 +19,7 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
     Route::post('/register','Auth\RegisterController@register')->name('register');
     Route::get('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
+    Route::post('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
     //TEST DENTRO MIDDLE
     Route::resource('/principalIncidencies', 'IncidenciaController');
     Route::resource('/alertantCentreSanitari', 'AlertantController');

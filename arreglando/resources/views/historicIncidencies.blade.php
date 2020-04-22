@@ -15,7 +15,17 @@
         </svg>
     </a>
   </div>
+
+  filtro --> 
   
+  <form action="{{ action('IncidenciaController@indexHistoricIncidencies') }}" method="POST">
+  @csrf 
+     <button type="submit" name="id_search" value="1">id</button>
+     <button type="submit" name="direccio_search" value="2">direccio</button>
+</form>
+
+
+
 <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
     <h1>Històric Incidències</h1>
     <hr>

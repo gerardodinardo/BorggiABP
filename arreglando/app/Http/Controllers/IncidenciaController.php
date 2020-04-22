@@ -7,11 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\TipuAlertant;
-use App\Models\TipusIncident;
 use App\Models\Comarca;
-use App\Models\Provincia;
-use App\Models\Municipi;
-use App\Models\EstatIncidencia;
 use Illuminate\Database\QueryException;
 
 class IncidenciaController extends Controller
@@ -27,11 +23,23 @@ class IncidenciaController extends Controller
         $data['incidencies'] = $incidencies;
         return view('principalIncidencies', $data);
     }
-    public function indexHistoricIncidencies()
+    public function indexHistoricIncidencies(Request $request)
     {
-        $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
-        $data['incidencies'] = $incidencies;
-        return view('historicIncidencies', $data);
+
+
+            if($request->has('id_search')){
+                $incidencies = Incidencia::orderby('id')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $data['incidencies'] = $incidencies;
+                return view('historicIncidencies', $data);
+            }else{
+                $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $data['incidencies'] = $incidencies;
+                return view('historicIncidencies', $data);
+            }
+
+        // $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+        // $data['incidencies'] = $incidencies;
+        // return view('historicIncidencies', $data);
     }
     /**
      * Show the form for creating a new resource.
@@ -41,19 +49,10 @@ class IncidenciaController extends Controller
     public function create()
     {
         $comarques = Comarca::all();
-        $municipis = Municipi::all();
-        $provincies = Provincia::all();
-        $tipusIncidents = TipusIncident::all();
         $tipusAlertants = TipuAlertant::all();
-        $estats = EstatIncidencia::all();
-
 
         $data['comarques'] = $comarques;
-        $data['municipis'] = $municipis;
-        $data['provincies'] = $provincies;
         $data['tipusAlertants'] = $tipusAlertants;
-        $data['tipusIncidents'] = $tipusIncidents;
-        $data['estats'] = $estats;
 
         return view('addIncidencia', $data);
     }
@@ -66,7 +65,7 @@ class IncidenciaController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
