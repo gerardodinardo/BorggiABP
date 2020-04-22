@@ -20,14 +20,13 @@
 
         {{-- BUSCADOR--}}
             <form action="{{ action('AlertantController@indexAlertantsVIP') }}" method="get" class="form-inline">
-         
                 <div class="form-group mb-2">
                     <label for="" class="sr-only">Alertant VIP a cercar:</label>
-                    <input type="text" readonly class="form-control-plaintext" id="" value="Centre Sanitari a cercar: ">
-                  </div>
+                    <input type="text" readonly class="form-control-plaintext" id="" value="Alertant VIP a cercar:">
+                </div>
                   <div class="form-group mx-sm-3 mb-2">
                     <label for="search" class="sr-only">Nom VIP</label>
-                    <input type="text" class="form-control" id="search" name="search" placeholder="Nom centre">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Nom VIP">
                   </div>
                   <button type="submit" class="btn btn-custom1 btn-xl mb-2">CERCAR</button>
             </form>
