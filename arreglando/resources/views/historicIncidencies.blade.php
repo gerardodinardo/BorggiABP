@@ -22,7 +22,7 @@
   @csrf 
      <button type="submit" name="id_search" value="1">id</button>
      <button type="submit" name="direccio_search" value="2">direccio</button>
-</form>
+  </form>
 
 
 
