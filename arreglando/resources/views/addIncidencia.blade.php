@@ -25,7 +25,7 @@
         <form action="{{ action('IncidenciaController@store') }}" method="post">
             @csrf
             <div class="desplegable">
-                <button class="collapsible" id="coll1"><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
+                <button class="collapsible" id="coll1" disabled><strong>Dades Automàtiquess (Telèfon, Data i Hora)</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <label for="telefon" class="col-sm-1 mt-4 col-form-label">Telèfon</label>
@@ -50,8 +50,8 @@
             </div>
             <!-- ********** Fin Desplegable 1 ********** -->
             <script src="{{ asset('/js/addIncidenciaSelecciones.js') }}"></script>{{-- Js resultado aparecer div segun selector --}}
-            <div class="desplegable">
-                <button class="collapsible" id="coll"><strong>Identificació - Classificació Alertant</strong></button>
+            <div class="desplegable" > 
+                <button class="collapsible" id="coll" disabled><strong>Identificació - Classificació Alertant</strong></button>
                 <div class="content">
                     <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this); reabrir();" id="desplegable_alertant" name="tipuAlertant[]">
                         <option selected>- Slecciona un tipus d'Alertant-</option>
@@ -89,7 +89,7 @@
             </div>        
             <!-- ********** Fin Desplegable 2 ********** -->
             <div class="desplegable">
-                <button class="collapsible" id="coll3"><strong>Localització</strong></button>
+                <button class="collapsible" id="coll3" disabled><strong>Localització</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <label for="localitzacio" class="col-sm-1 mt-4 col-form-label"></label>
@@ -135,7 +135,7 @@
             </div>      
             <!-- ********** Fin Desplegable 3 ********** -->  
             <div class="desplegable">     
-                <button class="collapsible" id="coll4"><strong>Dades Afectat</strong></button>
+                <button class="collapsible" id="coll4" disabled><strong>Dades Afectat</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <label for="cip" class="col-sm-1 mt-4 col-form-label">CIP</label>
@@ -182,7 +182,7 @@
             </div>
             <!-- ********** Fin Desplegable 4 ********** -->    
             <div class="desplegable">          
-                <button class="collapsible" id="coll5"><strong>Classificació Incident</strong></button>
+                <button class="collapsible" id="coll5" disabled><strong>Classificació Incident</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <div class="col-sm-9 mt-4">
@@ -203,15 +203,15 @@
                 </div> 
             </div>
             <!-- ********** Fin Desplegable 5 ********** -->  
-            <div class="desplegable">              
-                <button class="collapsible" id="coll6"><strong>Assignació de Recursos Mòbils</strong></button>
+            <div class="desplegable" >              
+                <button class="collapsible" id="coll6" disabled><strong>Assignació de Recursos Mòbils</strong></button>
                 <div class="content">
                     <p><strong>Falta por acabar, discutir en grupo...</strong></p>
                 </div>
             </div>  
             <!-- ********** Fin Desplegable 6 ********** --> 
             
-            <script> //Script abrir cerrar desplegables
+            {{-- <script> //Script abrir cerrar desplegables
                 var coll = document.getElementsByClassName("collapsible");
                 var i;
                 
@@ -227,7 +227,7 @@
                     });
                 }
                 
-            </script>
+            </script> --}}
             <hr>
             <div class="text-center pb-4">
                 <button type="" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
