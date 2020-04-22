@@ -177,7 +177,7 @@
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <div class="col-sm-9 mt-4">
-                            <select class="custom-select mt-4 mb-4" select id="getFname" id="municipiss<" name="tipusIncident[]">
+                            <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusIncident" name="tipusIncident[]">
                                 <option selected>- Tipus Incident -</option>
                                     @foreach($tipusIncidents as $tipoIncident)
                                         <option value="{{$tipoIncident->id}}">
