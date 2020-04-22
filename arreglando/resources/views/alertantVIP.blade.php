@@ -20,14 +20,13 @@
 
         {{-- BUSCADOR--}}
             <form action="{{ action('AlertantController@indexAlertantsVIP') }}" method="get" class="form-inline">
-         
                 <div class="form-group mb-2">
                     <label for="" class="sr-only">Alertant VIP a cercar:</label>
-                    <input type="text" readonly class="form-control-plaintext" id="" value="Centre Sanitari a cercar: ">
-                  </div>
+                    <input type="text" readonly class="form-control-plaintext" id="" value="Alertant VIP a cercar:">
+                </div>
                   <div class="form-group mx-sm-3 mb-2">
                     <label for="search" class="sr-only">Nom VIP</label>
-                    <input type="text" class="form-control" id="search" name="search" placeholder="Nom centre">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Nom VIP">
                   </div>
                   <button type="submit" class="btn btn-custom1 btn-xl mb-2">CERCAR</button>
             </form>
@@ -36,7 +35,7 @@
         </div>
         <div class="d-flex flex-wrap justify-content-center  row no-gutters">
         @foreach ($alertants as $alertant)
-            @if($alertant->id == 4)
+            {{-- @if($alertant->tipus_alertant_id == 4) --}}
                 <div class="card ml-3  mt-3 mb-5  col-sm-3">
                     <div class="card-header bg-warning text-center">
                         {{ $alertant->nom }}&nbsp;&nbsp;
@@ -54,8 +53,8 @@
                         Footer
                     </div> --}}
                 </div>
-            @else 
-            @endif
+            {{-- @else 
+            @endif --}}
         @endforeach
         
         </div>   

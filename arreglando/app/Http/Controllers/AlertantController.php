@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alertant;
+use App\Models\TipuAlertant;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -18,12 +19,12 @@ class AlertantController extends Controller
         if($request->has('search'))
         {
             $search = $request->input('search');
-            $alertants = Alertant::where('nom', 'like', '%'.$search.'%')->orderby('nom')->paginate(12);
+            $alertants = Alertant::where('tipus_alertant_id','like',1)->where('nom', 'like', '%'.$search.'%')->orderby('nom')->paginate(12);
         }
         else
         {
                 $search = '';
-            $alertants = Alertant::orderby('nom')->paginate(12);
+            $alertants = Alertant::where('tipus_alertant_id','like',1)->orderby('nom')->paginate(12);
         }
         
         $data['alertants'] = $alertants;
@@ -37,14 +38,16 @@ class AlertantController extends Controller
         if($request->has('search'))
         {
             $search = $request->input('search');
-            $alertants = Alertant::where('nom', 'like', '%'.$search.'%')->orderby('nom')->paginate(12);
+            $alertants = Alertant::where('tipus_alertant_id','like',4)->where('nom', 'like', '%'.$search.'%')->orderby('nom')->paginate(12);
         }
         else
         {
-                $search = '';
-            $alertants = Alertant::orderby('nom')->paginate(12);
+            $search = '';
+            $alertants = Alertant::where('tipus_alertant_id','like',4)->orderby('nom')->paginate(12);
         }
-        
+
+        $tipusAlertants = TipuAlertant::all();
+        $data['tipusAlertants'] = $tipusAlertants;
         $data['alertants'] = $alertants;
         $data['search'] = $search;
         return view('alertantVIP', $data);
