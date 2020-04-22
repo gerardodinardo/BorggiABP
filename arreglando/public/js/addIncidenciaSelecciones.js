@@ -1,4 +1,5 @@
-window.addEventListener('load', abrirDesplegables, false);
+// Vue.config.silent = false //eliminar error pagina en blanco al cargar
+// window.addEventListener('load', abrirDesplegables, true);
 // window.addEventListener('load', SetDate, false);
 
 function abrirDesplegables(){

@@ -25,9 +25,6 @@ h3{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
 }
 
-/* .active, .collapsible:hover {
-  background-color:  #F1D302;
-} */
 
 .collapsible:after {
     content: '\002B';
