@@ -34,16 +34,16 @@
                         </div>
                         <label for="fecha" class="col-sm-1 mt-4 col-form-label">Data</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="date" name="fecha" value="{{ old('fecha') }}" id="fecha">
+                            {{-- <input class="form-control" type="date" name="myDate" value="myDate" id="myDate"> --}}
                         </div>
                         <label for="currentTime" class="col-sm-1 mt-4 col-form-label">Hora</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="time" name="currentTime" value=" {{ old('currentTime') }} " id="currentTime">
+                            {{-- <input class="form-control" type="time" name="currentTime" value=" {{ old('currentTime') }} " id="currentTime">
                             <script>
                                 var date = new Date();
                                 var currentTime = date.getHours() + ':' + date.getMinutes();
                                 document.getElementById('currentTime').value = currentTime;
-                            </script>
+                            </script> --}}
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="Textarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
                     </div>
                 </div>   
             </div>      
@@ -142,9 +142,9 @@
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="tel" value=" {{ old('cip') }} " id="cip" placeholder="Ej. XX99000999" name="cip">
                         </div>
-                        <label for="telefon" class="col-sm-1 mt-4 col-form-label">Teléfon</label>
+                        <label for="telefon2" class="col-sm-1 mt-4 col-form-label">Teléfon</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('telefon') }} " id="telefon" name="telefon" placeholder="Ej. 666999666">
+                            <input class="form-control" type="tel" value=" {{ old('telefon2') }} " id="telefon2" name="telefon2" placeholder="Ej. 666999666">
                         </div> 
                     </div>
                     <hr>

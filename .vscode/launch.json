@@ -5,26 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "firefox",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "name": "Launch localhost",
-            "url": "http://localhost/shishigang/arreglando/public/",
+            "name": "Launch Chrome",
+            "url": "http://localhost:8080/shishigang/arreglando/public/",
             "webRoot": "${workspaceFolder}"
         },
-      
-        // {
-        //     "type": "chrome",
-        //     "request": "launch",
-        //     "name": "Launch Chrome",
-        //     "url": "https://localhost/DAW2/DWES/php/laravel/seguretat/public/",
-        //     "webRoot": "${workspaceFolder}"
-        // },
         {
             "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",
-            "port": 9001
+            "port": 9000
         },
         {
             "name": "Launch currently open script",
@@ -32,7 +23,7 @@
             "request": "launch",
             "program": "${file}",
             "cwd": "${fileDirname}",
-            "port": 9001
+            "port": 9000
         }
     ]
 }

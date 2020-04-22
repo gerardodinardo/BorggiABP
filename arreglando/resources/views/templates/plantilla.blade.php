@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('estilos.css') }}">
     <link rel="shortcut icon" href="{{ asset('img/ibroggi.png') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body style="padding-top:105px;">
    <nav class="navbar navbar-light fixed-top">                 {{--  <a href="{{ route('logout') }}" --}}
