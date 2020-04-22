@@ -72,8 +72,3 @@ function admSelectCheck(nameSelect)
     }
 }
 
-function reabrir()
-{
-    document.getElementById("coll").click();
-    document.getElementById("coll").click();
-}

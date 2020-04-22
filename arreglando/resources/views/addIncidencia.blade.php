@@ -34,16 +34,11 @@
                         </div>
                         <label for="fecha" class="col-sm-1 mt-4 col-form-label">Data</label>
                         <div class="col-sm-2 mt-4">
-                            {{-- <input class="form-control" type="date" name="myDate" value="myDate" id="myDate"> --}}
+                                <input class="form-control" type="date" name="data" value="{{ old('data') }}" id="data">
                         </div>
                         <label for="currentTime" class="col-sm-1 mt-4 col-form-label">Hora</label>
                         <div class="col-sm-2 mt-4">
-                            {{-- <input class="form-control" type="time" name="currentTime" value=" {{ old('currentTime') }} " id="currentTime">
-                            <script>
-                                var date = new Date();
-                                var currentTime = date.getHours() + ':' + date.getMinutes();
-                                document.getElementById('currentTime').value = currentTime;
-                            </script> --}}
+                            <input class="form-control" type="time" name="hora" value=" {{ old('hora') }} " id="hora">
                         </div>
                     </div>
                 </div>
@@ -53,28 +48,27 @@
             <div class="desplegable" > 
                 <button class="collapsible" id="coll" disabled><strong>Identificació - Classificació Alertant</strong></button>
                 <div class="content">
-                    <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this); reabrir();" id="desplegable_alertant" name="tipuAlertant[]">
+                    <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this);" id="desplegable_alertant" name="tipuAlertant[]">
                         <option selected>- Slecciona un tipus d'Alertant-</option>
-                            @foreach($tipusAlertants as $tipuAlertant)
+                            {{-- @foreach($tipusAlertants as $tipuAlertant)//Opcion de For EACH Funciona, No vàlida para mostrar los divs a continuación, x value 1-4
                                 <option value="{{$tipuAlertant->id}}">
                                     {{$tipuAlertant->tipus}}
                                 </option>
-                            @endforeach
-                        {{-- <option id="centreSanitari"value="1">Centre Sanitari</option>
+                            @endforeach --}}
+                        <option id="centreSanitari"value="1">Centre Sanitari</option>
                         <option id="personaAfectada"value="2">Persona Afectada</option>
                         <option id="entornAfectat" value="3">Entorn de l'Afectat</option>
-                        <option id="alertantVip" value="4">Alertant VIP</option> --}}
+                        <option id="alertantVip" value="4">Alertant VIP</option>
+                        <option id="alertantAccidental" value="5">Alertant Accidental</option>
                     </select>
                     {{-- divs a mostrar despues de execute javascript, los divs estan default display:none --}}
                     <div id="divcentreSanitari" style="display:none;">
                         <div class="form-group row">
                             <label for="metge" class="col-sm-2 mt-4 col-form-label">Nom del Metge: </label>
                             <div class="col-sm-4 mt-4">
-                                <input class="form-control" type="metge" name="metge" value=" {{ old('metge') }} " id="metge" placeholder="">
+                                <input class="form-control" type="metge" name="metge"  id="metge" placeholder="">
                             </div>
                         </div>
-                        <p>S'han de mostrar dades de l'alertant automàticament (backend)</p>
-                        <p><strong>Has seleccionat Perona Afectada</strong></p>
                     </div>  
                     <div id="divpersonaAfectada" style="display:none;">
                         <p><strong>Has seleccionat Perona Afectada</strong></p>
@@ -92,44 +86,42 @@
                 <button class="collapsible" id="coll3" disabled><strong>Localització</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
-                        <label for="localitzacio" class="col-sm-1 mt-4 col-form-label"></label>
-                        <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('localitzacio') }} " id="localitzacio" placeholder="Ej. Barcelona">
-                        </div>
-                        {{-- <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Província</label>
-                        <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Barcelona">
-                        </div>
-                        <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Comarca</label>
-                        <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Barcelonés">
-                        </div> 
-                        <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Municipi</label>
-                        <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value="" id="formGroupExampleInput" placeholder="Ej. Granollers">
-                        </div> --}}
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="provincies" name="provincies[]">
+                            <option selected>- Provincia -</option>
+                                @foreach($provincies as $provincia)
+                                    <option value="{{$provincia->id}}">
+                                        {{$provincia->nom}}
+                                    </option>
+                                @endforeach
+                        </select>
+                        <select class="custom-select mt-4 mb-4 ml-2 mr-2 col-sm-3" select id="getFname" id="comarques" name="comarques[]">
+                            <option selected>- Comarca -</option>
+                                @foreach($comarques as $comarca)
+                                    <option value="{{$comarca->id}}">
+                                        {{$comarca->nom}}
+                                    </option>
+                                @endforeach
+                        </select>
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="municipiss<" name="municipis[]">
+                            <option selected>- Municipi -</option>
+                                @foreach($municipis as $municipi)
+                                    <option value="{{$municipi->id}}">
+                                        {{$municipi->nom}}
+                                    </option>
+                                @endforeach
+                        </select>
                     </div>
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-1 mt-4 col-form-label">Adreça</label>
                         <div class="col-sm-4 mt-4">
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Ej. Passeig de Sant Martí" value=" {{ old('inputAdress') }} ">
-                        </div>
-                        <label for="inputTipusCarrer" class="col-sm-2 mt-4 col-form-label">Tipus Carrer</label>
-                        <div class="col-sm-3 mt-4">
-                            <select class="custom-select">
-                                <option selected>- Selecciona un Tipus de Carrer -</option>
-                                <option value="1">Avenida</option>
-                                <option value="2">Passeig</option>
-                                <option value="3">Carrer</option>
-                                <option value="3">Plaça</option>
-                            </select>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Ej. Passeig de Sant Martí" value=" {{ old('adreca') }} ">
                         </div>
                     </div>
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="Textarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="Textarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}></textarea>
                     </div>
                 </div>   
             </div>      
@@ -140,19 +132,18 @@
                     <div class="form-group row d-flex justify-content-center">
                         <label for="cip" class="col-sm-1 mt-4 col-form-label">CIP</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('cip') }} " id="cip" placeholder="Ej. XX99000999" name="cip">
+                          <input class="form-control" type="tel"   {{--value=" {{ old('cip') }} "--}}  id="cip" placeholder="Ej. XX99000999" name="cip">
                         </div>
                         <label for="telefon2" class="col-sm-1 mt-4 col-form-label">Teléfon</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('telefon2') }} " id="telefon2" name="telefon2" placeholder="Ej. 666999666">
+                            <input class="form-control" type="tel"  {{--value=" {{ old('telefon2') }} "--}} id="telefon2" name="telefon2" placeholder="Ej. 666999666">
                         </div> 
                     </div>
                     <hr>
-                    <p><strong>S'ha de buscar segons Tel o CIP i omplir dades següents automàticament(backend) si es troba, omplir a mà...</strong></p>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="edad" class="col-sm-1 mt-4 col-form-label">Edat</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('edad') }}" name="edad" id="edad" placeholder="Ej. 27">
+                            <input class="form-control" type="tel" {{--value=" {{ old('edad') }}"--}} name="edad" id="edad" placeholder="Ej. 27">
                         </div>
                         <label for="formGroupExampleInput" class="col-sm-1 mt-4 col-form-label">Sexe</label>
                         <div class="col-sm-2 mt-4">
@@ -167,15 +158,15 @@
                     <div class="form-group row d-flex justify-content-center">
                         <label for="nom" class="col-sm-0.5 mt-4 col-form-label">Nom</label>
                         <div class="col-sm-2 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('nom') }}" name="nom" id="nom" placeholder="Ej. Lorena">
+                            <input class="form-control" type="tel" {{--value=" {{ old('nom') }}"--}} name="nom" id="nom" placeholder="Ej. Lorena">
                         </div> 
                         <label for="cognom" class="col-sm-1 mt-4 col-form-label">1r Cognom</label>
                         <div class="col-sm-3 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('cognom') }}" id="cognom" name="cognom" placeholder="Ej. García">
+                            <input class="form-control" type="tel" {{--value=" {{ old('cognom') }}" --}}id="cognom" name="cognom" placeholder="Ej. García">
                         </div>
                         <label for="cognom2" class="col-sm-1.5 mt-4 mb-4 col-form-label">2n Cognom</label>
                         <div class="col-sm-3 mt-4">
-                            <input class="form-control" type="tel" value=" {{ old('cognom2') }} " id="cognom2" name="cognom2" placeholder="Ej. Torra">
+                            <input class="form-control" type="tel" {{--value=" {{ old('cognom2') }} "--}} id="cognom2" name="cognom2" placeholder="Ej. Torra">
                         </div>
                     </div>
                 </div>  
@@ -186,19 +177,19 @@
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <div class="col-sm-9 mt-4">
-                            <select class="custom-select">
-                                <option selected>- Selecciona una Classificació -</option>
-                                <option value="1">Accidents / Traumatisme</option>
-                                <option value="2">Malaltia lloc públic</option>
-                                <option value="3">Malaltia Domicili</option>
-                                <option value="4">Consulta Mèdica</option>
-                                <option value="5">Transport Sanitari</option>
+                            <select class="custom-select mt-4 mb-4" select id="getFname" id="municipiss<" name="tipusIncident[]">
+                                <option selected>- Tipus Incident -</option>
+                                    @foreach($tipusIncidents as $tipoIncident)
+                                        <option value="{{$tipoIncident->id}}">
+                                            {{$tipoIncident->tipus}}
+                                        </option>
+                                    @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..."></textarea>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value="{{ old('complement_adreca') }}"></textarea>
                     </div>
                 </div> 
             </div>
@@ -210,24 +201,6 @@
                 </div>
             </div>  
             <!-- ********** Fin Desplegable 6 ********** --> 
-            
-            {{-- <script> //Script abrir cerrar desplegables
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-                
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight){
-                        content.style.maxHeight = null;
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    } 
-                    });
-                }
-                
-            </script> --}}
             <hr>
             <div class="text-center pb-4">
                 <button type="" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
