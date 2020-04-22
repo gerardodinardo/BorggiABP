@@ -40,7 +40,7 @@
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="time" name="hora" value=" {{ old('hora') }} " id="hora">
                         </div>
-                        <select class="custom-select mt-4 mb-4 col-sm-1" select id="getFname" id="provincies" name="provincies[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-1" select id="estat" id="estat" name="provincies[]">
                             <option selected>Estat</option>
                                 @foreach($estats as $estat)
                                     <option value="{{$estat->id}}">
@@ -56,7 +56,7 @@
             <div class="desplegable" > 
                 <button class="collapsible" id="coll" disabled><strong>Identificació - Classificació Alertant</strong></button>
                 <div class="content">
-                    <select class="custom-select mt-4 mb-4" select id="getFname" onchange="admSelectCheck(this);" id="desplegable_alertant" name="tipuAlertant[]">
+                    <select class="custom-select mt-4 mb-4" select id="tipusAlertant" onchange="admSelectCheck(this);" id="tipusAlertant" name="tipuAlertant[]">
                         <option selected>- Slecciona un tipus d'Alertant-</option>
                             {{-- @foreach($tipusAlertants as $tipuAlertant)//Opcion de For EACH Funciona, No vàlida para mostrar los divs a continuación, x value 1-4
                                 <option value="{{$tipuAlertant->id}}">
@@ -71,21 +71,36 @@
                     </select>
                     {{-- divs a mostrar despues de execute javascript, los divs estan default display:none --}}
                     <div id="divcentreSanitari" style="display:none;">
-                        <div class="form-group row">
-                            <label for="metge" class="col-sm-2 mt-4 col-form-label">Nom del Metge: </label>
-                            <div class="col-sm-4 mt-4">
+                        <div class="form-group row d-flex justify-content-center">
+                            <label for="metge" class="col-sm-2 mt-4 col-form-label">Nom del Metge:</label>
+                            <div class="col-sm-6 mt-4">
                                 <input class="form-control" type="metge" name="metge"  id="metge" placeholder="">
                             </div>
                         </div>
+                        <div class="form-group row d-flex justify-content-center">
+                            <p class="text-center mb-4 col-sm-2">Centre Sanitari: </p>
+                            <select class="custom-select  mb-4 col-sm-6" select id="id_alertant" id="id_alertant" name="provincies[]">
+                                <option selected>- Selecciona un Centre Sanitari -</option>
+                                    @foreach($alertants as $alertant)
+                                        <option value="{{$alertant->id}}">
+                                            {{$alertant->nom}}
+                                        </option>
+                                    @endforeach
+                            </select> 
+                        </div>       
                     </div>  
-                    <div id="divpersonaAfectada" style="display:none;">
-                        <p><strong>Has seleccionat Perona Afectada</strong></p>
-                    </div>
-                    <div id="diventornAfectat" style="display:none;">
-                        <p><strong>Has seleccionat Entorn Afectat</strong></p>
-                    </div>   
                     <div id="divalertantVip" style="display:none;">
-                        <p><strong>S'ha de buscar l'alertant VIP (backend)</strong></p>
+                        <div class="form-group row d-flex justify-content-center">
+                            <p class="text-center mb-4 col-sm-2">Alertant VIP: </p>
+                            <select class="custom-select  mb-4 col-sm-6" select id="getFname" id="provincies" name="provincies[]">
+                                <option selected>- Selecciona Alerant VIP -</option>
+                                    @foreach($alertants as $alertant)
+                                        <option value="{{$alertant->id}}">
+                                            {{$alertant->nom}}
+                                        </option>
+                                    @endforeach
+                            </select> 
+                        </div>       
                     </div>
                 </div>
             </div>        
@@ -94,7 +109,7 @@
                 <button class="collapsible" id="coll3" disabled><strong>Localització</strong></button>
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
-                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="provincies" name="provincies[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="provincia" id="provincia" name="provincies[]">
                             <option selected>- Provincia -</option>
                                 @foreach($provincies as $provincia)
                                     <option value="{{$provincia->id}}">
@@ -102,7 +117,7 @@
                                     </option>
                                 @endforeach
                         </select>
-                        <select class="custom-select mt-4 mb-4 ml-2 mr-2 col-sm-3" select id="getFname" id="comarques" name="comarques[]">
+                        <select class="custom-select mt-4 mb-4 ml-2 mr-2 col-sm-3" select id="comarca" id="comarca" name="comarques[]">
                             <option selected>- Comarca -</option>
                                 @foreach($comarques as $comarca)
                                     <option value="{{$comarca->id}}">
@@ -110,7 +125,7 @@
                                     </option>
                                 @endforeach
                         </select>
-                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="getFname" id="municipiss<" name="municipis[]">
+                        <select class="custom-select mt-4 mb-4 col-sm-3" select id="municipi" id="municipi" name="municipis[]">
                             <option selected>- Municipi -</option>
                                 @foreach($municipis as $municipi)
                                     <option value="{{$municipi->id}}">
@@ -129,11 +144,11 @@
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
                         <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="Textarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}></textarea>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="complementAddress" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}"></textarea>
                     </div>
                 </div>   
             </div>      
-            <!-- ********** Fin Desplegable 3 ********** -->  
+            <!-- ********** Fin Desplegable 3 ********** !-->  
             <div class="desplegable">     
                 <button class="collapsible" id="coll4" disabled><strong>Dades Afectat</strong></button>
                 <div class="content">
@@ -185,7 +200,7 @@
                 <div class="content">
                     <div class="form-group row d-flex justify-content-center">
                         <div class="col-sm-9 mt-4">
-                            <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusIncident" name="tipusIncident[]">
+                            <select class="custom-select mt-4 mb-4" select id="tipusIncident" name="tipusIncident[]">
                                 <option selected>- Tipus Incident -</option>
                                     @foreach($tipusIncidents as $tipoIncident)
                                         <option value="{{$tipoIncident->id}}">
@@ -196,8 +211,8 @@
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-center">
-                        <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="exampleFormControlTextarea1" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value="{{ old('complement_adreca') }}"></textarea>
+                        <label for="descripcio" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Incident</strong></label>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="descripcio" rows="3" placeholder="Ej. Traumatisme a causa d'un accident..." value="{{ old('descripcio') }}"></textarea>
                     </div>
                 </div> 
             </div>
@@ -205,7 +220,33 @@
             <div class="desplegable" >              
                 <button class="collapsible" id="coll6" disabled><strong>Assignació de Recursos Mòbils</strong></button>
                 <div class="content">
-                    <p><strong>Falta por acabar, discutir en grupo...</strong></p>
+                    <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusIncident" name="tipusIncident[]">
+                        <option selected>- Tipus Recurs Mòbil -</option>
+                            @foreach($tipusRecurs as $trecur)
+                                <option value="{{$trecur->id}}">
+                                    {{$trecur->tipus}}
+                                </option>
+                            @endforeach
+                    </select>
+                    <p class="text-center"><strong>- Selecciona una Prioritat -</strong></p>
+                    <div class="row d-flex justify-content-center mb-5 mt-5">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">&rarr;1</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">&rarr;2</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline3">&rarr;3</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline4">&rarr;4</label>
+                          </div>
+                    </div>
                 </div>
             </div>  
             <!-- ********** Fin Desplegable 6 ********** --> 

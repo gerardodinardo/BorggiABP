@@ -22,9 +22,12 @@
 
     <div class="container border col-sm-11 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
         <div class="row">
-          <div class="col-sm-7 border rounded">
+          <div class="col-sm-12">
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
             <hr>
+            <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 5px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
+              <a class="button1" href="{{ asset('/')}}">Crear Nou Recurs Mòbil</a>
+            </div>
             <table class="table table-striped table-bordered table-hover text-center">
                 <thead class="bg-warning">
                   <tr>
@@ -34,100 +37,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Plaza Catalunya 123</td>
-                    <td>L'ambulància és troba al lloc.</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Carrer Ibiza</td>
-                    <td>L'ambulancia, está de camí a l'incident.</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td><button type="button" class="btn btn-outline-danger">EDITAR</button></td>
-                  </tr>
+                  {{-- @foreach ($recursos as $recurs)
+                      <tr>
+                        <th scope="row"> {{ $recurs->id }} </th>
+                        <td> {{ $recurs->adreca }} </td>
+                        <td> {{ $recurs->descripcio }} </td>
+                      </tr>
+                  @endforeach --}}
                 </tbody>
               </table>
-          </div>
-          <div class="col-sm-5 border rounded">
-            <p class="h2 mt-4 text-center">Recursos Disponibles</p>
-            <hr>
-            <div class="row text-center m-auto pb-5">
-                <div class="col-sm">
-                    <div class="card bg-light" style="width: 16rem; height:12rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Amb. Med.-Mike</h5>
-                          <div class="row d-flex justify-content-around">
-                            <button type="button" class="btn btn-danger btn-sm">-</button>
-                            <p class="card-text" style="font-size: 4em;">100</p>
-                            <button type="button" class="btn btn-success btn-sm">+</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card bg-light" style="width: 16rem; height:12rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Amb. Med.-India</h5>
-                          <div class="row d-flex justify-content-around">
-                            <button type="button" class="btn btn-danger btn-sm">-</button>
-                            <p class="card-text" style="font-size: 4em;">100</p>
-                            <button type="button" class="btn btn-success btn-sm">+</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-sm mt-5">
-                    <div class="card bg-light" style="width: 16rem; height:12rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Amb. Med.-Tango</h5>
-                          <div class="row d-flex justify-content-around">
-                            <button type="button" class="btn btn-danger btn-sm">-</button>
-                            <p class="card-text" style="font-size: 4em;">100</p>
-                            <button type="button" class="btn btn-success btn-sm">+</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm mt-5">
-                    <div class="card bg-light" style="width: 16rem; height:12rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Helicopter Medicalitzat</h5>
-                          <div class="row d-flex justify-content-around">
-                            <button type="button" class="btn btn-danger btn-sm">-</button>
-                            <p class="card-text" style="font-size: 4em;">100</p>
-                            <button type="button" class="btn btn-success btn-sm">+</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-          </div>
+              {{-- {{ $recursos->links() }} --}}
+            </div>
         </div>
       </div>
 @endsection

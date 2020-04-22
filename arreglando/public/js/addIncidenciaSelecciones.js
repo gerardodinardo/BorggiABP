@@ -40,22 +40,6 @@ function admSelectCheck(nameSelect)
             document.getElementById("divcentreSanitari").style.display = "none";
         }
         // ******************
-        admOptionValue = document.getElementById("personaAfectada").value;
-        if(admOptionValue == nameSelect.value){
-            document.getElementById("divpersonaAfectada").style.display = "block";
-        }
-        else{
-            document.getElementById("divpersonaAfectada").style.display = "none";
-        }
-        // ******************
-        admOptionValue = document.getElementById("entornAfectat").value;
-        if(admOptionValue == nameSelect.value){
-            document.getElementById("diventornAfectat").style.display = "block";
-        }
-        else{
-            document.getElementById("diventornAfectat").style.display = "none";
-        }
-        // ******************
         admOptionValue = document.getElementById("alertantVip").value;
         if(admOptionValue == nameSelect.value){
             document.getElementById("divalertantVip").style.display = "block";
@@ -66,8 +50,6 @@ function admSelectCheck(nameSelect)
     }
     else{
         document.getElementById("divcentreSanitari").style.display = "none";
-        document.getElementById("divpersonaAfectada").style.display = "none";
-        document.getElementById("diventornAfectat").style.display = "none";
         document.getElementById("divalertantVip").style.display = "none";
     }
 }
