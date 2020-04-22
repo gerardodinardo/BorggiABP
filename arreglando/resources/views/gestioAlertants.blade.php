@@ -13,53 +13,30 @@
             </svg>
         </a>
     </div>
-    <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
+    <div class="container border col-sm-7 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
         <hr>
         <a href="{{ asset('/alertantCentreSanitari')}}" style="color: black;">
-          <div class="row d-flex justify-content-around mt-5 text-center">
-              <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
+          <div class="row d-flex justify-content-center mt-5 text-center">
+              <div class="card p-2 mr-5" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
                   <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
                   <div class="card-body" >
                     <h5 class="card-title">Centre Sanitari</h5>
                     <p class="card-text">
-                      Fa referència a l'edifici on s'atén a la població en un primer nivell sanitari.</p>
-                    <span class="badge badge-info badge-pill">14</span>
+                      Edifici on s'atén a la població en un primer nivell sanitari.</p>
                   </div>
               </div>
-            </a> 
-            <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/headache.svg') }}" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">El propi afectat</h5>
-                  <p class="card-text">La incidència es relaciona directament amb l'afectat en qüestió.</p>
-                  <span class="badge badge-info badge-pill">10</span>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/enterprise.svg') }}" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Entorn de l'afectat</h5>
-                  <p class="card-text">L'afectat no está directament relacionat amb l'emissor de la trucada a emergències.</p>
-                  <span class="badge badge-info badge-pill">22</span>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Alertant VIP</h5>
-                  <p class="card-text">Aquella persona habitual, sanitaris, ambulància, metge.</p>
-                  <span class="badge badge-info badge-pill">33</span>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                <img class="card-img-top" src="{{ asset('img/sid-view.svg') }}" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Alertant accidental</h5>
-                  <p class="card-text">L'alertant no está afectat directament en la incidència.</p>
-                  <span class="badge badge-info badge-pill">52</span>
-                </div>
-            </div>
+            </a>
+            <a href="{{ asset('/alertantVIP')}}" style="color: black;">
+              <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
+                  <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Alertant VIP</h5>
+                    <p class="card-text">Aquella persona habitual, sanitaris, ambulància, metge.</p>
+                  </div>
+              </div>
+            </a>
+          </div>
         </div>
     </div>
 @endsection

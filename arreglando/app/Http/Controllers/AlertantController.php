@@ -30,6 +30,25 @@ class AlertantController extends Controller
         $data['search'] = $search;
         return view('alertantCentreSanitari', $data);
         
+    }    
+    
+    public function indexAlertantsVIP(Request $request)
+    {
+        if($request->has('search'))
+        {
+            $search = $request->input('search');
+            $alertants = Alertant::where('nom', 'like', '%'.$search.'%')->orderby('nom')->paginate(12);
+        }
+        else
+        {
+                $search = '';
+            $alertants = Alertant::orderby('nom')->paginate(12);
+        }
+        
+        $data['alertants'] = $alertants;
+        $data['search'] = $search;
+        return view('alertantVIP', $data);
+        
     }
 
     /**

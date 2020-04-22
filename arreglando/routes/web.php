@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth']],function(){
     //TEST DENTRO MIDDLE
     Route::resource('/principalIncidencies', 'IncidenciaController');
     Route::resource('/alertantCentreSanitari', 'AlertantController');
+    Route::get('/alertantVIP', 'AlertantController@indexAlertantsVIP');
     Route::resource('/addIncidencia', 'IncidenciaController');
     Route::get('/editarRecurs', function () 
     {
