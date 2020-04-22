@@ -15,7 +15,7 @@ class RecursMobilController extends Controller
      */
     public function index()
     {
-        //
+        return view('nouRecursMobil');
     }
 
     /**
@@ -36,7 +36,21 @@ class RecursMobilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $recurs = new RecursMobil();
+        $recurs->titulo = $request->input('titulo');
+        $recurs->director = $request->input('director');
+        $recurs->id_pelicula = $request->input('id_pelicula');
+
+       
+            $recurs->save();
+
+            
+        
+
+        return redirect()->action('PeliculaController@index')->withInput();
+
+
     }
 
     /**
@@ -47,7 +61,7 @@ class RecursMobilController extends Controller
      */
     public function show(RecursMobil $recursMobil)
     {
-        //
+        
     }
 
     /**

@@ -54,7 +54,7 @@ class LoginController extends Controller
 
         }else
         {
-        //    return redirect('/');
+       
             return redirect('login')->withInput();
 
         }

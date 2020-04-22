@@ -16,6 +16,10 @@
     </a>
   </div>
     
+
+
+  <a href="{{ asset('/nouRecursMobil.blade')}}">NOU RECURS</a>
+
     <div class="container border col-sm-11 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
         <div class="row">
           <div class="col-sm-7 border rounded">

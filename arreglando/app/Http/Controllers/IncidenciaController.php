@@ -31,6 +31,12 @@ class IncidenciaController extends Controller
                 $incidencies = Incidencia::orderby('id')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
+            }else if($request->has('id_search_desc')){
+
+
+                $incidencies = Incidencia::orderby('id','desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $data['incidencies'] = $incidencies;
+                return view('historicIncidencies', $data);
             }else{
                 $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
                 $data['incidencies'] = $incidencies;

@@ -15,7 +15,8 @@ Route::get('/', function () {
 //registro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
- 
+    
+    
     Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
     Route::post('/register','Auth\RegisterController@register')->name('register');
     Route::get('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
@@ -39,12 +40,22 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('/contacte', function () {
         return view('contacte');
     });
+
+
     Route::get('/gestioRecursos', function () {
         return view('gestioRecursos');
     });
 
 
+    Route::get('/nouRecursMobil.blade', function(){
+        return view('nouRecursMobil');
+    });
+
+    Route::post('/nouRecursMobil', 'RecursMobilController@store');
+
 });
+
+
     
 //esto es el loggin principal, el que viene siendo el index.
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login');;

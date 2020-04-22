@@ -20,8 +20,10 @@
   
   <form action="{{ action('IncidenciaController@indexHistoricIncidencies') }}" method="POST">
   @csrf 
-     <button type="submit" name="id_search" value="1">id</button>
-     <button type="submit" name="direccio_search" value="2">direccio</button>
+     <button type="submit" name="id_search" value="id_search">id</button>
+     <button type="submit" name="id_search_desc" value="id_search_desc">id_desc</button>
+     <!-- <button type="submit" name="direccio_search" value="2">direccio</button> -->
+     <button type="submit" name="direccio_search" value="">reset</button>
 </form>
 
 
