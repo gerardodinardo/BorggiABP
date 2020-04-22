@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alertant;
+use App\Models\TipuAlertant;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -44,7 +45,9 @@ class AlertantController extends Controller
                 $search = '';
             $alertants = Alertant::orderby('nom')->paginate(12);
         }
-        
+
+        $tipusAlertants = TipuAlertant::all();
+        $data['tipusAlertants'] = $tipusAlertants;
         $data['alertants'] = $alertants;
         $data['search'] = $search;
         return view('alertantVIP', $data);

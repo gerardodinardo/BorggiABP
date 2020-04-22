@@ -20,7 +20,7 @@ class Alertant extends Model
 
     public function tipus()
     {
-        return $this->belongsTo('App\Models\TipusAlertant', 'tipus_alertant_id');
+        return $this->belongsTo('App\Models\TipuAlertant', 'tipus_alertant_id');
     }
 
     public function municipi()

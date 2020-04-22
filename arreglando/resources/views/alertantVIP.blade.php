@@ -35,7 +35,7 @@
         </div>
         <div class="d-flex flex-wrap justify-content-center  row no-gutters">
         @foreach ($alertants as $alertant)
-            @if($alertant->id == 4)
+            @if($alertant->tipus_alertant_id == 4)
                 <div class="card ml-3  mt-3 mb-5  col-sm-3">
                     <div class="card-header bg-warning text-center">
                         {{ $alertant->nom }}&nbsp;&nbsp;
