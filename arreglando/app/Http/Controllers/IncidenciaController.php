@@ -11,6 +11,7 @@ use App\Models\TipusIncident;
 use App\Models\Comarca;
 use App\Models\Provincia;
 use App\Models\Municipi;
+use App\Models\EstatIncidencia;
 use Illuminate\Database\QueryException;
 
 class IncidenciaController extends Controller
@@ -44,6 +45,7 @@ class IncidenciaController extends Controller
         $provincies = Provincia::all();
         $tipusIncidents = TipusIncident::all();
         $tipusAlertants = TipuAlertant::all();
+        $estats = EstatIncidencia::all();
 
 
         $data['comarques'] = $comarques;
@@ -51,7 +53,7 @@ class IncidenciaController extends Controller
         $data['provincies'] = $provincies;
         $data['tipusAlertants'] = $tipusAlertants;
         $data['tipusIncidents'] = $tipusIncidents;
-
+        $data['estats'] = $estats;
 
         return view('addIncidencia', $data);
     }

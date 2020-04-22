@@ -40,6 +40,14 @@
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="time" name="hora" value=" {{ old('hora') }} " id="hora">
                         </div>
+                        <select class="custom-select mt-4 mb-4 col-sm-1" select id="getFname" id="provincies" name="provincies[]">
+                            <option selected>Estat</option>
+                                @foreach($estats as $estat)
+                                    <option value="{{$estat->id}}">
+                                        {{$estat->estat}}
+                                    </option>
+                                @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
