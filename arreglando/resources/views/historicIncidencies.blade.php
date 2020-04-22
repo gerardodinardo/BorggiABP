@@ -25,6 +25,7 @@
               <tr>
                 <th scope="col-sm" class="nIncidencia">Num. Incidència</th>
                 <th scope="col-sm" class="localitzacio">Localització</th>
+                <th scope="col-sm" class="hora">Data</th>
                 <th scope="col-sm" class="hora">Hora</th>
                 <th scope="col-sm" class="descripcioIncident">Descripció Incident</th>
                 <th scope="col-sm" class="estat">Estat</th>
@@ -35,8 +36,10 @@
                   <tr>
                     <th scope="row">{{ $incidencia->num_incidencia }}</th>
                     <td>{{ $incidencia->adreca }}</td>
+                    <td>{{ $incidencia->data }}</td>
                     <td>{{ $incidencia->hora }}</td>
                     <td>{{ $incidencia->descripcio }}</td>
+
                     <td>
                       @php 
                         $estado = 1; 

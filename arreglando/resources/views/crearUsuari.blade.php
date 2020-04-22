@@ -4,6 +4,10 @@
 
 @section('content')
 
+@if(Auth::user()->rols_id != 1)
+
+
+@else
 
 <link href="{{ asset('/css/backButton.css') }}" rel="stylesheet">
   <div id="mySidenav2" class="sidenav2">
@@ -89,6 +93,7 @@
             </div>
         </div>
         <hr>
+
         {{-- usuari correcte --}}
         <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
           <strong>Usuari Creat Correctament!</strong>
@@ -96,6 +101,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
         {{-- usuari errror --}}
         <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
           <strong>Oops, sembla que hi ha hagut un error!</strong>
@@ -103,6 +109,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
     </div>
 
     <script>
@@ -115,5 +122,6 @@
         }
 }
     </script>
+@endif
 
 @endsection

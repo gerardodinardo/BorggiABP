@@ -12,11 +12,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
-
-
-
 //registro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
