@@ -139,15 +139,15 @@
                     </div>
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
-                        <label for="inputAddress" class="col-sm-1 mt-4 col-form-label">Adreça</label>
+                        <label for="inputAddressdsf" class="col-sm-1 mt-4 col-form-label">Adreça</label>
                         <div class="col-sm-4 mt-4">
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Ej. Passeig de Sant Martí" value=" {{ old('adreca') }} ">
+                            <input type="text" class="form-control" id="adreca" placeholder="Ej. Passeig de Sant Martí" value=" {{ old('adreca') }} ">
                         </div>
                     </div>
                     <hr>
                     <div class="form-group row d-flex justify-content-center">
-                        <label for="inputAddress" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
-                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="complementAddress" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}"></textarea>
+                        <label for="inputAddressxd" class="col-sm-9 mt-4 col-form-label"><strong>Informació Adicional --> Adreça</strong></label>
+                        <textarea class="form-control col-sm-9 mt-1 mb-3 " id="complement_adreca" rows="3" placeholder="Ej. Al costat d'una gasolinera vermella..." value=" {{ old('complement_adreca') }}"></textarea>
                     </div>
                 </div>   
             </div>      

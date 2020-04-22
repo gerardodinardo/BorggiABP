@@ -96,10 +96,10 @@ class IncidenciaController extends Controller
         $incidencia->num_incidencia = 15; //numero incidencia guarda el ultimo y suma 1
         $incidencia->telefon_alertant = $request->input('telefon');
         $incidencia->data = $request->input('data');
-        $incidencia->hora = $request->input('hora');
+        // $incidencia->hora = $request->input('hora');
         //$incidencia->hora = $request->input('hora');
-        $incidencia->adreca = $request->input('inputAddress');
-        $incidencia->complement_adreca = $request->input('complementAddress');
+        $incidencia->adreca = $request->input('adreca');
+        $incidencia->complement_adreca = $request->input('complement_adreca');
         $incidencia->descripcio = $request->input('descripcio');
         $incidencia->municipis_id = $request->input('municipi');
         $incidencia->tipus_incident_id = $request->input('tipusIncident');
