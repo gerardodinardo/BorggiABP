@@ -49,14 +49,14 @@ class RecursMobilController extends Controller
         $recurs = new RecursMobil();
         $recurs->codi = $request->input('inputCodi');
         $recurs->tipus_recurs_id = $request->input('id_tipus');
-        $recurs->id_usuario = 1;
+       // $recurs->id_usuario = 1;
        
             $recurs->save();
 
             
         
 
-        return redirect()->action('RecursMobilController@index')->withInput();
+            return view('nouRecursMobil');
 
 
     }
