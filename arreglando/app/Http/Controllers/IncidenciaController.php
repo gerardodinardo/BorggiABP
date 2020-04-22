@@ -97,7 +97,7 @@ class IncidenciaController extends Controller
         $incidencia->telefon_alertant = $request->input('telefon');
         $incidencia->data = $request->input('data');
         $incidencia->hora = $request->input('hora');
-        $incidencia->hora = $request->input('hora');
+        //$incidencia->hora = $request->input('hora');
         $incidencia->adreca = $request->input('inputAddress');
         $incidencia->complement_adreca = $request->input('complementAddress');
         $incidencia->descripcio = $request->input('descripcio');

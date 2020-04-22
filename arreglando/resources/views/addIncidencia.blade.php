@@ -32,14 +32,17 @@
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="tel" name="telefon" value="{{ old('telefon') }}" id="telefon" placeholder="Ej. 616105478">
                         </div>
+                        
                         <label for="fecha" class="col-sm-1 mt-4 col-form-label">Data</label>
                         <div class="col-sm-2 mt-4">
                                 <input class="form-control" type="date" name="data" value="{{ old('data') }}" id="data">
                         </div>
+
                         <label for="currentTime" class="col-sm-1 mt-4 col-form-label">Hora</label>
                         <div class="col-sm-2 mt-4">
                             <input class="form-control" type="time" name="hora" value=" {{ old('hora') }} " id="hora">
                         </div>
+
                         <select class="custom-select mt-4 mb-4 col-sm-1" select id="estat" id="estat" name="provincies[]">
                             <option selected>Estat</option>
                                 @foreach($estats as $estat)
