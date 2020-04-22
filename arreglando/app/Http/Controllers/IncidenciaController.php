@@ -64,7 +64,7 @@ class IncidenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

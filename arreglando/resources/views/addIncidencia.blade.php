@@ -55,7 +55,7 @@
                                     {{$tipuAlertant->tipus}}
                                 </option>
                             @endforeach --}}
-                        <option id="centreSanitari"value="1">Centre Sanitari</option>
+                        <option id="centreSanitari" value="1">Centre Sanitari</option>
                         <option id="personaAfectada"value="2">Persona Afectada</option>
                         <option id="entornAfectat" value="3">Entorn de l'Afectat</option>
                         <option id="alertantVip" value="4">Alertant VIP</option>
