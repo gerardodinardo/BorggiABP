@@ -18,15 +18,18 @@
     
 
 
-  <a href="{{ asset('/nouRecursMobil.blade')}}">NOU RECURS</a>
+
 
     <div class="container border col-sm-11 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
         <div class="row">
           <div class="col-sm-12">
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
             <hr>
+
+            
             <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 5px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
-              <a class="button1" href="{{ asset('/')}}">Crear Nou Recurs Mòbil</a>
+            
+              <a class="button1" href="{{ asset('/nouRecursMobil.blade') }}">Crear Nou Recurs Mòbil</a>
             </div>
             <table class="table table-striped table-bordered table-hover text-center">
                 <thead class="bg-warning">
@@ -49,5 +52,30 @@
               {{-- {{ $recursos->links() }} --}}
             </div>
         </div>
+        
+        
+        
+        <p class="h2 mt-4">Recursos Mòbils</p>
+        <hr>
+        <table class="table table-striped table-bordered table-hover text-center">
+                <thead class="bg-warning">
+                  <tr>
+                  
+                    <th scope="col-sm">ID</th>
+                    <th scope="col-sm">Tipus Recurs</th>
+                    <th scope="col-sm">Codi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($recursos as $recurs)
+                      <tr>
+                        <th scope="row"> {{ $recurs->id }} </th>
+                        <td> {{ $recurs->tipusRecurs->tipus }} </td>
+                        <td> {{ $recurs->codi }} </td>
+                      </tr>
+                  @endforeach
+                </tbody>
+              </table>
+
       </div>
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RecursMobil;
+use App\Models\TipusRecurs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -19,12 +20,21 @@ class RecursMobilController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *  
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('nouRecursMobil');
+
+
+        $recursos = RecursMobil::orderby('ID')->paginate(2);
+
+        $tipusRecurs = TipusRecurs::All();
+
+        $data['tipusRecurs'] = $tipusRecurs;
+        $data['recursos'] = $recursos;
+
+        return view('gestioRecursos', $data);
     }
 
     /**
@@ -49,7 +59,7 @@ class RecursMobilController extends Controller
         $recurs = new RecursMobil();
         $recurs->codi = $request->input('inputCodi');
         $recurs->tipus_recurs_id = $request->input('id_tipus');
-       // $recurs->id_usuario = 1;
+         //$recurs->id_usuario = 2;
        
             $recurs->save();
 

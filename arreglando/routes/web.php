@@ -53,6 +53,8 @@ Route::group(['middleware' => ['auth']],function(){
 
     Route::post('/nouRecursMobil', 'RecursMobilController@store');
 
+    Route::get('/RecursMobil','RecursMobilController@index');
+
 });
 
 

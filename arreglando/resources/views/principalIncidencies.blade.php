@@ -23,7 +23,7 @@
           <a class="button1" href="{{ asset('/gestioAlertants')}}">Gestió Alertants</a>
           <a class="button1" href="{{ action('IncidenciaController@create') }}">Nova Incidència</a>      
           <a class="button1" href="{{ asset('/historicIncidencies')}}">Històric Incidències</a>                
-          <a class="button1" href="{{ asset('/gestioRecursos')}}">Recursos Mòbils</a>
+          <a class="button1" href="{{ action('RecursMobilController@index')}}">Recursos Mòbils</a>
         </div>
         <hr>
         <div class="col">
