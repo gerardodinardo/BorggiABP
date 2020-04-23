@@ -165,4 +165,10 @@ class IncidenciaController extends Controller
     {
         //
     }
+
+    //ajax
+    public function byProject($id)
+    {
+        Incidencia::where('project_id', $id)->get();
+    }
 }

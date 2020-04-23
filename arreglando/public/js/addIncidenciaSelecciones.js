@@ -54,3 +54,18 @@ function admSelectCheck(nameSelect)
     }
 }
 
+//FUNCION PROVINCIAS->> c ->> m == //Idea de Youtuber --> https://www.youtube.com/watch?v=deCC7loVs1U&feature=youtu.be
+
+$(function()
+{
+    $('#provincia').on('change', onSelectProjectChange);
+});
+
+function onSelectProjectChange()
+{
+    var project_id = $(this).val();
+    
+    // AJAX
+
+    
+}

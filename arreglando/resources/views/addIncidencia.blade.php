@@ -259,9 +259,7 @@
                 <button type="submit" class="btn btn-success mb-1 btn-lg" style="width:70%;">Enviar</button>
                 <button type="" class="btn btn-danger mb-1 btn-lg" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
             </div>  
-            
         </form>
     </div>
 </div> 
-
 @endsection
