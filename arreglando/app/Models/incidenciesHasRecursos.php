@@ -15,7 +15,9 @@ class incidenciesHasRecursos extends Model
 
     public function hasRecursos()
     {
-        return $this->belongsToMany('App\Models\RecursMobil', 'incidencies_has_recursos', 'incidencies_id', 'recursos_id');
+        return $this->belongsToMany('App\Models\RecursMobil')
+                    -> withPivot ('incidencies_id', 'recursos_id', 'prioritat')
+        ;
     }
 
 }

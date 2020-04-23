@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\TipusIncident;
 use App\Models\TipusRecurs;
 use App\Models\TipuAlertant;
+use App\Models\incidenciesHasRecursos;
 use App\Models\Comarca;
 use App\Models\Municipi;
 use App\Models\Provincia;
@@ -105,6 +106,14 @@ class IncidenciaController extends Controller
         $incidencia->estats_incidencia_id = $request->input('estat');
         $incidencia->tipus_alertant_id = $request->input('tipusAlertant');
         $incidencia->alertants_id = $request->input('id_alertant');
+        // $incidencia->recursosMobils()->prioritat = $request->input('prioritat');
+
+        
+        //ATTACH
+        //EJEMPLO WEB --> $ shop-> products () -> attach (1, ['products_amount' => 100, 'price' => 49.99]);
+
+        $incidencia->recursosMobils()->attach($prioritat, ['prioritat'=>$prioritat]);
+
         //municipis_id, tipus_incident_id, estat_incidencia_id, tipusalertantID, alerantId
 
         $incidencia->save();

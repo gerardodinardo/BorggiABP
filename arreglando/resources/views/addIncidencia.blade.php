@@ -223,7 +223,7 @@
             <div class="desplegable" >              
                 <button class="collapsible" id="coll6" disabled><strong>Assignació de Recursos Mòbils</strong></button>
                 <div class="content">
-                    <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusIncident" name="tipusIncident">
+                    <select class="custom-select mt-4 mb-4" select id="getFname" id="tipusRecurs" name="tipusRecurs">
                         <option selected>- Tipus Recurs Mòbil -</option>
                             @foreach($tipusRecurs as $trecur)
                                 <option value="{{$trecur->id}}">
@@ -234,19 +234,19 @@
                     <p class="text-center"><strong>- Selecciona una Prioritat -</strong></p>
                     <div class="row d-flex justify-content-center mb-5 mt-5">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                            <input type="radio" id="customRadioInline1" name="prioritat" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline1">&rarr;1</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                            <input type="radio" id="customRadioInline2" name="prioritat" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline2">&rarr;2</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                            <input type="radio" id="customRadioInline3" name="prioritat" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline3">&rarr;3</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+                            <input type="radio" id="customRadioInline4" name="prioritat" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline4">&rarr;4</label>
                           </div>
                     </div>
