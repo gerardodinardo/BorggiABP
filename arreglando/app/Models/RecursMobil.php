@@ -15,7 +15,7 @@ class RecursMobil extends Model
 
     public function incidencias()
     {
-        return $this->belongsToMany('App\Models\Incidencia', 'incidencies_has_recursos', 'recursos_id', 'incidencies_id');
+        return $this->belongsToMany('App\Models\Incidencia', 'incidencies_has_recursos', 'recursos_id', 'incidencies_id');//faltan
     }
 
     public function tipusRecurs()

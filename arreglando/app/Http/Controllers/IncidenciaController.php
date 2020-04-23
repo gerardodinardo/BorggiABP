@@ -91,12 +91,12 @@ class IncidenciaController extends Controller
      */
     public function store(Request $request)
     {
-        // $lastValue = Incidencia::where('num_incidencia')->orderBy('num_incidencia', 'desc')->first();
+        //$lastValue = Incidencia::where('num_incidencia')->orderBy('num_incidencia', 'desc')->first();
         $incidencia = new Incidencia();
-        $incidencia->num_incidencia = 15; //numero incidencia guarda el ultimo y suma 1
+        $incidencia->num_incidencia = rand(1, 9999); //numero incidencia guarda el ultimo y suma 1
         $incidencia->telefon_alertant = $request->input('telefon');
         $incidencia->data = $request->input('data');
-        // $incidencia->hora = $request->input('hora');
+        $incidencia->hora = $request->input('hora');
         $incidencia->adreca = $request->input('adreca');
         $incidencia->complement_adreca = $request->input('complement_adreca');
         $incidencia->descripcio = $request->input('descripcio');
@@ -105,10 +105,11 @@ class IncidenciaController extends Controller
         $incidencia->estats_incidencia_id = $request->input('estat');
         $incidencia->tipus_alertant_id = $request->input('tipusAlertant');
         $incidencia->alertants_id = $request->input('id_alertant');
-
+        //municipis_id, tipus_incident_id, estat_incidencia_id, tipusalertantID, alerantId
 
         $incidencia->save();
-        return redirect()->action('IncidenciesController@Index');
+       
+        return redirect()->action('IncidenciaController@index');
     }
 
     /**
