@@ -20,16 +20,13 @@
 
 
 
-    <div class="container border col-sm-11 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
+    <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="margin-bottom: 15%; padding-bottom: 25px;">
         <div class="row">
           <div class="col-sm-12">
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
             <hr>
-
-            
-            <div class="col mb-4" style="background-color: #3F0052; padding:20px; border-radius: 5px; display: flex; justify-content: center; min-width: 400px; height: 100px;">
-            
-              <a class="button1" href="{{ asset('/nouRecursMobil.blade') }}">Crear Nou Recurs Mòbil</a>
+            <div class="col mb-4 d-flex justify-content-center">
+              <button class="btn btn-custom1 col-sm-12" href="{{ asset('/nouRecursMobil.blade') }}">Crear Nou Recurs Mòbil</button>
             </div>
             <table class="table table-striped table-bordered table-hover text-center">
                 <thead class="bg-warning">

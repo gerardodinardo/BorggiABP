@@ -35,16 +35,36 @@ class IncidenciaController extends Controller
 
 
             if($request->has('id_search')){
-                $incidencies = Incidencia::orderby('id')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('num_incidencia')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
-            }else if($request->has('id_search_desc')){
+            }
+            else if($request->has('id_search_desc'))
+            {
 
 
-                $incidencies = Incidencia::orderby('id','desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('num_incidencia','desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
-            }else{
+            }
+            else if($request->has('search_date'))
+            {
+
+
+                $incidencies = Incidencia::orderby('data', 'desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $data['incidencies'] = $incidencies;
+                return view('historicIncidencies', $data);
+            }
+            else if($request->has('search_date_asc'))
+            {
+
+
+                $incidencies = Incidencia::orderby('data', 'asc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $data['incidencies'] = $incidencies;
+                return view('historicIncidencies', $data);
+            }
+            else
+            {
                 $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
