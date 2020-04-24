@@ -31,19 +31,19 @@
             <table class="table table-striped table-bordered table-hover text-center">
                 <thead class="bg-warning">
                   <tr>
-                    <th scope="col-sm">Tipus Recurs</th>
-                    <th scope="col-sm">Direcció</th>
-                    <th scope="col-sm">Descripció</th>
+                    <th scope="col-sm">ID Incidencia</th>
+                    <th scope="col-sm">ID Recurs</th>
+                    <th scope="col-sm">Prioritat</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {{-- @foreach ($recursos as $recurs)
+                  @foreach ($incidenciesHasRecursos as $inciHas)
                       <tr>
-                        <th scope="row"> {{ $recurs->id }} </th>
-                        <td> {{ $recurs->adreca }} </td>
-                        <td> {{ $recurs->descripcio }} </td>
+                        <th scope="row"> {{ $inciHas->incidencies_id }} </th>
+                        <td> {{ $inciHas->recursos_id }} </td>
+                        <td> {{ $inciHas->prioritat }} </td>
                       </tr>
-                  @endforeach --}}
+                  @endforeach
                 </tbody>
               </table>
               {{-- {{ $recursos->links() }} --}}

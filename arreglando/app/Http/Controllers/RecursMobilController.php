@@ -15,6 +15,8 @@ use App\Models\Provincia;
 use App\Models\Municipi;
 use App\Models\EstatIncidencia;
 use Illuminate\Database\QueryException;
+use App\Models\IncidenciesHasRecursos;
+use App\Models\Incidencias;
 
 class RecursMobilController extends Controller
 {
@@ -30,7 +32,11 @@ class RecursMobilController extends Controller
         $recursos = RecursMobil::orderby('ID')->paginate(2);
 
         $tipusRecurs = TipusRecurs::All();
+        $incidenciesHasRecursos = IncidenciesHasRecursos::All();
+        $incidencias = Incidencia::All();
 
+        $data['incidencias'] = $incidencias;
+        $data['incidenciesHasRecursos'] = $incidenciesHasRecursos;
         $data['tipusRecurs'] = $tipusRecurs;
         $data['recursos'] = $recursos;
 
