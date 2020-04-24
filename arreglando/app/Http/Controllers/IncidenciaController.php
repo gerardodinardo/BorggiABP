@@ -34,45 +34,67 @@ class IncidenciaController extends Controller
     {
 
 
-            if($request->has('id_search')){
-                $incidencies = Incidencia::orderby('num_incidencia')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+            if($request->has('id_search')){//id_search_HISTORICO
+                $incidencies = Incidencia::orderby('num_incidencia')->paginate(10);
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
             }
-            else if($request->has('id_search_desc'))
+            else if($request->has('id_search_desc'))//id_search_desc_HISTORICO
             {
 
 
-                $incidencies = Incidencia::orderby('num_incidencia','desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('num_incidencia','desc')->paginate(10);
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
             }
-            else if($request->has('search_date'))
+            else if($request->has('search_date'))//search_date_HISTORICO
             {
 
 
-                $incidencies = Incidencia::orderby('data', 'desc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('data', 'desc')->paginate(10);
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
             }
-            else if($request->has('search_date_asc'))
+            else if($request->has('search_date_asc'))//search_date_asc_HISTORICO
             {
 
 
-                $incidencies = Incidencia::orderby('data', 'asc')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('data', 'asc')->paginate(10);
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
+            }
+            else if($request->has('id_search_prin'))//id_search_prin_PRINCIPAL
+            {
+                $incidencies = Incidencia::orderby('num_incidencia', 'asc')->paginate(10);
+                $data['incidencies'] = $incidencies;
+                return view('principalIncidencies', $data);
+            }
+            else if($request->has('id_search_desc_prin'))//id_search_desc_prin_PRINCIPAL
+            {
+                $incidencies = Incidencia::orderby('num_incidencia','desc')->paginate(10);
+                $data['incidencies'] = $incidencies;
+                return view('principalIncidencies', $data);
+            }
+            else if($request->has('search_date_desc_prin'))//search_date_prin_PRINCIPAL
+            {
+                $incidencies = Incidencia::orderby('data','desc')->paginate(10);
+                $data['incidencies'] = $incidencies;
+                return view('principalIncidencies', $data);
+            }
+            else if($request->has('search_date_asc_prin'))//search_date_asc_prin_PRINCIPAL
+            {
+
+                $incidencies = Incidencia::orderby('data','asc')->paginate(10);
+                $data['incidencies'] = $incidencies;
+                return view('principalIncidencies', $data);
             }
             else
             {
-                $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
+                $incidencies = Incidencia::orderby('data')->paginate(10);
                 $data['incidencies'] = $incidencies;
                 return view('historicIncidencies', $data);
             }
 
-        // $incidencies = Incidencia::orderby('data')->paginate(10);//EN HISTORICO LOS LLAMO POR DATAS
-        // $data['incidencies'] = $incidencies;
-        // return view('historicIncidencies', $data);
     }
     /**
      * Show the form for creating a new resource.
