@@ -4,6 +4,8 @@
 
 @section('content')
 <link href="{{ asset('/css/principalIncidencies.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/gestioAlertants.css') }}" rel="stylesheet">
+
     <div id="mySidenav2" class="sidenav2">
         <a href="{{ asset('/principalIncidencies')}}" id="back">
             Torna a l'inici
@@ -16,26 +18,26 @@
     <div class="container border col-sm-7 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Gestió d'Alertants</h1>
         <hr>
-        <a href="{{ asset('/alertantCentreSanitari')}}" style="color: black;">
-          <div class="row d-flex justify-content-center mt-5 text-center">
-              <div class="card p-2 mr-5" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                  <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
-                  <div class="card-body" >
-                    <h5 class="card-title">Centre Sanitari</h5>
-                    <p class="card-text">
-                      Edifici on s'atén a la població en un primer nivell sanitari.</p>
-                  </div>
-              </div>
-            </a>
-            <a href="{{ asset('/alertantVIP')}}" style="color: black;">
-              <div class="card p-2" style="width: 14rem; border-color: rgba(4, 0, 233, 0.61); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(4, 0, 233, 0.61); outline: 0 none;">
-                  <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Alertant VIP</h5>
-                    <p class="card-text">Aquella persona habitual, sanitaris, ambulància, metge.</p>
-                  </div>
-              </div>
-            </a>
+          <a href="{{ asset('/alertantCentreSanitari')}}" class="zoom">
+            <div class="row d-flex justify-content-center mt-5 text-center">
+                <div class="card p-2 mr-5" style="width: 14rem; border-color: rgba(63, 0, 82, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493); outline: 0 none;">
+                    <img class="card-img-top" src="{{ asset('img/hospBroggi.svg') }}" alt="Card image cap">
+                    <div class="card-body" >
+                      <h5 class="card-title">Centre Sanitari</h5>
+                      <p class="card-text">
+                        Edifici on s'atén a la població en un primer nivell sanitari.</p>
+                    </div>
+                </div>
+              </a>
+              <a href="{{ asset('/alertantVIP')}}" class="zoom">
+                <div class="card p-2" style="width: 14rem; border-color: rgba(63, 0, 82, 0.493); box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493); outline: 0 none;">
+                    <img class="card-img-top" src="{{ asset('img/pharmacist.svg') }}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Alertant VIP</h5>
+                      <p class="card-text">Aquella persona habitual, sanitaris, ambulància, metge.</p>
+                    </div>
+                </div>
+              </a>
           </div>
         </div>
     </div>
