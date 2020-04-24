@@ -15,21 +15,40 @@
         </svg>
     </a>
   </div>
-
-  filtro --> 
   
-  <form action="{{ action('IncidenciaController@indexHistoricIncidencies') }}" method="POST">
-  @csrf 
-     <button type="submit" name="id_search" value="id_search">id</button>
-     <button type="submit" name="id_search_desc" value="id_search_desc">id_desc</button>
-     <!-- <button type="submit" name="direccio_search" value="2">direccio</button> -->
-     <button type="submit" name="direccio_search" value="">reset</button>
-</form>
 
 
 
 <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
     <h1>Històric Incidències</h1>
+    <hr>{{-- FILTROS --}}
+    <div class="row d-flex justify-content-center">
+      <form action="{{ action('IncidenciaController@indexHistoricIncidencies') }}" method="POST">
+        @csrf 
+          <button type="submit" name="id_search" class="btn btn-custom1" value="id_search">
+            Ordena per Id
+            <svg class="bi bi-arrow-bar-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.354 5.854a.5.5 0 000-.708l-3-3a.5.5 0 00-.708 0l-3 3a.5.5 0 10.708.708L8 3.207l2.646 2.647a.5.5 0 00.708 0z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M8 10a.5.5 0 00.5-.5V3a.5.5 0 00-1 0v6.5a.5.5 0 00.5.5zm-4.8 1.6c0-.22.18-.4.4-.4h8.8a.4.4 0 010 .8H3.6a.4.4 0 01-.4-.4z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <button type="submit" name="id_search_desc" class="btn btn-custom1" value="id_search_desc">
+            Ordena per Id
+            <svg class="bi bi-arrow-bar-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.354 10.146a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 01.708-.708L8 12.793l2.646-2.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M8 6a.5.5 0 01.5.5V13a.5.5 0 01-1 0V6.5A.5.5 0 018 6zM2 3.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <!-- <button type="submit" name="direccio_search" value="2">direccio</button> -->
+          <button type="submit" name="direccio_search" class="btn btn-custom1"  value="">
+            Ordena per Defecte
+            <svg class="bi bi-arrow-counterclockwise" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M12.83 6.706a5 5 0 00-7.103-3.16.5.5 0 11-.454-.892A6 6 0 112.545 5.5a.5.5 0 11.91.417 5 5 0 109.375.789z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M7.854.146a.5.5 0 00-.708 0l-2.5 2.5a.5.5 0 000 .708l2.5 2.5a.5.5 0 10.708-.708L5.707 3 7.854.854a.5.5 0 000-.708z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+      </form>
+    </div>
     <hr>
     <div class="col">
         <table class="table table-striped table-bordered table-hover text-center">
