@@ -18,6 +18,9 @@ Route::get('/contacte', function () {
 Route::get('/formacio', function () {
     return view('formacio');
 });
+Route::get('/formacioIncidencia', function () {
+    return view('formacioIncidencia');
+});
 //registro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){

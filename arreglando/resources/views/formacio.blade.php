@@ -16,7 +16,12 @@
   
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px; margin-bottom: 10%;">
         <h1 class="text-center" style="width: 100%; display: flex; position: center;">Videos Formatius!</h1>
-        <hr>  
+        <hr>
+        <div class="row d-felx justify-content-center">
+          <a class="btn btn-custom1" href="{{ asset('/formacio') }}">Vídeos Formatius</a>
+          <a class="btn btn-custom1 ml-2" href="{{ asset('/formacioIncidencia') }}">Formació Nova Incidència</a>
+        </div>  
+        <hr> 
         <div class="row text-center"> 
             <a href="" class="col-sm-6" data-toggle="modal" data-target="#modal_clip1">
                 <div class="card mt-5">
