@@ -12,6 +12,12 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/contacte', function () {
+    return view('contacte');
+});
+Route::get('/formacio', function () {
+    return view('formacio');
+});
 //registro de usuarios
 
 Route::group(['middleware' => ['auth']],function(){
@@ -36,9 +42,6 @@ Route::group(['middleware' => ['auth']],function(){
     // });
     Route::get('/gestioAlertants', function () {
         return view('gestioAlertants');
-    });
-    Route::get('/contacte', function () {
-        return view('contacte');
     });
 
 
