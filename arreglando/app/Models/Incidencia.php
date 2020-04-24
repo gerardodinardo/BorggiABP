@@ -20,7 +20,7 @@ class Incidencia extends Model
 
     public function recursosMobils()
     {
-        return $this->belongsToMany('App\Models\RecursMobil', 'incidencies_has_recursos', 'recursos_id', 'incidencies_id');
+        return $this->belongsToMany('App\Models\RecursMobil', 'incidencies_has_recursos', 'incidencies_id', 'recursos_id');
     }
     
     public function EstatIncidencia()

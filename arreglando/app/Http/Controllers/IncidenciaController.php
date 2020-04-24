@@ -126,8 +126,10 @@ class IncidenciaController extends Controller
         $incidencia->estats_incidencia_id = $request->input('estat');
         $incidencia->tipus_alertant_id = $request->input('tipusAlertant');
         $incidencia->alertants_id = $request->input('id_alertant');
-        // $incidencia->recursosMobils()->prioritat = $request->input('prioritat');
+        
 
+        $incidencia->save();
+        $incidencia->recursosMobils()->attach($request->input('tipusRecurs'), ['prioritat' => $request->input('prioritat')]);
         
         //ATTACH
         //EJEMPLO WEB --> $ shop-> products () -> attach (1, ['products_amount' => 100, 'price' => 49.99]);
@@ -136,7 +138,7 @@ class IncidenciaController extends Controller
 
         //municipis_id, tipus_incident_id, estat_incidencia_id, tipusalertantID, alerantId
 
-        $incidencia->save();
+        //$incidencia->save();
        
         return redirect()->action('IncidenciaController@index');
     }

@@ -232,19 +232,19 @@
                     <p class="text-center"><strong>- Selecciona una Prioritat -</strong></p>
                     <div class="row d-flex justify-content-center mb-5 mt-5">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="prioritat" class="custom-control-input">
+                            <input type="radio" id="customRadioInline1" name="prioritat" class="custom-control-input" value="1">
                             <label class="custom-control-label" for="customRadioInline1">&rarr;1</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="prioritat" class="custom-control-input">
+                            <input type="radio" id="customRadioInline2" name="prioritat" class="custom-control-input" value="2">
                             <label class="custom-control-label" for="customRadioInline2">&rarr;2</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline3" name="prioritat" class="custom-control-input">
+                            <input type="radio" id="customRadioInline3" name="prioritat" class="custom-control-input" value="3">
                             <label class="custom-control-label" for="customRadioInline3">&rarr;3</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline4" name="prioritat" class="custom-control-input">
+                            <input type="radio" id="customRadioInline4" name="prioritat" class="custom-control-input" value="4">
                             <label class="custom-control-label" for="customRadioInline4">&rarr;4</label>
                           </div>
                     </div>
