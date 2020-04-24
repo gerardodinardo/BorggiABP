@@ -38,6 +38,45 @@ input[type="color"]:focus,
   opacity: 80%;
   color: white;
 }
+/* LOGGED BUTTON */
+a.logged_button_redirect{
+  padding: 20px;
+  margin-top:10px;
+  background-color:#3F0052;
+  color: white;
+  border-color: rgba(63, 0, 82, 0.493);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
+  outline: 0 none;
+}
+
+a.logged_button_redirect:hover{
+  background-color:#3F0052;
+  opacity: 80%;
+  color: white;
+  border-color: rgba(63, 0, 82, 0.493);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(63, 0, 82, 0.493);
+  outline: 0 none;
+}
+a.logged_button{
+  padding: 20px;
+  margin-top:10px;
+  background-color:red;
+  color: white;  
+  border-color: rgba(82, 0, 0, 0.603);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 0, 0, 0.603);
+  outline: 0 none;
+}
+
+a.logged_button:hover{
+  background-color:red;
+  opacity: 80%;
+  color: white;
+  border-color: rgba(82, 0, 0, 0.603);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 0, 0, 0.603);
+  outline: 0 none;
+}
+/* LOGGED BUTTON FINAL */
+
 .btn-custom2:hover{
   background-color:rgb(122, 124, 0);
   opacity: 80%;
@@ -88,6 +127,7 @@ input[type="color"]:focus,
 .dropdown-toggle{
   background-color: #e2167c !important;
 }
+
 
 .card-footer {
   position: fixed;
