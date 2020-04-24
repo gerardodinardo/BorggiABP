@@ -112,7 +112,7 @@ class IncidenciaController extends Controller
         //ATTACH
         //EJEMPLO WEB --> $ shop-> products () -> attach (1, ['products_amount' => 100, 'price' => 49.99]);
 
-        $incidencia->recursosMobils()->attach($prioritat, ['prioritat'=>$prioritat]);
+        // //$incidencia->recursosMobils()->attach($prioritat, ['prioritat'=>$prioritat]);
 
         //municipis_id, tipus_incident_id, estat_incidencia_id, tipusalertantID, alerantId
 

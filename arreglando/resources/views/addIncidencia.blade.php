@@ -19,8 +19,6 @@
     <div class="container border col-sm-9 mt-5 border rounded shadow-lg" style="padding: 40px;">
         <h1>Nova Incidència</h1>
         <hr>
-        <button type="submit" class="btn btn-info text-center btn-lg" style="width:70%; margin-left: 15%;" onclick="location.href='{{ url('/principalIncidencies') }}'">Menú Principal Incidències</button>
-        <hr>
         <!-- ********** Start Desplegables ********** -->
         <form action="{{ action('IncidenciaController@store') }}" method="post">
             @csrf
@@ -255,9 +253,8 @@
             <!-- ********** Fin Desplegable 6 ********** --> 
             <hr>
             <div class="text-center pb-4">
-                <button type="" class="btn btn-warning mb-1 btn-lg" style="width:70%;" onClick="window.location.reload();">Netejar Formulari</button>
                 <button type="submit" class="btn btn-success mb-1 btn-lg" style="width:70%;">Enviar</button>
-                <button type="" class="btn btn-danger mb-1 btn-lg" style="width:70%;" onclick="location.href='{{ url('/') }}'">Tornar / Cancelar</button>
+                <a type="submit" class="btn btn-danger mb-1 btn-lg" style="width:70%;" href="{{ asset('/principalIncidencies')}}">Cancelar</a>
             </div>  
         </form>
     </div>
