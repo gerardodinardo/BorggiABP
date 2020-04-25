@@ -4,7 +4,7 @@
 
 
 @section('content')
-
+@include('errors.message')
 
 <!-- 
     id 	

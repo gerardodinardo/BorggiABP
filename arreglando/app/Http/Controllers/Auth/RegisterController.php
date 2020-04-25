@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 //use App\User;
+use App\Classes\Error;
 use App\Usuario;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -24,16 +25,35 @@ class RegisterController extends Controller
         
                     //lo que está seguido del -> es el nombre de la columna de la BD
                     $usuari = new Usuario();
-                    $pass = $request->input('inputContrasenya');
-                    $pass = Hash::make($pass);
-                    $usuari->nom = $request->input('inputUsuari');
-                    $usuari->codi = $request->input('inputCodi');
-                    $usuari->rols_id = $request->input('rol');
-                    $usuari->contrasenya = $pass;
+
+                    
+                    $user = Usuario::where('codi', '=', $request->input('inputUsuari'))->first();
                    
-                    $usuari->save();
-            
-                    return redirect()->to('/crearUsuari');
+                    if ($user === null) {
+
+                        $pass = $request->input('inputContrasenya');
+                        $pass = Hash::make($pass);
+                        $usuari->nom = $request->input('inputUsuari');
+                        $usuari->codi = $request->input('inputCodi');
+                        $usuari->rols_id = $request->input('rol');
+                        $usuari->contrasenya = $pass;
+                       
+                        $usuari->save();
+                
+                        return redirect()->to('/crearUsuari');
+
+
+                    }else{
+
+                        $request->session()->flash('error');
+
+                        return redirect()->to('/crearUsuari')->withInput();
+
+                    }
+
+
+
+                    
 
     }
 }
