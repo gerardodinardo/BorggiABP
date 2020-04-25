@@ -27,7 +27,6 @@ Route::group(['middleware' => ['auth']],function(){
     
     
     Route::get('/crearUsuari','Auth\RegisterController@index')->name('crearUsuari');
-    Route::resource('/crearVIP','AlertantController');
     Route::post('/register','Auth\RegisterController@register')->name('register');
     Route::get('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
     Route::post('/historicIncidencies', 'IncidenciaController@indexHistoricIncidencies');
@@ -57,10 +56,12 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('/nouRecursMobil.blade', function(){
         return view('nouRecursMobil');
     });
-
+    
     Route::post('/nouRecursMobil', 'RecursMobilController@store');
-
+    
     Route::get('/RecursMobil','RecursMobilController@index');
+
+    // Route::get('/crearVIP', 'AlertantController@create');
 
 });
 
