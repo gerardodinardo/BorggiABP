@@ -26,7 +26,13 @@
             <p class="h2 mt-4">Recursos Mòbils Desplegats</p>
             <hr>
             <div class="col mb-4 d-flex justify-content-center">
-              <button class="btn btn-custom1 col-sm-12" href="{{ asset('/nouRecursMobil') }}">Crear Nou Recurs Mòbil</button>
+            <a href="{{asset('/nouRecursMobil.blade')}}">
+              <button class="btn btn-custom1 col-sm-12" >
+              
+              Crear Nou Recurs Mòbil
+              
+              </button>
+              </a>
             </div>
             <table class="table table-striped table-bordered table-hover text-center">
                 <thead class="bg-warning">
