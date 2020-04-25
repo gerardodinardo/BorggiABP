@@ -81,7 +81,7 @@ class AlertantController extends Controller
     {
         $alertant = new Alertant();
         $alertant->nom = $request->input('nom');
-        $alertant->cognom = $request->input('cognom');
+        $alertant->cognoms = $request->input('cognom');
         $alertant->adreca = $request->input('adreca');
         $alertant->municipis_id = $request->input('municipis_id');
         $alertant->telefon = $request->input('telefon');

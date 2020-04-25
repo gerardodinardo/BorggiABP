@@ -19,6 +19,7 @@
     <h3 class="text-center" style="width: 100%; display: flex; position: center;">Creació Alertant VIP</h1>
     <hr>
     <form action="{{ action('AlertantController@store') }}" method="post">
+        @csrf
         <div class="col-sm-12 mt-4">
             <input class="form-control" type="text" name="nom"  id="nom" placeholder="Nom Alertant VIP">
         </div>
