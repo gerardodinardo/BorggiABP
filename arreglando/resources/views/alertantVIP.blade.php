@@ -17,7 +17,7 @@
         <h3 class="text-center" style="width: 100%; display: flex; position: center;">Alertants VIP</h1>
         <hr>
         <div class="row d-flex justify-content-center">
-            <a class="btn btn-custom1 col-sm-9" href="{{ asset('/crearVIP') }}">Crear Alertant VIP</a>
+            <a class="btn btn-custom1 col-sm-9" href="{{ action('AlertantController@create') }}">Crear Alertant VIP</a>
         </div>
         <hr>
         <div class="d-flex justify-content-center">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alertant;
 use App\Models\TipuAlertant;
+use App\Models\Municipi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,7 @@ class AlertantController extends Controller
         $data['alertants'] = $alertants;
         $data['search'] = $search;
         return view('alertantCentreSanitari', $data);
+
         
     }    
     
@@ -53,7 +55,6 @@ class AlertantController extends Controller
         return view('alertantVIP', $data);
         
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -61,7 +62,13 @@ class AlertantController extends Controller
      */
     public function create()
     {
-        //
+       $alertants = Alertant::all();
+       $municipis = Municipi::all();
+       $tipusAlertants = TipuAlertant::all();
+       $data['municipis'] = $municipis;
+       $data['tipusAlertants'] = $tipusAlertants;
+
+       return view('crearVIP', $data);
     }
 
     /**
@@ -72,9 +79,19 @@ class AlertantController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $alertant = new Alertant();
+        $alertant->nom = $request->input('nom');
+        $alertant->cognom = $request->input('cognom');
+        $alertant->adreca = $request->input('adreca');
+        $alertant->municipis_id = $request->input('municipis_id');
+        $alertant->telefon = $request->input('telefon');
+        $alertant->tipus_alertant_id = $request->input('tipus_alertant_id');
 
+        $alertant->save();  
+
+        return redirect()->action('AlertantController@indexAlertantsVIP');
+
+    }
     /**
      * Display the specified resource.
      *
