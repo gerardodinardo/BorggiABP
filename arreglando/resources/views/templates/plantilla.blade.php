@@ -19,7 +19,7 @@
 
         {{-- SI TENEIS DUDAS SOBRE ESTAS CONDICIONES PREGUNTAD A ALESSIO :D --}}
         @if (Auth::check()) 
-          @if (Auth::user()->nom == 'admin')
+          @if (Auth::user()->rols_id == 1)
             <div class="btn-group m-auto">
               <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">Hey, {{ Auth::user()->nom }}!</button>
               <button type="button" class="btn btn-customNAV dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #e2167c;">
@@ -45,7 +45,7 @@
             </div>
           @endif
         @endif 
-        @if (Auth::check() && Auth::user()->nom != 'admin')
+        @if (Auth::check() && Auth::user()->rols_id != 1))
           {{-- DROPDOWN PARA TODOS LOS USUARIOS --}}
             <div class="btn-group m-auto">
               <button type="text" class="btn btn-customNAVTEXT" style="width: 200px; border-color: #e2167c; background-color: #e2167c">Hey, {{ Auth::user()->nom }}!</button>
