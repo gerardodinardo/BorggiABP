@@ -13,6 +13,6 @@ Algunas consideraciones del proyecto:
 
  · El proyecto no tiene migraciones hechas porque en el momento de hacerlo no sabíamos como iba el asunto. Por ello tenemos el archivo broggi.sql, donde se encutra la base de datos.
  
- · Algunas cosas de Laravel están hechas un poco mal, por ejemplo escribir toda la lógica en los controladores y no en los modelos.
+ · Algunas cosas de Laravel están hechas sin seguir todas las buenas prácticas de este, básicamente por ser unos novatos en su momento, seguramente a día de hoy cambiaríamos miles de cosas.
 
  · Seguramente hay muchas cosas rotas a día de hoy.
